@@ -1,1 +1,1 @@
-# videojs
+# VideoJS
