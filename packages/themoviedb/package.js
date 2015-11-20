@@ -2,7 +2,7 @@ Package.describe({
   name: 'nolanrigo:themoviedb',
   version: '0.0.1',
   // Brief, one-line summary of the package.
-  summary: '',
+  summary: 'Packages for do request api to themoviedb',
   // URL to the Git repository containing the source code for this package.
   git: '',
   // By default, Meteor will default to using README.md for documentation.
@@ -10,15 +10,18 @@ Package.describe({
   documentation: 'README.md'
 });
 
+Npm.depends({
+  'moviedb': '0.2.2'
+});
+
 Package.onUse(function(api) {
   api.versionsFrom('1.2.1');
-  api.use('ecmascript');
-  api.addFiles('themoviedb.js');
+  api.addFiles('themoviedb.js',['server']);
+  api.export('themoviedb',['server']);
 });
 
 Package.onTest(function(api) {
-  api.use('ecmascript');
   api.use('tinytest');
   api.use('nolanrigo:themoviedb');
-  api.addFiles('themoviedb-tests.js');
+  api.addFiles('themoviedb-tests.js',['server']);
 });

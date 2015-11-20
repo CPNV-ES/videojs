@@ -1,1 +1,2 @@
-// Write your package code here!
+var moviedb = Npm.require('moviedb');
+themoviedb = moviedb('NotCorrectApiKey');
