@@ -1,6 +1,6 @@
 {
   "themoviedb" : {
-    "apikey" : "[[PUT YOUR THEMOVIEDB API KEY HERE]]",
+    "api_key" : "[[PUT YOUR THEMOVIEDB API KEY HERE]]",
     "language" : "fr"
   }
 }
