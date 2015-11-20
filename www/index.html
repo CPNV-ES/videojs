@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="fr" ng-app="interfaceApp">
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+		<!-- Style -->
+		<link rel="stylesheet" media="all" href="css/reset.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/angular-flash.min.css">
+		<link rel="stylesheet" media="all" href="css/style.css">
+		<!-- Script -->
+		<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+		<script type="text/javascript" src="js/angular.min.js"></script>
+		<script type="text/javascript" src="js/angular.route.min.js"></script>
+		<script type="text/javascript" src="js/socket.min.js"></script>
+		<script type="text/javascript" src="js/angular-flash.min.js"></script>
+		<script type="text/javascript" src="controllers/indexController.js"></script>
+		<script type="text/javascript" src="controllers/listController.js"></script>
+		<script type="text/javascript" src="controllers/movieController.js"></script>
+	</head>
+	<body ng-controller="indexController">
+		<div id="maxwidth">
+			<header class="header">
+			<a class="link_logo" href="#/"><img src="img/logo.png" alt="Logo VideoJS"></a>
+			<a href="#" class="button">Rechercher</a>
+			</header>
+			<div class="view" ng-view>
+				
+			</div>
+			<div flash-message="3000"></div>
+			<div class="control">
+				
+				<div class="left">
+					<div class="genres-dropdown">
+						<a class="genres-toggle" href="">Genre <i class="fa fa icon-o"></i></a>
+						<ul class="genres-dropdown">
+							<li ng-repeat="genre in genres"></li>
+						</ul>	
+					</div>
+					<input type="text" class="search" ng-model="search" placeholder="rechercher ...">
+				</div>
+				
+				
+				
+				<ul class="right">
+					<li ng-click="sync()" ng-class="{disabled:synced}"><i class="fa fa-refresh" ng-class="{'fa-spin':synced}"></i></li>
+					<li ng-click="openOption()"><i class="fa fa-cog"></i></li>
+				</ul>
+				
+			</div>
+		</div>		
+	</body>	
+</html>

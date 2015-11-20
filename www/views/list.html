@@ -1,0 +1,9 @@
+<div class="movie" ng-repeat="movie in movies">
+	<a ng-href="#/film/{{movie.cid}}" class="cover">
+		<img ng-show="movie.info.poster_path" ng-src="http://image.tmdb.org/t/p/w154{{movie.info.poster_path}}" alt="{{movie.info.title}}">
+		<span ng-show="movie.info.adult" class="nsfw">-18</span>
+	</a>
+	<p ng-show="movie.info.title" class="title">{{movie.info.title}}</p>
+	<p ng-hide="movie.info.title" class="title">{{movie.file}}</p>
+	<p ng-show="movie.info.tagline" class="tagline">{{movie.info.tagline}}</p>
+</div>

@@ -1,0 +1,47 @@
+{
+  "sources" : [
+	"./test/movies"
+  ],
+  "server" : {
+	"ip" : "127.0.0.1",
+	"port" : "1337",
+	"www" : "./www"
+  },
+  "database" : {
+	"path" : "./database"
+  },
+  "themoviedb" : {
+	"apikey" : "****",
+	"language": "fr"
+  },
+  "extensions" : [
+	".webm",
+	".mkv",
+	".flv",
+	".vob",
+	".ogv",
+	".ogg",
+	".drc",
+	".avi",
+	".mov",
+	".qt",
+	".wmv",
+	".yuv",
+	".rm",
+	".rmvb",
+	".asf",
+	".mp4",
+	".m4v",
+	".mpg",
+	".mp2",
+	".mpeg",
+	".mpe",
+	".mpv",
+	".m2v",
+	".m4v",
+	".mxf",
+	".svi",
+	".3gp",
+	".3g2"
+  ]
+}

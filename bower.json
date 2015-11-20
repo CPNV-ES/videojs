@@ -1,0 +1,25 @@
+{
+  "name": "videojs",
+  "version": "0.0.1",
+  "homepage": "https://github.com/nolanrigo/videojs",
+  "main": "src/app.js",
+  "private": true,
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "www/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.5",
+    "angular-masonry": "~0.12.0",
+    "angular-route": "~1.4.5",
+    "masonry.pkgd.min": "http://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.min.js"
+  }
+}
