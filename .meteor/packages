@@ -21,3 +21,4 @@ blaze-html-templates
 ecmascript
 iron:router
 nolanrigo:themoviedb
+nolanrigo:filemonitor
