@@ -16,13 +16,12 @@ Npm.depends({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.2.1');
-  api.use('ecmascript');
-  api.addFiles('filemonitor.js');
+  api.addFiles('filemonitor.js',['server']);
+  api.export('filemonitor',['server']);
 });
 
 Package.onTest(function(api) {
-  api.use('ecmascript');
   api.use('tinytest');
   api.use('nolanrigo:filemonitor');
-  api.addFiles('filemonitor-tests.js');
+  api.addFiles('filemonitor-tests.js',['server']);
 });
