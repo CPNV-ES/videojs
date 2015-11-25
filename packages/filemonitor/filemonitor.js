@@ -1,4 +1,4 @@
-var fm = Npm.require('filemonitor');
+var fm = Npm.require('fsmonitor');
 var fs = Npm.require('fs');
 var path = Npm.require('path');
 
@@ -48,20 +48,18 @@ Filemonitor.prototype.stop = function () {
 
 Filemonitor.prototype.watch = function(folder){
   var self = this;
-
   this.unwatch(folder);
-  console.log(folder);
 
-  this.watchers[folder] = fm.watch(folder,null); /*,{
+  this.watchers[folder] = fm.watch(folder,{
     matches : function(relPath){
-      console.log(relPath);
-      //var ext = path.extname(realPath);
-      //return self.extensions.indexOf(ext) >= 0;
+      var ext = path.extname(relPath);
+      return self.extensions.indexOf(ext) >= 0;
     },
     excludes : function(relPath){
       return false;
     }
-  });/*,function(changes){
+
+  },function(changes){
 
     // Added Files
     changes.addedFiles.forEach(function(file){
@@ -78,7 +76,7 @@ Filemonitor.prototype.watch = function(folder){
       self.fire('delete',path.join(folder,file));
     });
 
-  });*/
+  });
 };
 Filemonitor.prototype.unwatch = function(folder){
   if(this.watchers[folder]) this.watchers[folder].close();

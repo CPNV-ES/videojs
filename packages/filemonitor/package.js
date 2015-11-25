@@ -11,7 +11,7 @@ Package.describe({
 });
 
 Npm.depends({
-  'filemonitor': '0.1.3',
+  'fsmonitor': '0.2.4'
 });
 
 Package.onUse(function(api) {
