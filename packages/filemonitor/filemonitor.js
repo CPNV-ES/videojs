@@ -32,6 +32,24 @@ Filemonitor.prototype.both = function(sources,extensions){
 Filemonitor.prototype.start = function () {
   var self = this;
 
+  var movies = [];
+  Movies.find().fetch().forEach(function(movie){
+    movies.push(new File(movie));
+  });
+
+  var files = [];
+  this.sources.forEach(function(source){
+    files = files.concat(self.list(source));
+  });
+
+  // New One
+
+
+
+  // Old One
+
+
+
   // Lister les fichiers,
   // Faire la différences avec ceux existents dans la base de donnée
   // Créer, Supprimer, Modifier les fichiers
@@ -94,7 +112,6 @@ Filemonitor.prototype.list = function(folder){
     else if(info.isFile()){
       if(self.extensions.indexOf(extension)<0) return false;
       files.push(realpath);
-      self.fire('create',file);
     }
   });
   return files;

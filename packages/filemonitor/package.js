@@ -16,6 +16,7 @@ Npm.depends({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.2.1');
+  api.addFiles('model/File.js',['server']);
   api.addFiles('filemonitor.js',['server']);
   api.export('filemonitor',['server']);
 });
