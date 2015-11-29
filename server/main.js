@@ -1,5 +1,5 @@
 filemonitor.on('create',function(file){
-  console.log('create',file);
+  Movies.insert(file);
 });
 filemonitor.on('update',function(file){
   console.log('update',file);

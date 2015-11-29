@@ -43,17 +43,31 @@ Filemonitor.prototype.start = function () {
   });
 
   // New One
-
-
+  files
+    .filter(function(file){
+      var already = false;
+      movies.forEach(function(movie){
+        if(file.path==movie.path) already = true;
+      });
+      return !already;
+    })
+    .forEach(function(newMovie){
+      self.fire('create',newMovie);
+    });
 
   // Old One
+  movies
+    .filter(function(movie){
+      var always = false;
+      files.forEach(function(file){
+        if(movie.path==file.path) always = true;
+      });
+      return !always;
+    })
+    .forEach(function(oldMovie){
+      self.fire('delete',oldMovie);
+    });
 
-
-
-  // Lister les fichiers,
-  // Faire la différences avec ceux existents dans la base de donnée
-  // Créer, Supprimer, Modifier les fichiers
-  // Lancer le watch sur les dossiers
   this.sources.forEach(function(source){
     self.watch(source);
   });
@@ -111,7 +125,7 @@ Filemonitor.prototype.list = function(folder){
     if(info.isDirectory()) files = files.concat(self.list(realpath));
     else if(info.isFile()){
       if(self.extensions.indexOf(extension)<0) return false;
-      files.push(realpath);
+      files.push(new File(realpath));
     }
   });
   return files;
