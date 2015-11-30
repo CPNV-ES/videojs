@@ -1,10 +1,13 @@
 filemonitor.on('create',function(file){
+
+  // Ajout du torrentname
+  file.torrent = torrentname(file.filename);
+
+  // Création de l'entrée dans la collection
   Movies.insert(file);
 });
-filemonitor.on('update',function(file){
-  console.log('update',file);
-});
 filemonitor.on('delete',function(file){
+  // Supression de l'entrée dans la collection
   Movies.remove(file);
 });
 
