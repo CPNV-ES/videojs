@@ -5,7 +5,7 @@ filemonitor.on('update',function(file){
   console.log('update',file);
 });
 filemonitor.on('delete',function(file){
-  console.log('delete',file);
+  Movies.remove(file);
 });
 
 Meteor.startup(function(){
