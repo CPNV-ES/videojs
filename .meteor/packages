@@ -23,3 +23,4 @@ iron:router
 nolanrigo:themoviedb
 nolanrigo:filemonitor
 msavin:mongol
+nolanrigo:parse-torrent-name
