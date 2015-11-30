@@ -68,6 +68,7 @@ Filemonitor.prototype.start = function () {
       self.fire('delete',oldMovie);
     });
 
+  // Watch
   this.sources.forEach(function(source){
     self.watch(source);
   });
@@ -91,24 +92,24 @@ Filemonitor.prototype.watch = function(folder){
       return false;
     }
 
-  },function(changes){
+  });
 
-    // Added Files
+  this.watchers[folder].on('change',Meteor.bindEnvironment(function(changes){
     changes.addedFiles.forEach(function(file){
-      self.fire('create',path.join(folder,file));
+      self.fire('create',new File(path.join(folder,file)));
     });
 
     // Updated Files
     changes.modifiedFiles.forEach(function(file){
-      self.fire('update',path.join(folder,file));
+      self.fire('update',new File(path.join(folder,file)));
     });
 
     // Deleted Files
     changes.removedFiles.forEach(function(file){
-      self.fire('delete',path.join(folder,file));
+      self.fire('delete',new File(path.join(folder,file)));
     });
+  }));
 
-  });
 };
 Filemonitor.prototype.unwatch = function(folder){
   if(this.watchers[folder]) this.watchers[folder].close();
