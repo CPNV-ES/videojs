@@ -25,7 +25,7 @@ Themoviedb.prototype.info = function(filename){
   try{
     searchResult = this.moviedb.searchMovie({
         query: info.title,
-        language: Meteor.settings.themoviedb.api_key || 'fr'
+        language: Meteor.settings.themoviedb.language || 'fr'
     });
   }catch(e){
     console.error('themoviedb::search',e);
@@ -40,7 +40,7 @@ Themoviedb.prototype.info = function(filename){
   try{
     movieInfo = this.moviedb.movieInfo({
       id: movieId,
-      language: Meteor.settings.themoviedb.api_key || 'fr',
+      language: Meteor.settings.themoviedb.language || 'fr',
       append_to_response: 'trailers,images,keywords,credits'
     });
   }catch(e){
