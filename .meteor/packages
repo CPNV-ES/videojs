@@ -20,7 +20,8 @@ http
 blaze-html-templates
 ecmascript
 iron:router
-nolanrigo:themoviedb
 nolanrigo:filemonitor
 msavin:mongol
-nolanrigo:parse-torrent-name
+matb33:collection-hooks
+nolanrigo:themoviedb
+meteorhacks:async
