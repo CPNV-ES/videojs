@@ -21,22 +21,31 @@ Themoviedb.prototype.info = function(filename){
   var info = this.resolve(filename);
 
   // Search
-  var searchResult = this.moviedb.searchMovie({
-      query: info.title,
-      language: Meteor.settings.themoviedb.api_key || 'fr'
-  });
+  var searchResult;
+  try{
+    searchResult = this.moviedb.searchMovie({
+        query: info.title,
+        language: Meteor.settings.themoviedb.api_key || 'fr'
+    });
+  }catch(e){
+    console.error('themoviedb::search',e);
+  }
 
   // If 1 result no less no more, find more information about it
   if(searchResult.total_results<1) return null;
 
   var movieId = searchResult.results[0].id;
 
-  var movieInfo = this.moviedb.movieInfo({
-    id: movieId,
-    language: Meteor.settings.themoviedb.api_key || 'fr',
-    append_to_response: 'trailers,images,keywords,credits'
-  });
-
+  var movieInfo;
+  try{
+    movieInfo = this.moviedb.movieInfo({
+      id: movieId,
+      language: Meteor.settings.themoviedb.api_key || 'fr',
+      append_to_response: 'trailers,images,keywords,credits'
+    });
+  }catch(e){
+    console.error('themoviedb::find',e);
+  }
   // get movie info
   return movieInfo;
 };
