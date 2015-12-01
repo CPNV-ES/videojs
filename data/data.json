@@ -1,0 +1,3024 @@
+{
+   "header":{
+      "$created":"2015-09-07T08:22:40.166Z",
+      "$updated":"2015-11-16T11:03:38.218Z",
+      "lcid":94
+   },
+   "film":[
+      {
+         "file":"Ace Ventura Detective animalier.avi",
+         "path":"C:\\Users\\mickael.lacombe@cpnv.ch\\OneDrive\\Git\\videojs\\test\\movies",
+         "info":[
+
+         ],
+         "cid":0,
+         "$created":"2015-09-07T08:31:29.279Z",
+         "$updated":"2015-11-16T11:03:36.067Z"
+      },
+      {
+         "file":"Avatar.mkv",
+         "path":"C:\\Users\\mickael.lacombe@cpnv.ch\\OneDrive\\Git\\videojs\\test\\movies\\Films\\Test !;_+ç%&()=`ü!ö£ö_;",
+         "info":{
+            "adult":false,
+            "backdrop_path":"/5XPPB44RQGfkBrbJxmtdndKz05n.jpg",
+            "belongs_to_collection":{
+               "id":87096,
+               "name":"Avatar",
+               "poster_path":"/oexAr649CHHdS0akKEDiHQT1qIk.jpg",
+               "backdrop_path":"/9s4BM48NweGFrIRE6haIul0YJ9f.jpg"
+            },
+            "budget":237000000,
+            "genres":[
+               {
+                  "id":28,
+                  "name":"Action"
+               },
+               {
+                  "id":12,
+                  "name":"Aventure"
+               },
+               {
+                  "id":14,
+                  "name":"Fantastique"
+               },
+               {
+                  "id":878,
+                  "name":"Science-Fiction"
+               }
+            ],
+            "homepage":"",
+            "id":19995,
+            "imdb_id":"tt0499549",
+            "original_language":"en",
+            "original_title":"Avatar",
+            "overview":"Malgré sa paralysie, Jake Sully, un ancien marine immobilisé dans un fauteuil roulant, est resté un combattant au plus profond de son être. Il est recruté pour se rendre à des années-lumière de la Terre, sur Pandora, où de puissants groupes industriels exploitent un minerai rarissime destiné à résoudre la crise énergétique sur Terre. Parce que l'atmosphère de Pandora est toxique pour les humains, ceux-ci ont créé le Programme Avatar, qui permet à des \"pilotes\" humains de lier leur esprit à un avatar, un corps biologique commandé à distance, capable de survivre dans cette atmosphère létale. Ces avatars sont des hybrides créés génétiquement en croisant l'ADN humain avec celui des Na'vi, les autochtones de Pandora.",
+            "popularity":4.362175,
+            "poster_path":"/iHyW1522lgxAY76jCqMD1dA60DK.jpg",
+            "production_companies":[
+               {
+                  "name":"20th Century Fox",
+                  "id":25
+               },
+               {
+                  "name":"Ingenious Film Partners",
+                  "id":289
+               },
+               {
+                  "name":"Dune Entertainment",
+                  "id":444
+               },
+               {
+                  "name":"Lightstorm Entertainment",
+                  "id":574
+               }
+            ],
+            "production_countries":[
+               {
+                  "iso_3166_1":"US",
+                  "name":"United States of America"
+               },
+               {
+                  "iso_3166_1":"GB",
+                  "name":"United Kingdom"
+               }
+            ],
+            "release_date":"2009-12-18",
+            "revenue":2781505847,
+            "runtime":166,
+            "spoken_languages":[
+               {
+                  "iso_639_1":"en",
+                  "name":"English"
+               },
+               {
+                  "iso_639_1":"es",
+                  "name":"Español"
+               }
+            ],
+            "status":"Released",
+            "tagline":"Entrez dans le monde de Pandora.",
+            "title":"Avatar",
+            "video":false,
+            "vote_average":7,
+            "vote_count":6736
+         },
+         "cid":1,
+         "$created":"2015-09-07T08:31:29.295Z",
+         "$updated":"2015-11-16T11:03:36.069Z"
+      },
+      {
+         "file":"Ex.Machina.2015.MULTi.1080p.HDMA.x264BlaBla.mkv",
+         "path":"C:\\Users\\mickael.lacombe@cpnv.ch\\OneDrive\\Git\\videojs\\test\\movies\\Films\\Test !;_+ç%&()=`ü!ö£ö_;",
+         "info":{
+            "adult":false,
+            "backdrop_path":"/9X3cDZb4GYGQeOnZHLwMcCFz2Ro.jpg",
+            "belongs_to_collection":null,
+            "budget":16400000,
+            "genres":[
+               {
+                  "id":18,
+                  "name":"Drame"
+               },
+               {
+                  "id":878,
+                  "name":"Science-Fiction"
+               }
+            ],
+            "homepage":"",
+            "id":264660,
+            "imdb_id":"tt0470752",
+            "original_language":"en",
+            "original_title":"Ex Machina",
+            "overview":"Caleb, 24 ans, est programmeur de l’une des plus importantes entreprise d’informatique au monde. Lorsqu’il gagne un concours pour passer une semaine dans un lieu retiré en montagne appartenant à Nathan, le PDG solitaire de son entreprise, il découvre qu’il va en fait devoir participer à une étrange et fascinante expérience dans laquelle il devra interagir avec la première intelligence artificielle au monde qui prend la forme d’un superbe robot féminin.",
+            "popularity":7.138406,
+            "poster_path":"/icccSJwjCfnVHnnWlx59oFt6ze7.jpg",
+            "production_companies":[
+               {
+                  "name":"DNA Films",
+                  "id":284
+               },
+               {
+                  "name":"Film4",
+                  "id":9349
+               },
+               {
+                  "name":"A24",
+                  "id":41077
+               }
+            ],
+            "production_countries":[
+               {
+                  "iso_3166_1":"GB",
+                  "name":"United Kingdom"
+               }
+            ],
+            "release_date":"2015-01-21",
+            "revenue":36381129,
+            "runtime":108,
+            "spoken_languages":[
+               {
+                  "iso_639_1":"en",
+                  "name":"English"
+               }
+            ],
+            "status":"Released",
+            "tagline":"Rien n'est plus humain que la volonté de survivre",
+            "title":"Ex Machina",
+            "video":false,
+            "vote_average":7.6,
+            "vote_count":994
+         },
+         "cid":2,
+         "$created":"2015-09-07T08:31:29.310Z",
+         "$updated":"2015-11-16T11:03:36.084Z"
+      },
+      {
+         "file":"Interstellar (2014) (HD).m4v",
+         "path":"C:\\Users\\mickael.lacombe@cpnv.ch\\OneDrive\\Git\\videojs\\test\\movies\\Itunes\\iTunes Media",
+         "info":{
+            "adult":false,
+            "backdrop_path":"/xu9zaAevzQ5nnrsXN6JcahLnG4i.jpg",
+            "belongs_to_collection":null,
+            "budget":165000000,
+            "genres":[
+               {
+                  "id":18,
+                  "name":"Drame"
+               },
+               {
+                  "id":878,
+                  "name":"Science-Fiction"
+               }
+            ],
+            "homepage":"https://interstellar.withgoogle.com/",
+            "id":157336,
+            "imdb_id":"tt0816692",
+            "original_language":"en",
+            "original_title":"Interstellar",
+            "overview":"Dans un futur proche, face à une Terre exsangue, un groupe d'explorateurs utilise un vaisseau interstellaire pour franchir un trou de ver permettant de parcourir des distances jusque-là infranchissables. Leur but :  trouver un nouveau foyer pour l'humanité.",
+            "popularity":13.919886,
+            "poster_path":"/mJduNZNy9asMKoQBn0MbBmdpwvN.jpg",
+            "production_companies":[
+               {
+                  "name":"Paramount Pictures",
+                  "id":4
+               },
+               {
+                  "name":"Legendary Pictures",
+                  "id":923
+               },
+               {
+                  "name":"Warner Bros.",
+                  "id":6194
+               },
+               {
+                  "name":"Syncopy",
+                  "id":9996
+               },
+               {
+                  "name":"Lynda Obst Productions",
+                  "id":13769
+               }
+            ],
+            "production_countries":[
+               {
+                  "iso_3166_1":"CA",
+                  "name":"Canada"
+               },
+               {
+                  "iso_3166_1":"US",
+                  "name":"United States of America"
+               },
+               {
+                  "iso_3166_1":"GB",
+                  "name":"United Kingdom"
+               }
+            ],
+            "release_date":"2014-11-05",
+            "revenue":621752480,
+            "runtime":169,
+            "spoken_languages":[
+               {
+                  "iso_639_1":"en",
+                  "name":"English"
+               }
+            ],
+            "status":"Released",
+            "tagline":"L'Homme est né sur Terre, rien ne l'oblige à y mourir.",
+            "title":"Interstellar",
+            "video":false,
+            "vote_average":8.4,
+            "vote_count":3213
+         },
+         "cid":3,
+         "$created":"2015-09-07T08:31:29.310Z",
+         "$updated":"2015-11-16T11:03:36.097Z"
+      },
+      {
+         "file":"Matrix 1 [1080p] MULTi 1999 BluRay x264-Pop .mkv",
+         "path":"C:\\Users\\mickael.lacombe@cpnv.ch\\OneDrive\\Git\\videojs\\test\\movies",
+         "info":{
+            "adult":false,
+            "backdrop_path":"/7u3pxc0K1wx32IleAkLv78MKgrw.jpg",
+            "belongs_to_collection":{
+               "id":2344,
+               "name":"Matrix",
+               "poster_path":"/jBKcVOt7CEXfqpRZuBD635IEs4q.jpg",
+               "backdrop_path":"/bRm2DEgUiYciDw3myHuYFInD7la.jpg"
+            },
+            "budget":63000000,
+            "genres":[
+               {
+                  "id":12,
+                  "name":"Aventure"
+               },
+               {
+                  "id":28,
+                  "name":"Action"
+               },
+               {
+                  "id":53,
+                  "name":"Thriller"
+               },
+               {
+                  "id":878,
+                  "name":"Science-Fiction"
+               }
+            ],
+            "homepage":"",
+            "id":603,
+            "imdb_id":"tt0133093",
+            "original_language":"en",
+            "original_title":"The Matrix",
+            "overview":"Programmeur anonyme dans un service administratif le jour, Thomas Anderson devient Neo la nuit venue. Sous ce pseudonyme, il est l'un des pirates les plus recherchés du cyber-espace. À cheval entre deux mondes, Neo est assailli par d'étranges songes et des messages cryptés provenant d'un certain Morpheus. Celui-ci l'exhorte à aller au-delà des apparences et à trouver la réponse à la question qui hante constamment ses pensées : qu'est-ce que la Matrice ? Nul ne le sait, et aucun homme n'est encore parvenu à en percer les défenses. Mais Morpheus est persuadé que Neo est l’Élu, le libérateur mythique de l'humanité annoncé selon la prophétie. Ensemble, ils se lancent dans une lutte sans retour contre la Matrice et ses terribles agents...",
+            "popularity":4.333448,
+            "poster_path":"/LCcZvB2Ynxg7JOQgviGwZ3l66L.jpg",
+            "production_companies":[
+               {
+                  "name":"Village Roadshow Pictures",
+                  "id":79
+               },
+               {
+                  "name":"Groucho II Film Partnership",
+                  "id":372
+               },
+               {
+                  "name":"Silver Pictures",
+                  "id":1885
+               },
+               {
+                  "name":"Warner Bros.",
+                  "id":6194
+               }
+            ],
+            "production_countries":[
+               {
+                  "iso_3166_1":"AU",
+                  "name":"Australia"
+               },
+               {
+                  "iso_3166_1":"US",
+                  "name":"United States of America"
+               }
+            ],
+            "release_date":"1999-03-30",
+            "revenue":463517383,
+            "runtime":135,
+            "spoken_languages":[
+               {
+                  "iso_639_1":"en",
+                  "name":"English"
+               }
+            ],
+            "status":"Released",
+            "tagline":"Croire à l'incroyable",
+            "title":"Matrix",
+            "video":false,
+            "vote_average":7.6,
+            "vote_count":4542
+         },
+         "cid":4,
+         "$created":"2015-09-07T08:31:29.310Z",
+         "$updated":"2015-11-16T11:03:36.112Z"
+      },
+      
+      {
+         "file":"newmovie.mkv",
+         "path":"C:\\Users\\mickael.lacombe@cpnv.ch\\OneDrive\\Git\\videojs\\test\\movies\\movies\\folder",
+         "info":[
+
+         ],
+         "cid":6,
+         "$created":"2015-09-07T08:31:29.310Z",
+         "$updated":"2015-11-16T11:03:36.140Z"
+      },
+      {
+         "file":"le hobbit 1.avi",
+         "path":"C:\\Users\\mickael.lacombe@cpnv.ch\\OneDrive\\Git\\videojs\\test\\movies\\movies",
+         "info":{
+            "adult":false,
+            "backdrop_path":"/jjAq3tCezdlQduusgtMhpY2XzW0.jpg",
+            "belongs_to_collection":{
+               "id":121938,
+               "name":"Hobbit (Le)",
+               "poster_path":"/ojJkavaM8u5nzfdAgaTKtqsVjhX.jpg",
+               "backdrop_path":"/7wO7MSnP5UcwR2cTHdJFF1vP4Ie.jpg"
+            },
+            "budget":250000000,
+            "genres":[
+               {
+                  "id":12,
+                  "name":"Aventure"
+               },
+               {
+                  "id":14,
+                  "name":"Fantastique"
+               },
+               {
+                  "id":28,
+                  "name":"Action"
+               }
+            ],
+            "homepage":"",
+            "id":49051,
+            "imdb_id":"tt0903624",
+            "original_language":"en",
+            "original_title":"The Hobbit: An Unexpected Journey",
+            "overview":"Dans \"Un voyage inattendu\", Bilbon Sacquet cherche à reprendre le Royaume perdu des Nains d'Erebor, conquis par le redoutable dragon Smaug. Alors qu'il croise par hasard la route du magicien Gandalf le Gris, Bilbon rejoint une bande de 13 nains dont le chef n'est autre que le légendaire guerrier Thorin Écu-de-Chêne. Leur périple les conduit au cœur du Pays Sauvage, où ils devront affronter des Gobelins, des Orques, des Ouargues meurtriers, des Araignées géantes, des Métamorphes et des Sorciers…",
+            "popularity":3.943751,
+            "poster_path":"/VSWrSJDzAktJXyd2VbAggSIfyI.jpg",
+            "production_companies":[
+               {
+                  "name":"WingNut Films",
+                  "id":11
+               },
+               {
+                  "name":"New Line Cinema",
+                  "id":12
+               },
+               {
+                  "name":"Metro-Goldwyn-Mayer (MGM)",
+                  "id":8411
+               }
+            ],
+            "production_countries":[
+               {
+                  "iso_3166_1":"NZ",
+                  "name":"New Zealand"
+               },
+               {
+                  "iso_3166_1":"US",
+                  "name":"United States of America"
+               }
+            ],
+            "release_date":"2012-12-14",
+            "revenue":1017003568,
+            "runtime":165,
+            "spoken_languages":[
+               {
+                  "iso_639_1":"en",
+                  "name":"English"
+               }
+            ],
+            "status":"Released",
+            "tagline":"La plus grande aventure vient de commencer.",
+            "title":"Le Hobbit I : Un voyage inattendu",
+            "video":false,
+            "vote_average":6.8,
+            "vote_count":5354
+         },
+         "cid":7,
+         "$created":"2015-09-07T08:31:29.310Z",
+         "$updated":"2015-11-16T11:03:36.155Z"
+      },
+      {
+         "file":"Marvels.Daredevil.S01E01.VOSTFR.720p.WEBRip.x264.AC3-MuskeTeerS.mkv",
+         "path":"C:\\Users\\mickael.lacombe@cpnv.ch\\OneDrive\\Git\\videojs\\test\\movies\\movies",
+         "info":[
+
+         ],
+         "cid":8,
+         "$created":"2015-09-07T08:31:29.310Z",
+         "$updated":"2015-11-16T11:03:36.169Z"
+      },
+      {
+         "file":"peter.pan.mkv",
+         "path":"C:\\Users\\mickael.lacombe@cpnv.ch\\OneDrive\\Git\\videojs\\test\\movies\\movies",
+         "info":{
+            "adult":false,
+            "backdrop_path":"/nXII61245PlG2vOH8Yl15WIhJFP.jpg",
+            "belongs_to_collection":{
+               "id":55422,
+               "name":"Peter Pan",
+               "poster_path":"/t0mINaIut2aDKdGseQtC7UcbRNW.jpg",
+               "backdrop_path":"/AnhKboZjfeGuHI6qg7pp9RCesTF.jpg"
+            },
+            "budget":4000000,
+            "genres":[
+               {
+                  "id":16,
+                  "name":"Animation"
+               },
+               {
+                  "id":10402,
+                  "name":"Musique"
+               },
+               {
+                  "id":10751,
+                  "name":"Familial"
+               },
+               {
+                  "id":12,
+                  "name":"Aventure"
+               },
+               {
+                  "id":14,
+                  "name":"Fantastique"
+               }
+            ],
+            "homepage":"",
+            "id":10693,
+            "imdb_id":"tt0046183",
+            "original_language":"en",
+            "original_title":"Peter Pan",
+            "overview":"Wendy devient une grande fille. Aussi passe-t-elle sa dernière nuit dans la nursery avec ses jeunes frères. C'est cette nuit-la que Peter Pan choisit pour les entrainer dans un grand voyage au pays imaginaire.",
+            "popularity":1.580637,
+            "poster_path":"/AqJfB67EnRavnsxO9X5kgNE4WCc.jpg",
+            "production_companies":[
+               {
+                  "name":"Walt Disney Productions",
+                  "id":3166
+               }
+            ],
+            "production_countries":[
+               {
+                  "iso_3166_1":"US",
+                  "name":"United States of America"
+               }
+            ],
+            "release_date":"1953-02-05",
+            "revenue":29445131,
+            "runtime":76,
+            "spoken_languages":[
+               {
+                  "iso_639_1":"en",
+                  "name":"English"
+               }
+            ],
+            "status":"Released",
+            "tagline":"Laissez-vous entraîner dans le monde magique de Peter Pan",
+            "title":"Peter Pan",
+            "video":false,
+            "vote_average":6.6,
+            "vote_count":385
+         },
+         "cid":9,
+         "$created":"2015-09-07T08:31:29.310Z",
+         "$updated":"2015-11-16T11:03:36.184Z"
+      },
+      {
+         "file":"seigneur.des.anneaux.mkv",
+         "path":"C:\\Users\\mickael.lacombe@cpnv.ch\\OneDrive\\Git\\videojs\\test\\movies\\movies",
+         "info":{
+            "adult":false,
+            "backdrop_path":"/pIUvQ9Ed35wlWhY2oU6OmwEsmzG.jpg",
+            "belongs_to_collection":{
+               "id":119,
+               "name":"Le Seigneur des Anneaux",
+               "poster_path":"/aA8Xsud1GZwiBSE7W19ravxUPml.jpg",
+               "backdrop_path":"/bccR2CGTWVVSZAG0yqmy3DIvhTX.jpg"
+            },
+            "budget":93000000,
+            "genres":[
+               {
+                  "id":12,
+                  "name":"Aventure"
+               },
+               {
+                  "id":14,
+                  "name":"Fantastique"
+               },
+               {
+                  "id":28,
+                  "name":"Action"
+               }
+            ],
+            "homepage":"http://www.lordoftherings.net/",
+            "id":120,
+            "imdb_id":"tt0120737",
+            "original_language":"en",
+            "original_title":"The Lord of the Rings: The Fellowship of the Ring",
+            "overview":"Le jeune et timide Hobbit, Frodon Sacquet, hérite d'un anneau. Bien loin d'être une simple babiole, il s'agit de l'Anneau Unique, un instrument de pouvoir absolu qui permettrait à Sauron, le Seigneur des ténèbres, de régner sur la Terre du Milieu et de réduire en esclavage ses peuples. À moins que Frodon, aidé d'une Compagnie constituée de Hobbits, d'Hommes, d'un Magicien, d'un Nain, et d'un Elfe, ne parvienne à emporter l'Anneau à travers la Terre du Milieu jusqu'à la Crevasse du Destin, lieu où il a été forgé, et à le détruire pour toujours. Un tel périple signifie s'aventurer très loin en Mordor, les terres du Seigneur des ténèbres, où est rassemblée son armée d'Orques maléfiques... La Compagnie doit non seulement combattre les forces extérieures du mal mais aussi les dissensions internes et l'influence corruptrice qu'exerce l'Anneau lui-même.",
+            "popularity":5.150675,
+            "poster_path":"/1rF04Kk1eunZHk9OHPFwv8hllRF.jpg",
+            "production_companies":[
+               {
+                  "name":"WingNut Films",
+                  "id":11
+               },
+               {
+                  "name":"New Line Cinema",
+                  "id":12
+               },
+               {
+                  "name":"The Saul Zaentz Company",
+                  "id":5237
+               }
+            ],
+            "production_countries":[
+               {
+                  "iso_3166_1":"NZ",
+                  "name":"New Zealand"
+               },
+               {
+                  "iso_3166_1":"US",
+                  "name":"United States of America"
+               }
+            ],
+            "release_date":"2001-12-19",
+            "revenue":871368364,
+            "runtime":165,
+            "spoken_languages":[
+               {
+                  "iso_639_1":"en",
+                  "name":"English"
+               }
+            ],
+            "status":"Released",
+            "tagline":"Le périple de Frodon commence...",
+            "title":"Le Seigneur des Anneaux I : La Communauté de l'Anneau",
+            "video":false,
+            "vote_average":7.6,
+            "vote_count":4386
+         },
+         "cid":10,
+         "$created":"2015-09-07T08:31:29.310Z",
+         "$updated":"2015-11-16T11:03:36.198Z"
+      },
+      {
+         "file":"rrrrrrr.avi",
+         "path":"C:\\Users\\mickael.lacombe@cpnv.ch\\OneDrive\\Git\\videojs\\test\\movies\\movies\\Untitled Folder 2",
+         "info":{
+            "adult":false,
+            "backdrop_path":"/nA433M6AJgMTRIGvoX7sVRL6Uvf.jpg",
+            "belongs_to_collection":null,
+            "budget":17820000,
+            "genres":[
+               {
+                  "id":35,
+                  "name":"Comédie"
+               }
+            ],
+            "homepage":"",
+            "id":21778,
+            "imdb_id":"tt0357111",
+            "original_language":"en",
+            "original_title":"RRRrrrr!!!",
+            "overview":"Il y a 37 000 ans, deux tribus voisines vivaient en paix... à un cheveu près. Pendant que la tribu des Cheveux Propres coulait des jours paisibles en gardant pour elle seule le secret de la formule du shampooing, la tribu des Cheveux Sales se lamentait. Son chef décida d'envoyer un espion pour voler la recette. Mais un événement bien plus grave allait bouleverser la vie des Cheveux Propres : pour la première fois dans l'histoire de l'humanité, un crime venait d'être commis. Comment découvrir son auteur ? Au temps des mammouths et des moumoutes commence la première enquête policière de l'Histoire.",
+            "popularity":0.726973,
+            "poster_path":"/ooZmFKfRPyOAzswlMXayW29CJXh.jpg",
+            "production_companies":[
+               {
+                  "name":"Les Robins des Bois Airlines",
+                  "id":8005
+               },
+               {
+                  "name":"Chez Wam",
+                  "id":8006
+               }
+            ],
+            "production_countries":[
+               {
+                  "iso_3166_1":"FR",
+                  "name":"France"
+               }
+            ],
+            "release_date":"2004-01-28",
+            "revenue":14054361,
+            "runtime":98,
+            "spoken_languages":[
+               {
+                  "iso_639_1":"fr",
+                  "name":"Français"
+               }
+            ],
+            "status":"Released",
+            "tagline":"Le premier thriller policier préhistorique !",
+            "title":"RRRrrrr!!!",
+            "video":false,
+            "vote_average":6.1,
+            "vote_count":49
+         },
+         "cid":11,
+         "$created":"2015-09-07T08:31:29.310Z",
+         "$updated":"2015-11-16T11:03:36.213Z"
+      },
+      {
+         "file":"american.history.x.mkv",
+         "path":"C:\\Users\\mickael.lacombe@cpnv.ch\\OneDrive\\Git\\videojs\\test\\movies\\othermovies",
+         "info":{
+            "adult":false,
+            "backdrop_path":"/i9A0UMFg1hI2kLyCCwnmSbpT2cd.jpg",
+            "belongs_to_collection":null,
+            "budget":10000000,
+            "genres":[
+               {
+                  "id":18,
+                  "name":"Drame"
+               }
+            ],
+            "homepage":"",
+            "id":73,
+            "imdb_id":"tt0120586",
+            "original_language":"en",
+            "original_title":"American History X",
+            "overview":"A travers l'histoire d'une famille américaine, ce film tente d'expliquer l'origine du racisme et de l'extrémisme aux Etats-Unis. Il raconte l'histoire de Derek qui, voulant venger la mort de son père, abattu par un dealer noir, a épousé les thèses racistes d'un groupuscule de militants d'extrême droite et s'est mis au service de son leader, brutal théoricien prônant la suprématie de la race blanche. Ces théories le mèneront à commettre un double meurtre entrainant son jeune frère, Danny, dans la spirale de la haine.",
+            "popularity":3.005026,
+            "poster_path":"/rGMNSHYlSMpaTFWmPqFyAAPlEGs.jpg",
+            "production_companies":[
+               {
+                  "name":"New Line Cinema",
+                  "id":12
+               },
+               {
+                  "name":"The Turman-Morrissey Company",
+                  "id":924
+               },
+               {
+                  "name":"Savoy Pictures",
+                  "id":11308
+               }
+            ],
+            "production_countries":[
+               {
+                  "iso_3166_1":"US",
+                  "name":"United States of America"
+               }
+            ],
+            "release_date":"1998-10-30",
+            "revenue":23875127,
+            "runtime":118,
+            "spoken_languages":[
+               {
+                  "iso_639_1":"en",
+                  "name":"English"
+               }
+            ],
+            "status":"Released",
+            "tagline":"Deux frères unis par la haine, déchirés par la vérité.",
+            "title":"American History X",
+            "video":false,
+            "vote_average":7.8,
+            "vote_count":901
+         },
+         "cid":12,
+         "$created":"2015-09-07T08:31:29.310Z",
+         "$updated":"2015-11-16T11:03:36.228Z"
+      },
+      {
+         "file":"avengers 1.avi",
+         "path":"C:\\Users\\mickael.lacombe@cpnv.ch\\OneDrive\\Git\\videojs\\test\\movies\\othermovies",
+         "info":{
+            "adult":false,
+            "backdrop_path":"/dUnFHJ5OtywHdD8OS2NvqkByhWF.jpg",
+            "belongs_to_collection":{
+               "id":303595,
+               "name":"Marvel Origins: Avengers",
+               "poster_path":"/6I4EyRMjYKg1kZSS1rFR6W4ZvXo.jpg",
+               "backdrop_path":"/dUnFHJ5OtywHdD8OS2NvqkByhWF.jpg"
+            },
+            "budget":0,
+            "genres":[
+               {
+                  "id":12,
+                  "name":"Aventure"
+               },
+               {
+                  "id":878,
+                  "name":"Science-Fiction"
+               },
+               {
+                  "id":28,
+                  "name":"Action"
+               }
+            ],
+            "homepage":null,
+            "id":303590,
+            "imdb_id":"",
+            "original_language":"en",
+            "original_title":"Marvel Origins: Avengers Part 1",
+            "overview":null,
+            "popularity":0.070263,
+            "poster_path":"/xddWmPCQZcW2aRkZJqY9fTAHVUX.jpg",
+            "production_companies":[
+
+            ],
+            "production_countries":[
+
+            ],
+            "release_date":"2012-07-01",
+            "revenue":0,
+            "runtime":null,
+            "spoken_languages":[
+
+            ],
+            "status":"Released",
+            "tagline":null,
+            "title":"Marvel Origins: Avengers Part 1",
+            "video":false,
+            "vote_average":0,
+            "vote_count":0
+         },
+         "cid":13,
+         "$created":"2015-09-07T08:31:29.310Z",
+         "$updated":"2015-11-16T11:03:36.243Z"
+      },
+      {
+         "file":"nemo.mkv",
+         "path":"C:\\Users\\mickael.lacombe@cpnv.ch\\OneDrive\\Git\\videojs\\test\\movies\\othermovies",
+         "info":{
+            "adult":false,
+            "backdrop_path":"/n2vIGWw4ezslXjlP0VNxkp9wqwU.jpg",
+            "belongs_to_collection":{
+               "id":137697,
+               "name":"Le Monde de Nemo",
+               "poster_path":"/qv6s1DfFHHXOVxBHvvEgzBfcdHY.jpg",
+               "backdrop_path":"/2hC8HHRUvwRljYKIcQDMyMbLlxz.jpg"
+            },
+            "budget":94000000,
+            "genres":[
+               {
+                  "id":35,
+                  "name":"Comédie"
+               },
+               {
+                  "id":10751,
+                  "name":"Familial"
+               },
+               {
+                  "id":16,
+                  "name":"Animation"
+               },
+               {
+                  "id":12,
+                  "name":"Aventure"
+               }
+            ],
+            "homepage":"",
+            "id":12,
+            "imdb_id":"tt0266543",
+            "original_language":"en",
+            "original_title":"Finding Nemo",
+            "overview":"Dans les eaux tropicales de la Grande Barrière de corail, un poisson-clown du nom de Marin mène une existence paisible avec son fils unique, Nemo. Redoutant l'océan et ses risques imprévisibles, il fait de son mieux pour protéger son fils. Comme tous les petits poissons de son âge, celui-ci rêve pourtant d'explorer les mystérieux récifs. Lorsque Nemo disparaît, Marin devient malgré lui le héros d'une quête unique et palpitante. Le pauvre papa ignore que son rejeton à écailles a été emmené jusque dans l'aquarium d'un dentiste. Marin ne s'engagera pas seul dans l'aventure : la jolie Dory, un poisson-chirurgien bleu à la mémoire défaillante et au grand cœur, va se révéler d'une aide précieuse. Les deux poissons vont affronter d'innombrables dangers, mais l'optimisme de Dory va pousser Marin à surmonter toutes ses peurs.",
+            "popularity":3.374345,
+            "poster_path":"/N1ZzaUc4iOdfOn3UmoR01FBtZT.jpg",
+            "production_companies":[
+               {
+                  "name":"Walt Disney Pictures",
+                  "id":2
+               },
+               {
+                  "name":"Pixar Animation Studios",
+                  "id":3
+               },
+               {
+                  "name":"Disney Enterprises",
+                  "id":26151
+               }
+            ],
+            "production_countries":[
+               {
+                  "iso_3166_1":"US",
+                  "name":"United States of America"
+               }
+            ],
+            "release_date":"2003-05-30",
+            "revenue":864625978,
+            "runtime":101,
+            "spoken_languages":[
+               {
+                  "iso_639_1":"en",
+                  "name":"English"
+               }
+            ],
+            "status":"Released",
+            "tagline":"Les aventures du petit poisson clown appelé Nemo",
+            "title":"Le Monde de Nemo",
+            "video":false,
+            "vote_average":7.2,
+            "vote_count":2609
+         },
+         "cid":14,
+         "$created":"2015-09-07T08:31:29.310Z",
+         "$updated":"2015-11-16T11:03:36.244Z"
+      },
+      {
+         "file":"pourquoi.j.ai.pas.mangé.mon.pere.avi",
+         "path":"C:\\Users\\mickael.lacombe@cpnv.ch\\OneDrive\\Git\\videojs\\test\\movies\\othermovies",
+         "size":43888,
+         "info":{
+            "adult":false,
+            "backdrop_path":"/ngTSgptOlP1nr5YAHw319eOgvVE.jpg",
+            "belongs_to_collection":null,
+            "budget":0,
+            "genres":[
+               {
+                  "id":12,
+                  "name":"Aventure"
+               },
+               {
+                  "id":35,
+                  "name":"Comédie"
+               },
+               {
+                  "id":16,
+                  "name":"Animation"
+               }
+            ],
+            "homepage":"http://pourquoijaipasmangemonpere.com/",
+            "id":280391,
+            "imdb_id":"tt1220911",
+            "original_language":"fr",
+            "original_title":"Pourquoi j'ai pas mangé mon père",
+            "overview":"L’histoire trépidante d’Édouard, fils aîné du roi des simiens, qui, considéré à sa naissance comme trop malingre, est rejeté par sa tribu. Il grandit loin d’eux, auprès de son ami Ian, et, incroyablement ingénieux, il découvre le feu, la chasse, l’habitat moderne, l’amour et même… l’espoir. Généreux, il veut tout partager, révolutionne l’ordre établi, et mène son peuple avec éclat et humour vers la véritable humanité… celle où on ne mange pas son père.",
+            "popularity":0.986063,
+            "poster_path":"/xfKWcmTPZI8biZXmZbVs8aQeD6b.jpg",
+            "production_companies":[
+               {
+                  "name":"Pathé Films",
+                  "id":4959
+               },
+               {
+                  "name":"Boréales",
+                  "id":8606
+               }
+            ],
+            "production_countries":[
+               {
+                  "iso_3166_1":"FR",
+                  "name":"France"
+               }
+            ],
+            "release_date":"2015-04-08",
+            "revenue":0,
+            "runtime":95,
+            "spoken_languages":[
+               {
+                  "iso_639_1":"fr",
+                  "name":"Français"
+               }
+            ],
+            "status":"In Production",
+            "tagline":"Une préhistoire de Ouf !",
+            "title":"Pourquoi j'ai pas mangé mon père",
+            "video":false,
+            "vote_average":4.9,
+            "vote_count":35
+         },
+         "cid":15,
+         "$created":"2015-09-07T08:31:29.310Z",
+         "$updated":"2015-11-16T11:03:36.246Z"
+      },
+      {
+         "file":"snowpiercer.mkv",
+         "path":"C:\\Users\\mickael.lacombe@cpnv.ch\\OneDrive\\Git\\videojs\\test\\movies\\othermovies",
+         "info":{
+            "adult":false,
+            "backdrop_path":"/GY6RVLqDjaDMnT06DL61MVlbgS.jpg",
+            "belongs_to_collection":null,
+            "budget":39200000,
+            "genres":[
+               {
+                  "id":28,
+                  "name":"Action"
+               },
+               {
+                  "id":878,
+                  "name":"Science-Fiction"
+               },
+               {
+                  "id":18,
+                  "name":"Drame"
+               }
+            ],
+            "homepage":"",
+            "id":110415,
+            "imdb_id":"tt1706620",
+            "original_language":"en",
+            "original_title":"Snowpiercer",
+            "overview":"2031. Une nouvelle ère glaciaire. Les derniers survivants ont pris place à bord du Snowpiercer, un train gigantesque condamné à tourner autour de la Terre sans jamais s’arrêter. Dans ce microcosme futuriste de métal fendant la glace, s’est recréée une hiérarchie des classes contre laquelle une poignée d’hommes entraînés par l’un d’eux tente de lutter. Car l’être humain ne changera jamais…",
+            "popularity":2.033654,
+            "poster_path":"/nUWWCyIoD6AM3w0eAZheYhTiR8Y.jpg",
+            "production_companies":[
+               {
+                  "name":"CJ Entertainment",
+                  "id":7036
+               },
+               {
+                  "name":"Opus Pictures",
+                  "id":7270
+               },
+               {
+                  "name":"Stillking Films",
+                  "id":11345
+               },
+               {
+                  "name":"SnowPiercer",
+                  "id":21122
+               },
+               {
+                  "name":"Moho Film",
+                  "id":34725
+               }
+            ],
+            "production_countries":[
+               {
+                  "iso_3166_1":"FR",
+                  "name":"France"
+               },
+               {
+                  "iso_3166_1":"KR",
+                  "name":"South Korea"
+               },
+               {
+                  "iso_3166_1":"CZ",
+                  "name":"Czech Republic"
+               },
+               {
+                  "iso_3166_1":"US",
+                  "name":"United States of America"
+               }
+            ],
+            "release_date":"2013-08-01",
+            "revenue":86612448,
+            "runtime":126,
+            "spoken_languages":[
+               {
+                  "iso_639_1":"en",
+                  "name":"English"
+               },
+               {
+                  "iso_639_1":"fr",
+                  "name":"Français"
+               },
+               {
+                  "iso_639_1":"ja",
+                  "name":"日本語"
+               },
+               {
+                  "iso_639_1":"ko",
+                  "name":"한국어/조선말"
+               }
+            ],
+            "status":"Released",
+            "tagline":"2031. Nouvelle ère glaciaire. Le dernier refuge de l'humanité est un train.",
+            "title":"Snowpiercer : Le transperceneige",
+            "video":false,
+            "vote_average":6.6,
+            "vote_count":934
+         },
+         "cid":16,
+         "$created":"2015-09-07T08:31:29.326Z",
+         "$updated":"2015-11-16T11:03:36.248Z"
+      },
+      {
+         "file":"Screwed.2011.TRUEFRECH.titi.mkv",
+         "path":"C:\\Users\\mickael.lacombe@cpnv.ch\\OneDrive\\Git\\videojs\\test\\movies",
+         "info":{
+            "adult":false,
+            "backdrop_path":"/q6zie0LFQj3NxXSPOEIz12BvtJ2.jpg",
+            "belongs_to_collection":null,
+            "budget":3,
+            "genres":[
+               {
+                  "id":28,
+                  "name":"Action"
+               },
+               {
+                  "id":80,
+                  "name":"Crime"
+               }
+            ],
+            "homepage":"",
+            "id":75657,
+            "imdb_id":"tt1727816",
+            "original_language":"en",
+            "original_title":"Screwed",
+            "overview":"Inspiré de l'histoire de l'ancien gardien de prison Ronnie Thompson qui a passé sept ans de sa vie à travailler dans les pires pénitenciers d'Angleterre.",
+            "popularity":0.04505,
+            "poster_path":"/dubeVLjXYPyz4c1H8y1FeTY8Hnp.jpg",
+            "production_companies":[
+
+            ],
+            "production_countries":[
+
+            ],
+            "release_date":"2011-06-03",
+            "revenue":0,
+            "runtime":110,
+            "spoken_languages":[
+
+            ],
+            "status":"Released",
+            "tagline":"",
+            "title":"Carcéral : Dans l'enfer de la taule",
+            "video":false,
+            "vote_average":4.8,
+            "vote_count":4
+         },
+         "cid":17,
+         "$created":"2015-09-07T08:31:29.326Z",
+         "$updated":"2015-11-16T11:03:36.249Z"
+      },
+      {
+         "file":"the.social.network.mp4",
+         "path":"C:\\Users\\mickael.lacombe@cpnv.ch\\OneDrive\\Git\\videojs\\test\\movies",
+         "info":{
+            "adult":false,
+            "backdrop_path":"/8AazWuNBQV7QFjb9XNzJLox0Zey.jpg",
+            "belongs_to_collection":null,
+            "budget":40000000,
+            "genres":[
+               {
+                  "id":18,
+                  "name":"Drame"
+               }
+            ],
+            "homepage":"",
+            "id":37799,
+            "imdb_id":"tt1285016",
+            "original_language":"en",
+            "original_title":"The Social Network",
+            "overview":"Un soir d'hiver 2003, Mark Zuckerberg, étudiant à Harvard et expert en informatique, s'installe devant son ordinateur et se met à travailler avec frénésie sur une nouvelle idée, autour du développement de programme et de blogs. Ce qui prend forme dans cette chambre ce soir-là deviendra très vite un réseau communautaire à échelle mondiale et une révolution dans la communication. Seulement six années et quelques 500 millions d'amis plus tard, Mark Zuckerberg est devenu le plus jeune milliardaire de l'histoire... Cependant, pour cet entrepreneur, la réussite amène à la fois des complications personnelles et légales.",
+            "popularity":1.369733,
+            "poster_path":"/kuq7PstzRa7Sau4DzXvuaKw3zY8.jpg",
+            "production_companies":[
+               {
+                  "name":"Columbia Pictures",
+                  "id":5
+               },
+               {
+                  "name":"Scott Rudin Productions",
+                  "id":258
+               },
+               {
+                  "name":"Relativity Media",
+                  "id":7295
+               }
+            ],
+            "production_countries":[
+               {
+                  "iso_3166_1":"US",
+                  "name":"United States of America"
+               }
+            ],
+            "release_date":"2010-09-30",
+            "revenue":224920315,
+            "runtime":120,
+            "spoken_languages":[
+               {
+                  "iso_639_1":"en",
+                  "name":"English"
+               }
+            ],
+            "status":"Released",
+            "tagline":"On ne peut pas se faire 500 millions d'amis sans se faire quelques ennemis",
+            "title":"The Social Network",
+            "video":false,
+            "vote_average":7,
+            "vote_count":1299
+         },
+         "cid":18,
+         "$created":"2015-09-07T08:31:29.326Z",
+         "$updated":"2015-11-16T11:03:36.250Z"
+      },
+      {
+         "file":"matrix 2.avi",
+         "path":"C:\\Users\\mickael.lacombe@cpnv.ch\\OneDrive\\Git\\videojs\\test\\movies",
+         "info":{
+            "adult":false,
+            "backdrop_path":"/Fp3piEuHXxKnPBO5R0Wj4wjZHg.jpg",
+            "belongs_to_collection":{
+               "id":2344,
+               "name":"Matrix",
+               "poster_path":"/jBKcVOt7CEXfqpRZuBD635IEs4q.jpg",
+               "backdrop_path":"/bRm2DEgUiYciDw3myHuYFInD7la.jpg"
+            },
+            "budget":150000000,
+            "genres":[
+               {
+                  "id":12,
+                  "name":"Aventure"
+               },
+               {
+                  "id":28,
+                  "name":"Action"
+               },
+               {
+                  "id":53,
+                  "name":"Thriller"
+               },
+               {
+                  "id":878,
+                  "name":"Science-Fiction"
+               }
+            ],
+            "homepage":"",
+            "id":604,
+            "imdb_id":"tt0234215",
+            "original_language":"en",
+            "original_title":"The Matrix Reloaded",
+            "overview":"Neo apprend à mieux contrôler ses dons naturels, alors même que Sion s'apprête à tomber sous l'assaut de l'Armée des Machines. D'ici quelques heures, 250 000 Sentinelles programmées pour anéantir notre espèce envahiront la dernière enclave humaine de la Terre. Mais Morpheus galvanise les citoyens de Sion en leur rappelant la Parole de l'Oracle : il est encore temps pour l’Élu d'arrêter la guerre contre les Machines. Tous les espoirs se reportent dès lors sur Neo. Au long de sa périlleuse plongée au sein de la Matrix et de sa propre destinée, ce dernier sera confronté à une résistance croissante, une vérité encore plus aveuglante, un choix encore plus douloureux que tout ce qu'il avait jamais imaginé.",
+            "popularity":3.849542,
+            "poster_path":"/zVlPxQ115XBwPWplKq6eK4o3aVN.jpg",
+            "production_companies":[
+               {
+                  "name":"Village Roadshow Pictures",
+                  "id":79
+               },
+               {
+                  "name":"NPV Entertainment",
+                  "id":172
+               },
+               {
+                  "name":"Heineken Branded Entertainment",
+                  "id":375
+               },
+               {
+                  "name":"Silver Pictures",
+                  "id":1885
+               },
+               {
+                  "name":"Warner Bros.",
+                  "id":6194
+               }
+            ],
+            "production_countries":[
+               {
+                  "iso_3166_1":"AU",
+                  "name":"Australia"
+               },
+               {
+                  "iso_3166_1":"US",
+                  "name":"United States of America"
+               }
+            ],
+            "release_date":"2003-05-06",
+            "revenue":738599701,
+            "runtime":138,
+            "spoken_languages":[
+               {
+                  "iso_639_1":"en",
+                  "name":"English"
+               }
+            ],
+            "status":"Released",
+            "tagline":"Libérez votre esprit.",
+            "title":"Matrix Reloaded",
+            "video":false,
+            "vote_average":6.5,
+            "vote_count":1757
+         },
+         "cid":19,
+         "$created":"2015-09-07T08:37:40.994Z",
+         "$updated":"2015-11-16T11:03:36.252Z"
+      },
+      {
+         "file":"matrix 3.mp4",
+         "path":"C:\\Users\\mickael.lacombe@cpnv.ch\\OneDrive\\Git\\videojs\\test\\movies",
+         "info":{
+            "adult":false,
+            "backdrop_path":"/o6Xif3e9flyYiuel1qGxGMvqKx0.jpg",
+            "belongs_to_collection":{
+               "id":2344,
+               "name":"Matrix",
+               "poster_path":"/jBKcVOt7CEXfqpRZuBD635IEs4q.jpg",
+               "backdrop_path":"/bRm2DEgUiYciDw3myHuYFInD7la.jpg"
+            },
+            "budget":150000000,
+            "genres":[
+               {
+                  "id":12,
+                  "name":"Aventure"
+               },
+               {
+                  "id":28,
+                  "name":"Action"
+               },
+               {
+                  "id":53,
+                  "name":"Thriller"
+               },
+               {
+                  "id":878,
+                  "name":"Science-Fiction"
+               }
+            ],
+            "homepage":"",
+            "id":605,
+            "imdb_id":"tt0242653",
+            "original_language":"en",
+            "original_title":"The Matrix Revolutions",
+            "overview":"La longue quête de liberté des rebelles culmine en une bataille finale explosive. Tandis que l'armée des Machines sème la désolation sur Sion, ses citoyens organisent une défense acharnée. Mais pourront-ils retenir les nuées implacables des Sentinelles en attendant que Neo s'approprie l'ensemble de ses pouvoirs et mette fin à la guerre ? L'agent Smith est quant à lui parvenu à prendre possession de l'esprit de Bane, l'un des membres de l'équipage de l'aéroglisseur. De plus en plus puissant, il est désormais incontrôlable et n'obéit plus aux Machines : il menace de détruire leur empire ainsi que le monde réel et la Matrice...",
+            "popularity":3.248787,
+            "poster_path":"/dpRI4paxcyoUCj4ebh5HlgdDdG6.jpg",
+            "production_companies":[
+               {
+                  "name":"Village Roadshow Pictures",
+                  "id":79
+               },
+               {
+                  "name":"NPV Entertainment",
+                  "id":172
+               },
+               {
+                  "name":"Silver Pictures",
+                  "id":1885
+               },
+               {
+                  "name":"Warner Bros.",
+                  "id":6194
+               }
+            ],
+            "production_countries":[
+               {
+                  "iso_3166_1":"US",
+                  "name":"United States of America"
+               },
+               {
+                  "iso_3166_1":"AU",
+                  "name":"Australia"
+               }
+            ],
+            "release_date":"2003-10-26",
+            "revenue":424988211,
+            "runtime":128,
+            "spoken_languages":[
+               {
+                  "iso_639_1":"en",
+                  "name":"English"
+               },
+               {
+                  "iso_639_1":"fr",
+                  "name":"Français"
+               }
+            ],
+            "status":"Released",
+            "tagline":"Ce qui a commencé doit finir.",
+            "title":"Matrix Revolutions",
+            "video":false,
+            "vote_average":6.4,
+            "vote_count":1587
+         },
+         "cid":20,
+         "$created":"2015-09-07T08:37:56.608Z",
+         "$updated":"2015-11-16T11:03:36.254Z"
+      },
+      {
+         "file":"le nom de la rose.mp4",
+         "path":"C:\\Users\\mickael.lacombe@cpnv.ch\\OneDrive\\Git\\videojs\\test\\movies",
+         "info":{
+            "adult":false,
+            "backdrop_path":"/qthiIjX8Lt4Jg6hqPAdp2EIyJss.jpg",
+            "belongs_to_collection":null,
+            "budget":20000000,
+            "genres":[
+               {
+                  "id":18,
+                  "name":"Drame"
+               },
+               {
+                  "id":53,
+                  "name":"Thriller"
+               },
+               {
+                  "id":9648,
+                  "name":"Mystère"
+               }
+            ],
+            "homepage":"",
+            "id":192,
+            "imdb_id":"tt0091605",
+            "original_language":"en",
+            "original_title":"The Name of the Rose",
+            "overview":"En l'an 1327, dans une abbaye bénédictine, des moines disparaissent. Un franciscain, Guillaume de Baskerville, mène l'enquête, aidé du jeune novice Adso von Melk. C'est l'époque où l'Église, en pleine crise, se voit disputer son pouvoir spirituel et temporel. C'est aussi l'apogée de l'inquisition.",
+            "popularity":1.31442,
+            "poster_path":"/uyCGha8TYrcVXAjiOsQLh6aiyQQ.jpg",
+            "production_companies":[
+               {
+                  "name":"Zweites Deutsches Fernsehen (ZDF)",
+                  "id":4606
+               },
+               {
+                  "name":"Les Films Ariane",
+                  "id":7110
+               },
+               {
+                  "name":"RAI Radiotelevisione Italiana",
+                  "id":20091
+               },
+               {
+                  "name":"Cristaldifilm",
+                  "id":45693
+               }
+            ],
+            "production_countries":[
+               {
+                  "iso_3166_1":"FR",
+                  "name":"France"
+               },
+               {
+                  "iso_3166_1":"IT",
+                  "name":"Italy"
+               },
+               {
+                  "iso_3166_1":"DE",
+                  "name":"Germany"
+               }
+            ],
+            "release_date":"1986-09-24",
+            "revenue":77200000,
+            "runtime":131,
+            "spoken_languages":[
+               {
+                  "iso_639_1":"la",
+                  "name":"Latin"
+               },
+               {
+                  "iso_639_1":"en",
+                  "name":"English"
+               }
+            ],
+            "status":"Released",
+            "tagline":"Qui, au nom de Dieu, assassine ?",
+            "title":"Le Nom de la rose",
+            "video":false,
+            "vote_average":7,
+            "vote_count":201
+         },
+         "cid":21,
+         "$created":"2015-09-07T08:38:12.107Z",
+         "$updated":"2015-11-16T11:03:36.255Z"
+      },
+      {
+         "file":"django[1080p].mp4",
+         "path":"C:\\Users\\mickael.lacombe@cpnv.ch\\OneDrive\\Git\\videojs\\test\\movies",
+         "info":{
+            "adult":false,
+            "backdrop_path":"/kFwUy1Nu9tM4ywZAGXHoetBY2pk.jpg",
+            "belongs_to_collection":null,
+            "budget":100000000,
+            "genres":[
+               {
+                  "id":18,
+                  "name":"Drame"
+               },
+               {
+                  "id":37,
+                  "name":"Western"
+               }
+            ],
+            "homepage":"",
+            "id":68718,
+            "imdb_id":"tt1853728",
+            "original_language":"en",
+            "original_title":"Django Unchained",
+            "overview":"Dans le sud des États-Unis, deux ans avant la guerre de Sécession, le Dr King Schultz, un chasseur de primes allemand, fait l’acquisition de Django, un esclave qui peut l’aider à traquer les frères Brittle, les meurtriers qu’il recherche. Schultz promet à Django de lui rendre sa liberté lorsqu’il aura capturé les Brittle – morts ou vifs.  Alors que les deux hommes pistent les dangereux criminels, Django n’oublie pas que son seul but est de retrouver Broomhilda, sa femme, dont il fut séparé à cause du commerce des esclaves…  Lorsque Django et Schultz arrivent dans l’immense plantation du puissant Calvin Candie, ils éveillent les soupçons de Stephen, un esclave qui sert Candie et a toute sa confiance. Le moindre de leurs mouvements est désormais épié par une dangereuse organisation de plus en plus proche… Si Django et Schultz veulent espérer s’enfuir avec Broomhilda, ils vont devoir choisir entre l’indépendance et la solidarité, entre le sacrifice et la survie…",
+            "popularity":4.091516,
+            "poster_path":"/pS8YPH71GauFYjeC0PYDw59LxXO.jpg",
+            "production_companies":[
+               {
+                  "name":"Columbia Pictures",
+                  "id":5
+               },
+               {
+                  "name":"The Weinstein Company",
+                  "id":308
+               }
+            ],
+            "production_countries":[
+               {
+                  "iso_3166_1":"US",
+                  "name":"United States of America"
+               }
+            ],
+            "release_date":"2012-12-25",
+            "revenue":425368238,
+            "runtime":164,
+            "spoken_languages":[
+               {
+                  "iso_639_1":"en",
+                  "name":"English"
+               },
+               {
+                  "iso_639_1":"fr",
+                  "name":"Français"
+               },
+               {
+                  "iso_639_1":"de",
+                  "name":"Deutsch"
+               }
+            ],
+            "status":"Released",
+            "tagline":"Ils ont pris sa liberté. Il va tout leur prendre.",
+            "title":"Django Unchained",
+            "video":false,
+            "vote_average":7.5,
+            "vote_count":5520
+         },
+         "cid":28,
+         "$created":"2015-09-07T08:40:48.301Z",
+         "$updated":"2015-11-16T11:03:36.257Z"
+      },
+      {
+         "file":"Ex.Machina.2015.MULTi.1080p.HDMA.x264BlaBla.mkv",
+         "path":"C:\\Users\\mickael.lacombe@cpnv.ch\\OneDrive\\Git\\videojs\\test\\movies",
+         "info":{
+            "adult":false,
+            "backdrop_path":"/9X3cDZb4GYGQeOnZHLwMcCFz2Ro.jpg",
+            "belongs_to_collection":null,
+            "budget":16400000,
+            "genres":[
+               {
+                  "id":18,
+                  "name":"Drame"
+               },
+               {
+                  "id":878,
+                  "name":"Science-Fiction"
+               }
+            ],
+            "homepage":"",
+            "id":264660,
+            "imdb_id":"tt0470752",
+            "original_language":"en",
+            "original_title":"Ex Machina",
+            "overview":"Caleb, 24 ans, est programmeur de l’une des plus importantes entreprise d’informatique au monde. Lorsqu’il gagne un concours pour passer une semaine dans un lieu retiré en montagne appartenant à Nathan, le PDG solitaire de son entreprise, il découvre qu’il va en fait devoir participer à une étrange et fascinante expérience dans laquelle il devra interagir avec la première intelligence artificielle au monde qui prend la forme d’un superbe robot féminin.",
+            "popularity":7.138406,
+            "poster_path":"/icccSJwjCfnVHnnWlx59oFt6ze7.jpg",
+            "production_companies":[
+               {
+                  "name":"DNA Films",
+                  "id":284
+               },
+               {
+                  "name":"Film4",
+                  "id":9349
+               },
+               {
+                  "name":"A24",
+                  "id":41077
+               }
+            ],
+            "production_countries":[
+               {
+                  "iso_3166_1":"GB",
+                  "name":"United Kingdom"
+               }
+            ],
+            "release_date":"2015-01-21",
+            "revenue":36381129,
+            "runtime":108,
+            "spoken_languages":[
+               {
+                  "iso_639_1":"en",
+                  "name":"English"
+               }
+            ],
+            "status":"Released",
+            "tagline":"Rien n'est plus humain que la volonté de survivre",
+            "title":"Ex Machina",
+            "video":false,
+            "vote_average":7.6,
+            "vote_count":994
+         },
+         "cid":31,
+         "$created":"2015-09-07T09:20:27.955Z",
+         "$updated":"2015-11-16T11:03:36.259Z"
+      },
+      {
+         "file":"lord of war.2005.DVxiz.FRENCH.TOTO.avi",
+         "path":"C:\\Users\\mickael.lacombe@cpnv.ch\\OneDrive\\Git\\videojs\\test\\movies",
+         "info":{
+            "adult":false,
+            "backdrop_path":"/fjt8ZNuDH64GxgluSj52UMNkolY.jpg",
+            "belongs_to_collection":null,
+            "budget":42000000,
+            "genres":[
+               {
+                  "id":80,
+                  "name":"Crime"
+               },
+               {
+                  "id":18,
+                  "name":"Drame"
+               },
+               {
+                  "id":53,
+                  "name":"Thriller"
+               }
+            ],
+            "homepage":"",
+            "id":1830,
+            "imdb_id":"tt0399295",
+            "original_language":"en",
+            "original_title":"Lord of War",
+            "overview":"Né en Ukraine avant l'effondrement du bloc soviétique, Yuri arrive aux Etats-Unis avec ses parents. Il se fait passer pour un émigrant juif...Audacieux et fin négociateur, il se fait une place dans le trafic d'armes. Les énormes sommes d'argent qu'il gagne lui permettent aussi de conquérir celle qui l'a toujours fasciné, la belle Ava. Parallèlement à cette vie de mari et de père idéal, Yuri devient l'un des plus gros vendeurs d'armes clandestins du monde. Utilisant ses relations à l'Est, il multiplie les coups toujours plus risqués, mais parvient chaque fois à échapper à Jack Valentine, l'agent d'Interpol qui le pourchasse.Des luxueux immeubles new-yorkais aux palais des dictateurs africains, Yuri joue de plus en plus gros. Convaincu de sa chance, il poursuit sa double vie explosive, jusqu'à ce que le destin et sa conscience le rattrapent...",
+            "popularity":1.144386,
+            "poster_path":"/54CGx18epYWxSHBPGVFq8XfLLJs.jpg",
+            "production_companies":[
+               {
+                  "name":"Saturn Films",
+                  "id":831
+               },
+               {
+                  "name":"Ascendant Pictures",
+                  "id":1204
+               },
+               {
+                  "name":"Endgame Entertainment",
+                  "id":1205
+               },
+               {
+                  "name":"Entertainment Manufacturing Company",
+                  "id":1206
+               },
+               {
+                  "name":"Rising Star",
+                  "id":1208
+               },
+               {
+                  "name":"Copag V",
+                  "id":21938
+               }
+            ],
+            "production_countries":[
+               {
+                  "iso_3166_1":"FR",
+                  "name":"France"
+               },
+               {
+                  "iso_3166_1":"US",
+                  "name":"United States of America"
+               },
+               {
+                  "iso_3166_1":"DE",
+                  "name":"Germany"
+               }
+            ],
+            "release_date":"2005-09-16",
+            "revenue":24127895,
+            "runtime":122,
+            "spoken_languages":[
+               {
+                  "iso_639_1":"ar",
+                  "name":"العربية"
+               },
+               {
+                  "iso_639_1":"de",
+                  "name":"Deutsch"
+               },
+               {
+                  "iso_639_1":"en",
+                  "name":"English"
+               },
+               {
+                  "iso_639_1":"fr",
+                  "name":"Français"
+               },
+               {
+                  "iso_639_1":"ru",
+                  "name":"Pусский"
+               },
+               {
+                  "iso_639_1":"es",
+                  "name":"Español"
+               },
+               {
+                  "iso_639_1":"uk",
+                  "name":"Український"
+               },
+               {
+                  "iso_639_1":"tr",
+                  "name":"Türkçe"
+               }
+            ],
+            "status":"Released",
+            "tagline":"Vendre des armes est un business comme un autre.",
+            "title":"Lord of War",
+            "video":false,
+            "vote_average":6.8,
+            "vote_count":516
+         },
+         "cid":32,
+         "$created":"2015-09-07T09:21:12.290Z",
+         "$updated":"2015-11-16T11:03:36.260Z"
+      },
+      {
+         "file":"the lion king.mp4",
+         "path":"C:\\Users\\mickael.lacombe@cpnv.ch\\OneDrive\\Git\\videojs\\test\\movies",
+         "info":{
+            "adult":false,
+            "backdrop_path":"/klI0K4oQMsLhHdjA9Uw8WLugk9v.jpg",
+            "belongs_to_collection":{
+               "id":94032,
+               "name":"Le Roi Lion",
+               "poster_path":"/f1snopqELT0z2mocc9KipMUD7sv.jpg",
+               "backdrop_path":"/A9IEaj9cPAwEgFnTmteB70oxgJY.jpg"
+            },
+            "budget":45000000,
+            "genres":[
+               {
+                  "id":16,
+                  "name":"Animation"
+               },
+               {
+                  "id":10751,
+                  "name":"Familial"
+               }
+            ],
+            "homepage":"",
+            "id":8587,
+            "imdb_id":"tt0110357",
+            "original_language":"en",
+            "original_title":"The Lion King",
+            "overview":"Le lion Mufasa, roi des animaux, et son épouse Sarabi donnent naissance à Simba, un futur héritier. Mais Scar, le frère de Mufasa, voyant diminuer ses chances d'accéder au trône, incite le lionceau à s'aventurer dans un cimetière des éléphants situé au-delà des frontières du royaume...",
+            "popularity":2.107328,
+            "poster_path":"/ohPx8z7Act0PavkE4oTB3x0vs6h.jpg",
+            "production_companies":[
+               {
+                  "name":"Walt Disney Pictures",
+                  "id":2
+               }
+            ],
+            "production_countries":[
+               {
+                  "iso_3166_1":"US",
+                  "name":"United States of America"
+               }
+            ],
+            "release_date":"1994-06-23",
+            "revenue":788241776,
+            "runtime":85,
+            "spoken_languages":[
+               {
+                  "iso_639_1":"en",
+                  "name":"English"
+               }
+            ],
+            "status":"Released",
+            "tagline":"C'est l'histoire d'un destin, c'est l'histoire de la vie !",
+            "title":"Le Roi Lion",
+            "video":false,
+            "vote_average":7.5,
+            "vote_count":2560
+         },
+         "cid":33,
+         "$created":"2015-09-07T09:23:12.366Z",
+         "$updated":"2015-11-16T11:03:36.262Z"
+      },
+      {
+         "file":"Spanking the Monkey.avi",
+         "path":"C:\\Users\\mickael.lacombe@cpnv.ch\\OneDrive\\Git\\videojs\\test\\movies",
+         "info":{
+            "adult":false,
+            "backdrop_path":"/zu4NFqTbvaVHLzi1GdLZBbcTl1x.jpg",
+            "belongs_to_collection":null,
+            "budget":200000,
+            "genres":[
+               {
+                  "id":35,
+                  "name":"Comédie"
+               },
+               {
+                  "id":18,
+                  "name":"Drame"
+               }
+            ],
+            "homepage":null,
+            "id":17600,
+            "imdb_id":"tt0111252",
+            "original_language":"en",
+            "original_title":"Spanking the Monkey",
+            "overview":null,
+            "popularity":0.00916,
+            "poster_path":"/nr3KNkAu7tmiaBnNgxabrcyCLX0.jpg",
+            "production_companies":[
+               {
+                  "name":"Fine Line Features",
+                  "id":8
+               },
+               {
+                  "name":"Swelter Films",
+                  "id":55150
+               },
+               {
+                  "name":"Buckeye Films",
+                  "id":55151
+               }
+            ],
+            "production_countries":[
+               {
+                  "iso_3166_1":"US",
+                  "name":"United States of America"
+               }
+            ],
+            "release_date":"1994-01-15",
+            "revenue":0,
+            "runtime":null,
+            "spoken_languages":[
+               {
+                  "iso_639_1":"en",
+                  "name":"English"
+               }
+            ],
+            "status":"Released",
+            "tagline":null,
+            "title":"Spanking the Monkey",
+            "video":false,
+            "vote_average":4.8,
+            "vote_count":6
+         },
+         "cid":35,
+         "$created":"2015-09-07T09:25:28.551Z",
+         "$updated":"2015-11-16T11:03:36.263Z"
+      },
+      {
+         "file":"Les Temps modernes.mp4",
+         "path":"C:\\Users\\mickael.lacombe@cpnv.ch\\OneDrive\\Git\\videojs\\test\\movies",
+         "info":{
+            "adult":false,
+            "backdrop_path":"/m0Bnz5crKnP0EWM5WvNUE3nnI2z.jpg",
+            "belongs_to_collection":{
+               "id":107471,
+               "name":"Yamakasi",
+               "poster_path":"/6t7QBvkMq02vgGuwxH7VduDbZ4j.jpg",
+               "backdrop_path":"/brTwRwoszOadojCoRzCbNjbYd9S.jpg"
+            },
+            "budget":0,
+            "genres":[
+               {
+                  "id":28,
+                  "name":"Action"
+               },
+               {
+                  "id":80,
+                  "name":"Crime"
+               },
+               {
+                  "id":18,
+                  "name":"Drame"
+               }
+            ],
+            "homepage":"",
+            "id":6935,
+            "imdb_id":"tt0267129",
+            "original_language":"en",
+            "original_title":"Yamakasi - Les samouraïs des temps modernes",
+            "overview":"Une bande de jeunes athlètes banlieusards a créé sa propre discipline : l'art du déplacement. Ils bravent tous les dangers, escaladent les immeubles, effectuent des sauts vertigineux. Chaque membre a sa spécialité : Baseball est lanceur d'élite, L'Araignée se prend pour Spiderman, La Belette est une véritable anguille, Zicmu est un fou de musique, Rocket est plus rapide que l'éclair. Ils sont adoubés nouveaux modèles pour les plus jeunes et se livrent au jeu du chat et de la souris avec les autorités locales. Mais un accident survient : le petit Djamel tombe. Les Yamakasi vont devoir face à leurs responsabilités pour trouver l'argent nécessaire à son opération.",
+            "popularity":0.461298,
+            "poster_path":"/vFOYe0lThvjeKMn69DaVZDeaFSF.jpg",
+            "production_companies":[
+
+            ],
+            "production_countries":[
+               {
+                  "iso_3166_1":"FR",
+                  "name":"France"
+               }
+            ],
+            "release_date":"2001-04-04",
+            "revenue":0,
+            "runtime":90,
+            "spoken_languages":[
+               {
+                  "iso_639_1":"fr",
+                  "name":"Français"
+               }
+            ],
+            "status":"Released",
+            "tagline":"Les samourais des temps modernes",
+            "title":"Yamakasi",
+            "video":false,
+            "vote_average":6.1,
+            "vote_count":45
+         },
+         "cid":36,
+         "$created":"2015-09-07T09:26:01.713Z",
+         "$updated":"2015-11-16T11:03:36.264Z"
+      },
+      {
+         "file":"Les Lumières de la ville.avi",
+         "path":"C:\\Users\\mickael.lacombe@cpnv.ch\\OneDrive\\Git\\videojs\\test\\movies",
+         "info":{
+            "adult":false,
+            "backdrop_path":"/xDmdjsQ2XVQCYUrnyZXwO7QzLd7.jpg",
+            "belongs_to_collection":null,
+            "budget":1500000,
+            "genres":[
+               {
+                  "id":35,
+                  "name":"Comédie"
+               },
+               {
+                  "id":18,
+                  "name":"Drame"
+               },
+               {
+                  "id":10749,
+                  "name":"Romance"
+               }
+            ],
+            "homepage":"",
+            "id":901,
+            "imdb_id":"tt0021749",
+            "original_language":"en",
+            "original_title":"City Lights",
+            "overview":"Charlot vagabond vient en aide à une jeune fleuriste aveugle et se fait passer pour un homme riche. A force de travail il réunit assez d'argent pour que la jeune fille recouvre la vue.",
+            "popularity":1.208729,
+            "poster_path":"/ayOkrSvNXDl6tWXUYt9qu6AhNuF.jpg",
+            "production_companies":[
+               {
+                  "name":"Charles Chaplin Productions",
+                  "id":1315
+               }
+            ],
+            "production_countries":[
+               {
+                  "iso_3166_1":"US",
+                  "name":"United States of America"
+               }
+            ],
+            "release_date":"1931-01-30",
+            "revenue":19181,
+            "runtime":0,
+            "spoken_languages":[
+               {
+                  "iso_639_1":"en",
+                  "name":"English"
+               }
+            ],
+            "status":"Released",
+            "tagline":"",
+            "title":"Les Lumières de la ville",
+            "video":false,
+            "vote_average":7.8,
+            "vote_count":112
+         },
+         "cid":37,
+         "$created":"2015-09-07T09:26:17.859Z",
+         "$updated":"2015-11-16T11:03:36.266Z"
+      },
+      {
+         "file":"Curious George 3 Back to the Jungle.avi",
+         "path":"C:\\Users\\mickael.lacombe@cpnv.ch\\OneDrive\\Git\\videojs\\test\\movies",
+         "info":{
+            "adult":false,
+            "backdrop_path":"/2HcB0bjOlXn1h8AFPx7odvWFh7S.jpg",
+            "belongs_to_collection":{
+               "id":55428,
+               "name":"Curious George Collection",
+               "poster_path":"/8nOAUE2VgdnzxYurRjd1KjE98Sm.jpg",
+               "backdrop_path":"/qC533xWXnpR8SG3zrll8aKmeQXV.jpg"
+            },
+            "budget":0,
+            "genres":[
+               {
+                  "id":16,
+                  "name":"Animation"
+               }
+            ],
+            "homepage":"",
+            "id":338103,
+            "imdb_id":"tt4622340",
+            "original_language":"en",
+            "original_title":"Curious George 3: Back To The Jungle",
+            "overview":"George le petit curieux se voit proposer une nouvelle mission un peu spéciale : une mission dans l'espace.",
+            "popularity":0.920575,
+            "poster_path":"/v7kcgYze4PUKh0RWeTFhKqVTpAJ.jpg",
+            "production_companies":[
+               {
+                  "name":"Universal",
+                  "id":6292
+               }
+            ],
+            "production_countries":[
+               {
+                  "iso_3166_1":"US",
+                  "name":"United States of America"
+               }
+            ],
+            "release_date":"2015-08-20",
+            "revenue":0,
+            "runtime":80,
+            "spoken_languages":[
+               {
+                  "iso_639_1":"de",
+                  "name":"Deutsch"
+               },
+               {
+                  "iso_639_1":"it",
+                  "name":"Italiano"
+               },
+               {
+                  "iso_639_1":"pt",
+                  "name":"Português"
+               },
+               {
+                  "iso_639_1":"en",
+                  "name":"English"
+               }
+            ],
+            "status":"Released",
+            "tagline":"",
+            "title":"Georges le petit curieux 3 : Retour dans la jungle",
+            "video":false,
+            "vote_average":8,
+            "vote_count":3
+         },
+         "cid":38,
+         "$created":"2015-09-07T09:26:52.357Z",
+         "$updated":"2015-11-16T11:03:36.267Z"
+      },
+      {
+         "file":"love.avi",
+         "path":"C:\\Users\\mickael.lacombe@cpnv.ch\\OneDrive\\Git\\videojs\\test\\movies",
+         "info":{
+            "adult":false,
+            "backdrop_path":"/nt52LkPTb6NmHUJU8OY4XbujTHo.jpg",
+            "belongs_to_collection":null,
+            "budget":500000,
+            "genres":[
+               {
+                  "id":18,
+                  "name":"Drame"
+               },
+               {
+                  "id":878,
+                  "name":"Science-Fiction"
+               }
+            ],
+            "homepage":"",
+            "id":54320,
+            "imdb_id":"tt1541874",
+            "original_language":"en",
+            "original_title":"Love",
+            "overview":"Après avoir perdu contact avec la Terre, l'astronaute Lee Miller se retrouve piégé en orbite tout seul à bord de la station spatiale internationale. Le temps passe et sa vie devient difficile à soutenir, Lee se bat afin de rester sain d'esprit - et tout simplement de rester en vie. Dans son monde, il a une claustrophobe et isolée existence, jusqu'à ce qu'il fasse une étrange découverte à bord du complexe...",
+            "popularity":0.559971,
+            "poster_path":"/3ugsZEcKNxFiwLflYZpSghikko3.jpg",
+            "production_companies":[
+               {
+                  "name":"Angels & Airwaves",
+                  "id":21959
+               }
+            ],
+            "production_countries":[
+               {
+                  "iso_3166_1":"US",
+                  "name":"United States of America"
+               }
+            ],
+            "release_date":"2011-02-02",
+            "revenue":0,
+            "runtime":84,
+            "spoken_languages":[
+               {
+                  "iso_639_1":"en",
+                  "name":"English"
+               }
+            ],
+            "status":"Released",
+            "tagline":"",
+            "title":"Space time : L'ultime odyssée",
+            "video":false,
+            "vote_average":5.5,
+            "vote_count":28
+         },
+         "cid":39,
+         "$created":"2015-09-07T09:49:10.338Z",
+         "$updated":"2015-11-16T11:03:36.268Z"
+      },
+      {
+         "file":"18+.avi",
+         "path":"C:\\Users\\mickael.lacombe@cpnv.ch\\OneDrive\\Git\\videojs\\test\\movies",
+         "info":{
+            "adult":false,
+            "backdrop_path":null,
+            "belongs_to_collection":null,
+            "budget":0,
+            "genres":[
+
+            ],
+            "homepage":null,
+            "id":131707,
+            "imdb_id":"",
+            "original_language":"ms",
+            "original_title":"18+",
+            "overview":null,
+            "popularity":0.001958,
+            "poster_path":"/tFb3jYmzSahW8fepyiPO3oXPzT.jpg",
+            "production_companies":[
+
+            ],
+            "production_countries":[
+               {
+                  "iso_3166_1":"ID",
+                  "name":"Indonesia"
+               }
+            ],
+            "release_date":"2010-09-11",
+            "revenue":0,
+            "runtime":null,
+            "spoken_languages":[
+               {
+                  "iso_639_1":"id",
+                  "name":"Bahasa indonesia"
+               }
+            ],
+            "status":"Released",
+            "tagline":null,
+            "title":"18+",
+            "video":false,
+            "vote_average":9.5,
+            "vote_count":1
+         },
+         "cid":42,
+         "$created":"2015-09-07T09:52:25.391Z",
+         "$updated":"2015-11-16T11:03:36.270Z"
+      },
+      {
+         "file":"war.avi",
+         "path":"C:\\Users\\mickael.lacombe@cpnv.ch\\OneDrive\\Git\\videojs\\test\\movies\\Films\\Test !;_+ç%&()=`ü!ö£ö_;",
+         "info":{
+            "adult":false,
+            "backdrop_path":"/p7xkGTUYTzU5IateDstefi0MBVG.jpg",
+            "belongs_to_collection":null,
+            "budget":25000000,
+            "genres":[
+               {
+                  "id":28,
+                  "name":"Action"
+               },
+               {
+                  "id":53,
+                  "name":"Thriller"
+               },
+               {
+                  "id":80,
+                  "name":"Crime"
+               }
+            ],
+            "homepage":"",
+            "id":10431,
+            "imdb_id":"tt0499556",
+            "original_language":"en",
+            "original_title":"War",
+            "overview":"Depuis l'assassinat de son meilleur ami, l'agent du FBI Jack Crawford n'a plus qu'une obsession : retrouver Rogue, celui que tout désigne comme coupable, et faire justice lui-même. Mais comment attraper le plus redoutable des tueurs, un véritable fantôme capable d'apparaître n'importe où pour semer le chaos avant de s'évanouir dans la nature ?",
+            "popularity":1.152987,
+            "poster_path":"/9AWIS20FYeU60S8T9U4YGdz2Ck3.jpg",
+            "production_companies":[
+               {
+                  "name":"Mosaic Media Group",
+                  "id":748
+               },
+               {
+                  "name":"Current Entertainment",
+                  "id":972
+               },
+               {
+                  "name":"Lionsgate",
+                  "id":1632
+               },
+               {
+                  "name":"Fierce Entertainment",
+                  "id":12138
+               },
+               {
+                  "name":"Province of British Columbia Production Services Tax Credit",
+                  "id":12200
+               },
+               {
+                  "name":"Rogue Films",
+                  "id":23956
+               }
+            ],
+            "production_countries":[
+               {
+                  "iso_3166_1":"US",
+                  "name":"United States of America"
+               },
+               {
+                  "iso_3166_1":"CA",
+                  "name":"Canada"
+               }
+            ],
+            "release_date":"2007-08-24",
+            "revenue":40452643,
+            "runtime":103,
+            "spoken_languages":[
+               {
+                  "iso_639_1":"ja",
+                  "name":"日本語"
+               },
+               {
+                  "iso_639_1":"zh",
+                  "name":"普通话"
+               },
+               {
+                  "iso_639_1":"cn",
+                  "name":"广州话 / 廣州話"
+               },
+               {
+                  "iso_639_1":"en",
+                  "name":"English"
+               }
+            ],
+            "status":"Released",
+            "tagline":"",
+            "title":"Rogue - L'ultime affrontement",
+            "video":false,
+            "vote_average":6.1,
+            "vote_count":174
+         },
+         "cid":43,
+         "$created":"2015-09-07T10:21:44.040Z",
+         "$updated":"2015-11-16T11:03:36.271Z"
+      },
+      {
+         "file":"edge.avi",
+         "path":"C:\\Users\\mickael.lacombe@cpnv.ch\\OneDrive\\Git\\videojs\\test\\movies",
+         "info":{
+            "adult":false,
+            "backdrop_path":"/7mgKeg18Qml5nJQa56RBZO7dIu0.jpg",
+            "belongs_to_collection":null,
+            "budget":178000000,
+            "genres":[
+               {
+                  "id":28,
+                  "name":"Action"
+               },
+               {
+                  "id":878,
+                  "name":"Science-Fiction"
+               }
+            ],
+            "homepage":"",
+            "id":137113,
+            "imdb_id":"tt1631867",
+            "original_language":"en",
+            "original_title":"Edge of Tomorrow",
+            "overview":"Dans un futur proche, des hordes d'extraterrestres ont livré une bataille acharnée contre la Terre et semblent désormais invincibles: aucune armée au monde n'a réussi à les vaincre. Le commandant William Cage, qui n'a jamais combattu de sa vie, est envoyé, sans la moindre explication, dans ce qui ressemble à une mission-suicide. Il meurt en l'espace de quelques minutes et se retrouve projeté dans une boucle temporelle, condamné à revivre le même combat et à mourir de nouveau indéfiniment…",
+            "popularity":3.921901,
+            "poster_path":"/fJXVF4BvD83CGmJaAgUQ5xQoyLe.jpg",
+            "production_companies":[
+               {
+                  "name":"Village Roadshow Pictures",
+                  "id":79
+               },
+               {
+                  "name":"Warner Bros.",
+                  "id":6194
+               },
+               {
+                  "name":"Viz Media",
+                  "id":6687
+               },
+               {
+                  "name":"Province of British Columbia Production Services Tax Credit",
+                  "id":12200
+               },
+               {
+                  "name":"3 Arts Entertainment",
+                  "id":36390
+               },
+               {
+                  "name":"RatPac-Dune Entertainment",
+                  "id":41624
+               }
+            ],
+            "production_countries":[
+               {
+                  "iso_3166_1":"AU",
+                  "name":"Australia"
+               },
+               {
+                  "iso_3166_1":"US",
+                  "name":"United States of America"
+               }
+            ],
+            "release_date":"2014-06-06",
+            "revenue":369200000,
+            "runtime":108,
+            "spoken_languages":[
+               {
+                  "iso_639_1":"en",
+                  "name":"English"
+               }
+            ],
+            "status":"Released",
+            "tagline":"Vivre, Mourir, Recommencer",
+            "title":"Edge of Tomorrow",
+            "video":false,
+            "vote_average":7.7,
+            "vote_count":2083
+         },
+         "cid":45,
+         "$created":"2015-09-10T06:42:16.315Z",
+         "$updated":"2015-11-16T11:03:36.273Z"
+      },
+      {
+         "file":"test[1080p]TRUERENCH.VOSTFR.mp4",
+         "path":"C:\\Users\\mickael.lacombe@cpnv.ch\\OneDrive\\Git\\videojs\\test\\movies",
+         "info":{
+            "adult":false,
+            "backdrop_path":"/1zB4xf6dYp8Bn8wG8MUMCzx0JCf.jpg",
+            "belongs_to_collection":null,
+            "budget":0,
+            "genres":[
+               {
+                  "id":18,
+                  "name":"Drame"
+               }
+            ],
+            "homepage":"",
+            "id":226979,
+            "imdb_id":"tt2407380",
+            "original_language":"en",
+            "original_title":"Test",
+            "overview":"San Francisco 1985. Frankie est un jeune danseur qui vient d’intégrer une des plus prestigieuses troupes de danse contemporaine de la ville. Il fait la connaissance de Todd, un des danseurs de la troupe. Leur rencontre ne tarde pas à dépasser le cadre de la danse. Des manifestations contre la communauté gay voient le jour. Elles sont liées à la panique créée par la maladie du VIH que l'on vient de découvrir. Ensemble, Frankie et Todd évolueront dans ces événements hostiles mais aussi parfois plein d’espoir.",
+            "popularity":0.131971,
+            "poster_path":"/mMohokylrZ2AsFPgqdrgI8o7i9i.jpg",
+            "production_companies":[
+               {
+                  "name":"Gloss Studio",
+                  "id":17275
+               },
+               {
+                  "name":"Serious Productions",
+                  "id":17276
+               }
+            ],
+            "production_countries":[
+               {
+                  "iso_3166_1":"US",
+                  "name":"United States of America"
+               }
+            ],
+            "release_date":"2013-06-29",
+            "revenue":0,
+            "runtime":79,
+            "spoken_languages":[
+               {
+                  "iso_639_1":"en",
+                  "name":"English"
+               }
+            ],
+            "status":"Released",
+            "tagline":"",
+            "title":"San Francisco 1985",
+            "video":false,
+            "vote_average":6.6,
+            "vote_count":7
+         },
+         "cid":46,
+         "$created":"2015-09-10T06:43:21.804Z",
+         "$updated":"2015-11-16T11:03:36.274Z"
+      },
+      {
+         "file":"CouCou.[1080p].avi",
+         "path":"C:\\Users\\mickael.lacombe@cpnv.ch\\OneDrive\\Git\\videojs\\test\\movies",
+         "info":{
+            "adult":false,
+            "backdrop_path":null,
+            "belongs_to_collection":null,
+            "budget":0,
+            "genres":[
+               {
+                  "id":35,
+                  "name":"Comédie"
+               }
+            ],
+            "homepage":"",
+            "id":249199,
+            "imdb_id":"",
+            "original_language":"fr",
+            "original_title":"Coucou c'est nous",
+            "overview":"A la rentrée 1992, TF1 sacrifie «Santa Barbara» et «La Roue de la Fortune» sur l’autel de l’access prime time (19/20h) et Christophe Dechavanne inaugure avec succès un concept télévisuel inédit en France : le talk-show quotidien. En compagnie de son complice Patrice Carmouze, Christophe Dechavanne accueille un invité différent du lundi au vendredi, en direct. Pendant une heure vont se mêler expériences farfelues, témoignages décalés et autres épreuves déjantées dont tout le monde se souvient encore !",
+            "popularity":0.000429,
+            "poster_path":"/dpkvt4rUyFgwmS0TtEvnKmreuR4.jpg",
+            "production_companies":[
+
+            ],
+            "production_countries":[
+
+            ],
+            "release_date":"2004-11-03",
+            "revenue":0,
+            "runtime":402,
+            "spoken_languages":[
+               {
+                  "iso_639_1":"fr",
+                  "name":"Français"
+               }
+            ],
+            "status":"Released",
+            "tagline":"",
+            "title":"Coucou c'est nous",
+            "video":false,
+            "vote_average":0,
+            "vote_count":0
+         },
+         "cid":83,
+         "$created":"2015-09-10T06:55:59.717Z",
+         "$updated":"2015-11-16T11:03:36.276Z"
+      },
+      {
+         "file":"new york 1997.avi",
+         "path":"C:\\Users\\mickael.lacombe@cpnv.ch\\OneDrive\\Git\\videojs\\test\\movies",
+         "info":{
+            "adult":false,
+            "backdrop_path":"/oTBxvPzfn2EtTV7b7FGGmXxJqP3.jpg",
+            "belongs_to_collection":null,
+            "budget":0,
+            "genres":[
+               {
+                  "id":18,
+                  "name":"Drame"
+               },
+               {
+                  "id":10402,
+                  "name":"Musique"
+               },
+               {
+                  "id":10749,
+                  "name":"Romance"
+               }
+            ],
+            "homepage":"",
+            "id":12637,
+            "imdb_id":"tt0076451",
+            "original_language":"en",
+            "original_title":"New York, New York",
+            "overview":"Août 1945, la victoire des américains sur le Japon fait éclater de joie tout New York. Dans la foule, Jimmy le saxophoniste rencontre la chanteuse Francine. Ils se marient et composent la chanson New York, New York, mais une certaine rivalité professionnelle s'installe entre eux et les oblige à se séparer.",
+            "popularity":0.517974,
+            "poster_path":"/1zEwZ3WskgNxf1tQdWnO9R4xzK9.jpg",
+            "production_companies":[
+               {
+                  "name":"United Artists",
+                  "id":60
+               },
+               {
+                  "name":"Chartoff-Winkler Productions",
+                  "id":12252
+               }
+            ],
+            "production_countries":[
+               {
+                  "iso_3166_1":"US",
+                  "name":"United States of America"
+               }
+            ],
+            "release_date":"1977-06-21",
+            "revenue":0,
+            "runtime":162,
+            "spoken_languages":[
+               {
+                  "iso_639_1":"en",
+                  "name":"English"
+               }
+            ],
+            "status":"Released",
+            "tagline":"Le rire. Les larmes. Le Jazz. Le Blues. Tout ce qui fait de New York, New York.",
+            "title":"New York, New York",
+            "video":false,
+            "vote_average":6.6,
+            "vote_count":13
+         },
+         "cid":84,
+         "$created":"2015-09-10T07:01:37.701Z",
+         "$updated":"2015-11-16T11:03:36.277Z"
+      },
+      {
+         "file":"Men in black III.avi",
+         "path":"C:\\Users\\mickael.lacombe@cpnv.ch\\OneDrive\\Git\\videojs\\test\\movies",
+         "info":{
+            "adult":false,
+            "backdrop_path":"/7u3UyejCbhM3jXcZ86xzA9JJxge.jpg",
+            "belongs_to_collection":{
+               "id":86055,
+               "name":"Men In Black",
+               "poster_path":"/AhF9ReIU4jW02jBmPz6YXtFm0Ff.jpg",
+               "backdrop_path":"/xKz6YaOvmnIJQ3MYIpnaa7FBaAB.jpg"
+            },
+            "budget":225000000,
+            "genres":[
+               {
+                  "id":28,
+                  "name":"Action"
+               },
+               {
+                  "id":35,
+                  "name":"Comédie"
+               },
+               {
+                  "id":878,
+                  "name":"Science-Fiction"
+               }
+            ],
+            "homepage":"",
+            "id":41154,
+            "imdb_id":"tt1409024",
+            "original_language":"en",
+            "original_title":"Men in Black 3",
+            "overview":"En quinze ans de carrière chez les Men In Black, l’agent J a vu beaucoup de phénomènes inexplicables… Mais rien, pas même le plus étrange des aliens, ne le laisse aussi perplexe que son partenaire, le sarcastique K. Lorsque la vie de K et le destin de la Terre sont menacés, l’agent J décide de remonter le temps pour remettre les choses en ordre. Il va alors découvrir qu’il existe certains secrets de l’univers que K ne lui a jamais révélés. Il est cette fois obligé de faire équipe avec l’agent K, plus jeune, pour sauver la vie de son partenaire, l’agence, et l’avenir même de l’humanité…",
+            "popularity":1.523046,
+            "poster_path":"/h8cpBqiORUERHFe9stauEZWh8PR.jpg",
+            "production_companies":[
+               {
+                  "name":"Amblin Entertainment",
+                  "id":56
+               },
+               {
+                  "name":"Media Magik Entertainment",
+                  "id":5627
+               },
+               {
+                  "name":"Imagenation Abu Dhabi FZ",
+                  "id":6736
+               },
+               {
+                  "name":"Hemisphere Media Capital",
+                  "id":9169
+               },
+               {
+                  "name":"Parkes/MacDonald Productions",
+                  "id":11084
+               }
+            ],
+            "production_countries":[
+               {
+                  "iso_3166_1":"US",
+                  "name":"United States of America"
+               }
+            ],
+            "release_date":"2012-05-25",
+            "revenue":624026776,
+            "runtime":106,
+            "spoken_languages":[
+               {
+                  "iso_639_1":"en",
+                  "name":"English"
+               }
+            ],
+            "status":"Released",
+            "tagline":"Retour vers le passé... Pour sauver le futur.",
+            "title":"Men in Black III",
+            "video":false,
+            "vote_average":6.1,
+            "vote_count":2328
+         },
+         "cid":85,
+         "$created":"2015-09-10T07:25:50.569Z",
+         "$updated":"2015-11-16T11:03:36.279Z"
+      },
+      {
+         "file":"men in Black II.avi",
+         "path":"C:\\Users\\mickael.lacombe@cpnv.ch\\OneDrive\\Git\\videojs\\test\\movies",
+         "info":{
+            "adult":false,
+            "backdrop_path":"/cITp4EM8HEKrlhXDEeGNy2IB8D9.jpg",
+            "belongs_to_collection":{
+               "id":86055,
+               "name":"Men In Black",
+               "poster_path":"/AhF9ReIU4jW02jBmPz6YXtFm0Ff.jpg",
+               "backdrop_path":"/xKz6YaOvmnIJQ3MYIpnaa7FBaAB.jpg"
+            },
+            "budget":140000000,
+            "genres":[
+               {
+                  "id":28,
+                  "name":"Action"
+               },
+               {
+                  "id":12,
+                  "name":"Aventure"
+               },
+               {
+                  "id":35,
+                  "name":"Comédie"
+               },
+               {
+                  "id":878,
+                  "name":"Science-Fiction"
+               }
+            ],
+            "homepage":"",
+            "id":608,
+            "imdb_id":"tt0120912",
+            "original_language":"en",
+            "original_title":"Men in Black II",
+            "overview":"En quatre années passées à protéger la Terre de toutes sortes d'invasions extraterrestres, l'agent J, qui travaille secrètement au quartier général des Men In Black, n'a toujours pas trouvé de partenaire avec qui faire équipe. À la suite d'un crime étrange impliquant des extraterrestres, l'agence découvre l'existence d'un redoutable complot menaçant notre planète. Serleena, une maléfique séductrice qui a pris l'apparence d'un top-model en lingerie fine, est prête à tout pour accomplir son sinistre dessein. J a absolument besoin des services de K, son ancien partenaire qui n'a plus aucun souvenir des MIB et travaille dorénavant à la Poste. J va devoir par tous les moyens le faire sortir de sa retraite.",
+            "popularity":1.342041,
+            "poster_path":"/ppQTSH5HUhOQGHtBFbUi6R1SC1A.jpg",
+            "production_companies":[
+               {
+                  "name":"Columbia Pictures",
+                  "id":5
+               },
+               {
+                  "name":"Amblin Entertainment",
+                  "id":56
+               },
+               {
+                  "name":"Columbia Pictures Corporation",
+                  "id":441
+               },
+               {
+                  "name":"Parkes+MacDonald Image Nation",
+                  "id":49325
+               }
+            ],
+            "production_countries":[
+               {
+                  "iso_3166_1":"US",
+                  "name":"United States of America"
+               }
+            ],
+            "release_date":"2002-07-03",
+            "revenue":441818803,
+            "runtime":90,
+            "spoken_languages":[
+               {
+                  "iso_639_1":"en",
+                  "name":"English"
+               }
+            ],
+            "status":"Released",
+            "tagline":"Même planète, nouvelle racaille.",
+            "title":"Men in Black II",
+            "video":false,
+            "vote_average":5.9,
+            "vote_count":1146
+         },
+         "cid":86,
+         "$created":"2015-09-10T07:26:14.923Z",
+         "$updated":"2015-11-16T11:03:36.280Z"
+      },
+      {
+         "file":"Men In Black I.avi",
+         "path":"C:\\Users\\mickael.lacombe@cpnv.ch\\OneDrive\\Git\\videojs\\test\\movies",
+         "info":{
+            "adult":false,
+            "backdrop_path":"/8xK6vXJtwcmMNE9t2VawDU2pfTn.jpg",
+            "belongs_to_collection":{
+               "id":86055,
+               "name":"Men In Black",
+               "poster_path":"/AhF9ReIU4jW02jBmPz6YXtFm0Ff.jpg",
+               "backdrop_path":"/xKz6YaOvmnIJQ3MYIpnaa7FBaAB.jpg"
+            },
+            "budget":90000000,
+            "genres":[
+               {
+                  "id":28,
+                  "name":"Action"
+               },
+               {
+                  "id":12,
+                  "name":"Aventure"
+               },
+               {
+                  "id":35,
+                  "name":"Comédie"
+               },
+               {
+                  "id":878,
+                  "name":"Science-Fiction"
+               }
+            ],
+            "homepage":"",
+            "id":607,
+            "imdb_id":"tt0119654",
+            "original_language":"en",
+            "original_title":"Men in Black",
+            "overview":"Récemment séparé de son vieux partenaire, retourné à la vie civile sans aucun souvenir de sa vie d'homme en noir, K, le plus expérimenté des agents du MIB décide de former J, un jeune policier. Ensemble, ils vont afronter une nouvelle menace : Edgar le cafard...",
+            "popularity":2.21114,
+            "poster_path":"/8zVanYvCNJ1fU1bsFJT5hwohFYp.jpg",
+            "production_companies":[
+               {
+                  "name":"Amblin Entertainment",
+                  "id":56
+               },
+               {
+                  "name":"Columbia Pictures Corporation",
+                  "id":441
+               },
+               {
+                  "name":"Parkes+MacDonald Image Nation",
+                  "id":49325
+               }
+            ],
+            "production_countries":[
+               {
+                  "iso_3166_1":"US",
+                  "name":"United States of America"
+               }
+            ],
+            "release_date":"1997-07-02",
+            "revenue":589390539,
+            "runtime":98,
+            "spoken_languages":[
+               {
+                  "iso_639_1":"en",
+                  "name":"English"
+               },
+               {
+                  "iso_639_1":"es",
+                  "name":"Español"
+               }
+            ],
+            "status":"Released",
+            "tagline":"Ils protègent la Terre contre la racaille de l'univers",
+            "title":"Men in Black",
+            "video":false,
+            "vote_average":6.5,
+            "vote_count":1853
+         },
+         "cid":87,
+         "$created":"2015-09-10T07:26:38.366Z",
+         "$updated":"2015-11-16T11:03:36.282Z"
+      },
+      {
+         "file":"jo.mp4",
+         "path":"C:\\Users\\mickael.lacombe@cpnv.ch\\OneDrive\\Git\\videojs\\test\\movies",
+         "info":{
+            "adult":false,
+            "backdrop_path":"/yfetk2k6EdSQt6ivaUSPLZ5AjQr.jpg",
+            "belongs_to_collection":null,
+            "budget":0,
+            "genres":[
+               {
+                  "id":35,
+                  "name":"Comédie"
+               }
+            ],
+            "homepage":null,
+            "id":12598,
+            "imdb_id":"tt0067274",
+            "original_language":"en",
+            "original_title":"Jo",
+            "overview":"Antoine Brisebard, auteur à succès, est victime d'un maître chanteur qui menace de l'atteindre en dévoilant les origines familiales de sa femme. Résolu à se débarrasser de Jo, le responsable du chantage, Antoine prétexte l'écriture d'une pièce policière afin de recueillir auprès de qui veut l'entendre les ingrédients du crime parfait...",
+            "popularity":0.327464,
+            "poster_path":"/cTCwWqTFK1GdcJKTIfKN5ta2J57.jpg",
+            "production_companies":[
+
+            ],
+            "production_countries":[
+               {
+                  "iso_3166_1":"FR",
+                  "name":"France"
+               }
+            ],
+            "release_date":"1971-09-01",
+            "revenue":0,
+            "runtime":0,
+            "spoken_languages":[
+               {
+                  "iso_639_1":"fr",
+                  "name":"Français"
+               },
+               {
+                  "iso_639_1":"en",
+                  "name":"English"
+               }
+            ],
+            "status":"Released",
+            "tagline":null,
+            "title":"Jo",
+            "video":false,
+            "vote_average":6.5,
+            "vote_count":11
+         },
+         "cid":88,
+         "$created":"2015-09-10T07:27:09.274Z",
+         "$updated":"2015-11-16T11:03:36.283Z"
+      },
+      {
+         "file":"sal.mp4",
+         "path":"C:\\Users\\mickael.lacombe@cpnv.ch\\OneDrive\\Git\\videojs\\test\\movies",
+         "info":{
+            "adult":false,
+            "backdrop_path":"/qUm1m41fn39RbBCxvU1Tki9CqbX.jpg",
+            "belongs_to_collection":null,
+            "budget":1300000,
+            "genres":[
+               {
+                  "id":53,
+                  "name":"Thriller"
+               },
+               {
+                  "id":18,
+                  "name":"Drame"
+               },
+               {
+                  "id":37,
+                  "name":"Western"
+               }
+            ],
+            "homepage":null,
+            "id":139932,
+            "imdb_id":"tt1395065",
+            "original_language":"es",
+            "original_title":"Sal",
+            "overview":null,
+            "popularity":0.004221,
+            "poster_path":"/aNET9q5UYxSfjtiBSbMuESCefHK.jpg",
+            "production_companies":[
+
+            ],
+            "production_countries":[
+               {
+                  "iso_3166_1":"AR",
+                  "name":"Argentina"
+               },
+               {
+                  "iso_3166_1":"CL",
+                  "name":"Chile"
+               }
+            ],
+            "release_date":"2012-05-17",
+            "revenue":0,
+            "runtime":null,
+            "spoken_languages":[
+               {
+                  "iso_639_1":"es",
+                  "name":"Español"
+               }
+            ],
+            "status":"Released",
+            "tagline":null,
+            "title":"Sal",
+            "video":false,
+            "vote_average":0,
+            "vote_count":0
+         },
+         "cid":90,
+         "$created":"2015-09-10T07:28:31.900Z",
+         "$updated":"2015-11-16T11:03:36.285Z"
+      },
+      {
+         "file":"nolan.avi",
+         "path":"C:\\Users\\mickael.lacombe@cpnv.ch\\OneDrive\\Git\\videojs\\test\\movies",
+         "info":{
+            "adult":false,
+            "backdrop_path":null,
+            "belongs_to_collection":null,
+            "budget":0,
+            "genres":[
+               {
+                  "id":99,
+                  "name":"Documentaire"
+               }
+            ],
+            "homepage":null,
+            "id":113039,
+            "imdb_id":"tt1335988",
+            "original_language":"en",
+            "original_title":"The Disappearance of McKinley Nolan",
+            "overview":null,
+            "popularity":0.001315,
+            "poster_path":"/guYmfeQiCF00j4UDJGj6dtNgG5n.jpg",
+            "production_companies":[
+
+            ],
+            "production_countries":[
+
+            ],
+            "release_date":"2010-10-01",
+            "revenue":0,
+            "runtime":null,
+            "spoken_languages":[
+               {
+                  "iso_639_1":"en",
+                  "name":"English"
+               }
+            ],
+            "status":"Released",
+            "tagline":null,
+            "title":"The Disappearance of McKinley Nolan",
+            "video":false,
+            "vote_average":0,
+            "vote_count":0
+         },
+         "cid":91,
+         "$created":"2015-09-10T07:28:48.935Z",
+         "$updated":"2015-11-16T11:03:36.287Z"
+      },
+      {
+         "file":"mickael.mp4",
+         "path":"C:\\Users\\mickael.lacombe@cpnv.ch\\OneDrive\\Git\\videojs\\test\\movies",
+         "info":[
+
+         ],
+         "cid":92,
+         "$created":"2015-09-10T07:29:02.720Z",
+         "$updated":"2015-11-16T11:03:36.288Z"
+      },
+      {
+         "file":"salt.avi",
+         "path":"C:\\Users\\mickael.lacombe@cpnv.ch\\OneDrive\\Git\\videojs\\test\\movies",
+         "info":{
+            "adult":false,
+            "backdrop_path":"/vHLsgsvLtFWDlhBigKDRsYIC1p6.jpg",
+            "belongs_to_collection":null,
+            "budget":110000000,
+            "genres":[
+               {
+                  "id":28,
+                  "name":"Action"
+               },
+               {
+                  "id":53,
+                  "name":"Thriller"
+               },
+               {
+                  "id":80,
+                  "name":"Crime"
+               },
+               {
+                  "id":9648,
+                  "name":"Mystère"
+               }
+            ],
+            "homepage":"",
+            "id":27576,
+            "imdb_id":"tt0944835",
+            "original_language":"en",
+            "original_title":"Salt",
+            "overview":"Evelyn Salt est sans aucun doute l'un des meilleurs agents que la CIA ait jamais comptés dans ses rangs. Pourtant, lorsque la jeune femme est accusée d'être une espionne au service de la Russie, elle doit fuir. Evelyn Salt va faire appel à sa remarquable expertise pour échapper à ceux qui la traquent, y compris dans son propre camp. En cherchant à percer le secret de ceux qui la visent, Salt va brouiller toutes les pistes. Est-elle vraiment ce qu'elle prétend ? Désormais, une seule question se pose : qui est Salt ?",
+            "popularity":1.682005,
+            "poster_path":"/4PYLF3SShM0hk8RiFXPNhNiWJD7.jpg",
+            "production_companies":[
+               {
+                  "name":"Columbia Pictures",
+                  "id":5
+               },
+               {
+                  "name":"Di Bonaventura Pictures",
+                  "id":435
+               },
+               {
+                  "name":"Relativity Media",
+                  "id":7295
+               },
+               {
+                  "name":"Wintergreen Productions",
+                  "id":11845
+               }
+            ],
+            "production_countries":[
+               {
+                  "iso_3166_1":"US",
+                  "name":"United States of America"
+               }
+            ],
+            "release_date":"2010-07-23",
+            "revenue":293329073,
+            "runtime":98,
+            "spoken_languages":[
+               {
+                  "iso_639_1":"en",
+                  "name":"English"
+               },
+               {
+                  "iso_639_1":"ru",
+                  "name":"Pусский"
+               },
+               {
+                  "iso_639_1":"ko",
+                  "name":"한국어/조선말"
+               }
+            ],
+            "status":"Released",
+            "tagline":"",
+            "title":"Salt",
+            "video":false,
+            "vote_average":6.2,
+            "vote_count":927
+         },
+         "cid":93,
+         "$created":"2015-09-10T07:32:24.365Z",
+         "$updated":"2015-11-16T11:03:36.290Z"
+      },
+      {
+         "file":"star.mp4",
+         "path":"C:\\Users\\mickael.lacombe@cpnv.ch\\OneDrive\\Git\\videojs\\test\\movies",
+         "info":{
+            "adult":false,
+            "backdrop_path":"/4iJfYYoQzZcONB9hNzg0J0wWyPH.jpg",
+            "belongs_to_collection":{
+               "id":10,
+               "name":"Star Wars",
+               "poster_path":"/ijAC17I7X4xCrKxtp1JUc2YBGuM.jpg",
+               "backdrop_path":"/d8duYyyC9J5T825Hg7grmaabfxQ.jpg"
+            },
+            "budget":11000000,
+            "genres":[
+               {
+                  "id":12,
+                  "name":"Aventure"
+               },
+               {
+                  "id":28,
+                  "name":"Action"
+               },
+               {
+                  "id":878,
+                  "name":"Science-Fiction"
+               }
+            ],
+            "homepage":"",
+            "id":11,
+            "imdb_id":"tt0076759",
+            "original_language":"en",
+            "original_title":"Star Wars",
+            "overview":"Il y a bien longtemps, dans une galaxie très lointaine... La guerre civile fait rage entre l'Empire galactique et l'Alliance rebelle. Capturée par les troupes de choc de l'Empereur menées par le sombre et impitoyable Dark Vador, la princesse Leia Organa dissimule les plans de l’Étoile Noire, une station spatiale invulnérable, à son droïde R2-D2 avec pour mission de les remettre au Jedi Obi-Wan Kenobi. Accompagné de son fidèle compagnon, le droïde de protocole C-3PO, R2-D2 s'échoue sur la planète Tatooine et termine sa quête chez le jeune Luke Skywalker. Rêvant de devenir pilote mais confiné aux travaux de la ferme, ce dernier se lance à la recherche de ce mystérieux Obi-Wan Kenobi, devenu ermite au cœur des montagnes désertiques de Tatooine...",
+            "popularity":10.09089,
+            "poster_path":"/iRXsmWFoxxiT7Me4cYF0vfWU0WV.jpg",
+            "production_companies":[
+               {
+                  "name":"Lucasfilm",
+                  "id":1
+               },
+               {
+                  "name":"Twentieth Century Fox Film Corporation",
+                  "id":306
+               }
+            ],
+            "production_countries":[
+               {
+                  "iso_3166_1":"US",
+                  "name":"United States of America"
+               }
+            ],
+            "release_date":"1977-05-25",
+            "revenue":775398007,
+            "runtime":121,
+            "spoken_languages":[
+               {
+                  "iso_639_1":"en",
+                  "name":"English"
+               }
+            ],
+            "status":"Released",
+            "tagline":"Il y a bien longtemps dans une galaxie très lointaine...",
+            "title":"Star Wars, épisode IV : Un nouvel espoir",
+            "video":false,
+            "vote_average":7.7,
+            "vote_count":2865
+         },
+         "cid":94,
+         "$created":"2015-11-16T11:03:36.292Z",
+         "$updated":"2015-11-16T11:03:38.218Z"
+      }
+   ]
+}
