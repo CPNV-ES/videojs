@@ -74,6 +74,9 @@
           }
         }
       }
+    },
+    "parse-torrent-name": {
+      "version": "0.5.4"
     }
   }
 }

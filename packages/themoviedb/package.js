@@ -11,11 +11,13 @@ Package.describe({
 });
 
 Npm.depends({
-  'moviedb': '0.2.2'
+  'moviedb': '0.2.2',
+  'parse-torrent-name': '0.5.4'
 });
 
 Package.onUse(function(api) {
   api.versionsFrom('1.2.1');
+  api.use('meteorhacks:async',['server']);
   api.addFiles('themoviedb.js',['server']);
   api.export('themoviedb',['server']);
 });
