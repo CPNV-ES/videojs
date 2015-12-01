@@ -1,8 +1,22 @@
 <template name="home">
-  <h1>Movies</h1>
-  {{#each posts}}
-    <div class="movie">
-      {{name}}
-    </div>
-  {{/each}}
+    <section class="movies">
+      {{#each movies}}
+        <div class="movie">
+          {{#if themoviedb}}
+            <img class="thumbnail" src="http://image.tmdb.org/t/p/original{{themoviedb.poster_path}}" alt="">
+          {{else}}
+            <img class="thumbnail" src="img/movie/noposter.png" alt="">
+          {{/if}}
+        </div>
+      {{/each}}
+    </section>
+    <aside class="menu">
+      <a href="#" class="logo">
+        <img src="img/logo.png" alt="VideoJS">
+
+        <div class="search"></div>
+
+
+      </a>
+    </aside>
 </template>
