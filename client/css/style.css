@@ -23,34 +23,49 @@ section.movies{
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
   width: auto; height: auto;
-  background: #242424;
+  background: #242424 no-repeat;
+  background-size: cover;
+  transition-property: background;
+  transition-duration: 0.3s;
+}
+section.movies:before{
+  content:'';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: auto; height: auto;
+  background: rgba(0,0,0,0.8);
 }
 aside.menu{
   display: none;
 }
 
 
-.infobar{
-  display: block;
+.movieinfo{
+  display: none;
   position: absolute;
   top: 0; left: 0; bottom: 0;
   height: auto; width: 420px;
   padding-top: 100px;
 }
-.infobar .thumbnail{
+.movieinfo .thumbnail{
   display: block;
   position: relative;
   margin: 0 auto;
   width: 200px;
 }
-.infobar .thumbnail:before{
+.movieinfo .thumbnail:before{
   content: '';
   display: block;
   padding-top: 150%;
   background-image: url('img/movie/noposter.png');
   background-size: cover;
 }
-
+.movieinfo .thumbnail img{
+  display: block;
+  position: absolute;
+  top: 0; left: 0;
+  height: 100%; width: 100%;
+}
 
 .movielist{
   display: block;
@@ -75,12 +90,15 @@ aside.menu{
   text-decoration: none;
   color: #efefef;
   font-weight: 100;
-  padding: 10px;
+  padding: 5px 10px;
+  line-height: 1.5em;
+  font-style: italic;
 }
-.movielist ul li a:hover{
+.movielist ul li a.active{
   background-color: #2980b9;
 }
 
 .movielist ul li a strong{
-  font-weight: 200;
+  font-weight: 300;
+  font-style: normal;
 }

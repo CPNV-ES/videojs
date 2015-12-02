@@ -1,28 +1,17 @@
 <template name="home">
 
   <section class="movies">
-    <!--INFOBAR-->
-    <div class="infobar">
-      <div class="thumbnail">
-        <img src="http://image.tmdb.org/t/p/original{{themoviedb.poster_path}}" alt=""/>
-      </div>
-      <h2>{{themoviedb.title}}</h2>
-    </div>
-    <!--/INFOBAR-->
+    <!--INFOBARS-->
+    {{#each movies}}
+      {{> movieinfo}}
+    {{/each}}
+    <!--/INFOBARS-->
 
     <!--MOVIELIST-->
     <div class="movielist">
       <ul>
         {{#each movies}}
-          <li>
-            <a href="film/{{_id}}">
-              {{#if themoviedb}}
-                <strong>{{themoviedb.title}}</strong>
-              {{else}}
-                {{filename}}
-              {{/if}}
-            </a>
-          </li>
+          {{> movielist}}
         {{/each}}
       </ul>
     </div>
