@@ -1,0 +1,13 @@
+<template name="movieinfo">
+    <div class="movieinfo" data-movie-id="{{_id}}" {{moviebackground}}>
+      <div class="thumbnail">
+        {{#if themoviedb}}<img src="http://image.tmdb.org/t/p/w500{{themoviedb.poster_path}}" alt=""/>{{/if}}
+      </div>
+      {{#if themoviedb}}
+        <h2>{{themoviedb.title}}</h2>
+      {{else}}
+        <h2>{{filename}}</h2>
+      {{/if}}
+      
+    </div>
+</template>
