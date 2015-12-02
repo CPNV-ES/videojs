@@ -33,7 +33,7 @@ Filemonitor.prototype.start = function () {
   var self = this;
 
   var movies = [];
-  Movies.find().fetch().forEach(function(movie){
+  Movies.find({}).fetch().forEach(function(movie){
     movies.push(new File(movie));
   });
 
@@ -67,6 +67,8 @@ Filemonitor.prototype.start = function () {
     .forEach(function(oldMovie){
       self.fire('delete',oldMovie);
     });
+
+
 
   // Watch
   this.sources.forEach(function(source){
