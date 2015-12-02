@@ -13,36 +13,74 @@ body{
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
   height: auto; width: auto;
+  font-family: 'Roboto',sans-serif;
+  font-size: 12px;
+  line-height: 1.5em;
+  overflow: hidden;
 }
 
 section.movies{
   position: absolute;
-  top: 0; left: 0; right: 280px; bottom: 0;
+  top: 0; left: 0; right: 0; bottom: 0;
   width: auto; height: auto;
   background: #242424;
 }
-.movie{
-  position: relative;
-  display: block;
-  float: left;
-  width: 10%;
+aside.menu{
+  display: none;
 }
-.movie:before{
+
+
+.infobar{
+  display: block;
+  position: absolute;
+  top: 0; left: 0; bottom: 0;
+  height: auto; width: 420px;
+  padding-top: 100px;
+}
+.infobar .thumbnail{
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  width: 200px;
+}
+.infobar .thumbnail:before{
   content: '';
   display: block;
   padding-top: 150%;
+  background-image: url('img/movie/noposter.png');
+  background-size: cover;
 }
 
-.movie .thumbnail{
+
+.movielist{
   display: block;
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
+  top: 0; left: 450px; right: 80px; bottom: 0;
+  width: auto; height: auto;
+  overflow-x: hidden; overflow-y: auto;
+}
+.movielist::-webkit-scrollbar {
+    display: none;
+}
+.movielist ul{
+  list-style-type: none;
+  margin: 200px 0; padding: 0;
+}
+.movielist ul li{
+  display: block;
+}
+.movielist ul li a{
+  display: block;
+  font-size: 2em;
+  text-decoration: none;
+  color: #efefef;
+  font-weight: 100;
+  padding: 10px;
+}
+.movielist ul li a:hover{
+  background-color: #2980b9;
 }
 
-aside.menu{
-  position: absolute;
-  top: 0; bottom: 0; right: 0;
-  width: 280px; height: auto;
-  background: #121212;
+.movielist ul li a strong{
+  font-weight: 200;
 }

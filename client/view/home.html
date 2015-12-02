@@ -1,21 +1,33 @@
 <template name="home">
-    <section class="movies">
-      {{#each movies}}
-        <div class="movie">
-          {{#if themoviedb}}
-            <img class="thumbnail" src="http://image.tmdb.org/t/p/original{{themoviedb.poster_path}}" alt="">
-          {{else}}
-            <img class="thumbnail" src="img/movie/noposter.png" alt="">
-          {{/if}}
-        </div>
-      {{/each}}
-    </section>
-    <aside class="menu">
-      <a href="#" class="logo">
-        <img src="img/logo.png" alt="VideoJS">
 
-        <div class="search"></div>
-        
-      </a>
-    </aside>
+  <section class="movies">
+    <!--INFOBAR-->
+    <div class="infobar">
+      <div class="thumbnail">
+        <img src="http://image.tmdb.org/t/p/original{{themoviedb.poster_path}}" alt=""/>
+      </div>
+      <h2>{{themoviedb.title}}</h2>
+    </div>
+    <!--/INFOBAR-->
+
+    <!--MOVIELIST-->
+    <div class="movielist">
+      <ul>
+        {{#each movies}}
+          <li>
+            <a href="film/{{_id}}">
+              {{#if themoviedb}}
+                <strong>{{themoviedb.title}}</strong>
+              {{else}}
+                {{filename}}
+              {{/if}}
+            </a>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+    <!--/MOVIELIST-->
+
+  </section>
+
 </template>
