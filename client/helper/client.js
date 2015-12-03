@@ -27,13 +27,3 @@ Template.home.events({
     console.log(this);*/
   }
 });
-
-
-Template.movieinfo.helpers({
-  moviebackground : function(){
-    if(this.themoviedb.backdrop_path)
-    return {
-      'data-movie-background' : 'http://image.tmdb.org/t/p/original'+this.themoviedb.backdrop_path
-    };
-  }
-});

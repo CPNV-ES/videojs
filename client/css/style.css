@@ -22,5 +22,48 @@ body{
   top: 0; left: 0; bottom: 0;
   height: auto; width: 300px;
   background: #202020;
+}
 
+.info{
+  display: block;
+  position: absolute;
+  top: 0; right: 0; bottom: 0;
+  height: auto; width: 300px;
+  background: #2980b9;
+}
+.info div[data-movie-id]{
+  display: none;
+}
+
+.info div[data-movie-id]:first-child{
+  display: block;
+}
+
+
+.info .thumbnail{
+  display: block;
+  width: 100%;
+  position: relative;
+}
+.info .thumbnail:before{
+  content: "";
+}
+
+.info .thumbnail{
+  display: block;
+  position: relative;
+  width: 100%;
+}
+.info .thumbnail:before{
+  content: '';
+  display: block;
+  padding-top: 150%;
+  background-image: url('img/movie/noposter.png');
+  background-size: cover;
+}
+.info .thumbnail img{
+  display: block;
+  position: absolute;
+  top: 0; left: 0;
+  height: 100%; width: 100%;
 }
