@@ -5,8 +5,8 @@ Template.home.helpers({
 });
 
 Template.home.events({
-  'mouseenter .movielist ul li a' : function(event, template){
-    var id = this._id;
+  'mouseenter .movielist ul li a' : function(event){
+    /*var id = this._id;
     var $all = $('.movielist ul li a');
     var $this = $(event.currentTarget);
     var $movies = $('.movies');
@@ -24,7 +24,7 @@ Template.home.events({
     // Set Background
     var bg = $movieinfo.attr('data-movie-background');
     $movies.css('background-image','url('+bg+')');
-    console.log(this);
+    console.log(this);*/
   }
 });
 
