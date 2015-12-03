@@ -66,6 +66,21 @@ aside.menu{
   top: 0; left: 0;
   height: 100%; width: 100%;
 }
+.movieinfo h2{
+  font-weight: 600;
+  text-align: center;
+  color: #efefef;
+  font-size: 1.5em;
+  text-shadow: 0 0 3px rgba(0,0,0,0.8);
+  margin: 20px 0;
+}
+.movieinfo .tagline{
+  font-weight: 100;
+  text-align: center;
+  color: #acacac;
+  font-size: 1.3em;
+  font-style: italic;
+}
 
 .movielist{
   display: block;

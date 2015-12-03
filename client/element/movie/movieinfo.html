@@ -5,9 +5,11 @@
       </div>
       {{#if themoviedb}}
         <h2>{{themoviedb.title}}</h2>
+        {{#if themoviedb.tagline}}
+          <p class="tagline">{{themoviedb.tagline}}</p>
+        {{/if}}
       {{else}}
         <h2>{{filename}}</h2>
       {{/if}}
-      
     </div>
 </template>

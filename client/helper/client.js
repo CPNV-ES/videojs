@@ -13,6 +13,7 @@ Template.home.events({
     var $allmovieinfo = $('.movieinfo');
     var $movieinfo = $('.movieinfo[data-movie-id="'+id+'"]');
 
+    // Remove class and add class to current .active item
     $all.removeClass('active');
     $this.addClass('active');
 
@@ -23,18 +24,16 @@ Template.home.events({
     // Set Background
     var bg = $movieinfo.attr('data-movie-background');
     $movies.css('background-image','url('+bg+')');
+    console.log(this);
   }
 });
 
 
 Template.movieinfo.helpers({
   moviebackground : function(){
-    if(this.themoviedb){
-      return {
-        'data-movie-background' : 'http://image.tmdb.org/t/p/original'+this.themoviedb.backdrop_path
-      };
-    }else{
-      return {};
-    }
+    if(this.themoviedb.backdrop_path)
+    return {
+      'data-movie-background' : 'http://image.tmdb.org/t/p/original'+this.themoviedb.backdrop_path
+    };
   }
 });
