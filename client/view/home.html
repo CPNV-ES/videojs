@@ -1,22 +1,11 @@
 <template name="home">
+  <div class="info">
+    {{#each movies}} {{> movieinfo}} {{/each}}
+  </div>
+  <div class="list">
+    {{#each movies}} {{> movielist}} {{/each}}
+  </div>
+  <div class="search">
 
-  <section class="movies">
-    <!--INFOBARS-->
-    {{#each movies}}
-      {{> movieinfo}}
-    {{/each}}
-    <!--/INFOBARS-->
-
-    <!--MOVIELIST-->
-    <div class="movielist">
-      <ul>
-        {{#each movies}}
-          {{> movielist}}
-        {{/each}}
-      </ul>
-    </div>
-    <!--/MOVIELIST-->
-
-  </section>
-
+  </div>
 </template>
