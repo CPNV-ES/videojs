@@ -1,11 +1,48 @@
 <template name="home">
+
   <div class="sidebar">
-    {{> sidebar}}
+    Yo
   </div>
+
   <div class="list">
-    {{#each movies}} {{> movielist}} {{/each}}
+    <ul>
+      {{#each movies}}
+        <li>
+          <a href="film/{{_id}}">
+            {{#if themoviedb}}
+              <strong>{{themoviedb.title}}</strong>
+              <small>{{themoviedb.runtime}}</small>
+            {{else}}
+              {{filename}}
+            {{/if}}
+          </a>
+        </li>
+      {{/each}}
+    </ul>
   </div>
+
   <div class="info">
-    {{#each movies}} {{> movieinfo}} {{/each}}
+    
+    {{#each movies}}
+      <div data-movie-id="{{_id}}" >
+        <div class="thumbnail">
+          {{#if themoviedb}}<img src="http://image.tmdb.org/t/p/w500{{themoviedb.poster_path}}" alt=""/>{{/if}}
+        </div>
+
+
+
+
+        {{#if themoviedb}}
+          <h2>{{themoviedb.title}}</h2>
+          {{#if themoviedb.tagline}}
+            <p class="tagline">{{themoviedb.tagline}}</p>
+          {{/if}}
+        {{else}}
+          <h2>{{filename}}</h2>
+        {{/if}}
+      </div>
+    {{/each}}
+
   </div>
+
 </template>

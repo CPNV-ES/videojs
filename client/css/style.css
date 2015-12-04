@@ -7,6 +7,9 @@ body{
   width: 100%; height: 100%;
   padding: 0; margin: 0;
   position: relative;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  line-height: 1.5em;
 }
 .app{
   display: block;
@@ -29,7 +32,7 @@ body{
   position: absolute;
   top: 0; right: 0; bottom: 0;
   height: auto; width: 300px;
-  background: #2980b9;
+  background: none;
 }
 .info div[data-movie-id]{
   display: none;
@@ -38,32 +41,61 @@ body{
 .info div[data-movie-id]:first-child{
   display: block;
 }
+  .info .thumbnail{
+    display: block;
+    width: 100%;
+    position: relative;
+  }
+  .info .thumbnail:before{
+    content: "";
+  }
 
+  .info .thumbnail{
+    display: block;
+    position: relative;
+    width: 100%;
+  }
+  .info .thumbnail:before{
+    content: '';
+    display: block;
+    padding-top: 150%;
+    background-image: url('img/movie/noposter.png');
+    background-size: cover;
+  }
+  .info .thumbnail img{
+    display: block;
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%; width: 100%;
+  }
 
-.info .thumbnail{
-  display: block;
-  width: 100%;
-  position: relative;
-}
-.info .thumbnail:before{
-  content: "";
-}
-
-.info .thumbnail{
-  display: block;
-  position: relative;
-  width: 100%;
-}
-.info .thumbnail:before{
-  content: '';
-  display: block;
-  padding-top: 150%;
-  background-image: url('img/movie/noposter.png');
-  background-size: cover;
-}
-.info .thumbnail img{
-  display: block;
+.list{
   position: absolute;
-  top: 0; left: 0;
-  height: 100%; width: 100%;
+  top: 0; bottom: 0; left: 300px; right: 300px;
+  height: auto; width: auto;
+  overflow-x: hidden; overflow-y: auto;
+}
+
+.list ul{
+  list-style-type: none;
+  margin: 0; padding: 0;
+}
+
+.list ul li{
+
+}
+
+.list ul li a{
+  display: block;
+  padding: 10px 20px;
+  color: #ecf0f1;
+  text-decoration: none;
+  font-weight: 100;
+  font-size: 20px;
+}
+.list ul li a strong{
+  font-weight: 300;
+}
+.list ul li a.active,.list ul li a:hover{
+  background: #2980b9;
 }
