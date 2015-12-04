@@ -20,6 +20,8 @@ Themoviedb.prototype.moviedb = Async.wrap(moviedb,['searchMovie','movieInfo','co
 Themoviedb.prototype.info = function(filename){
   var info = this.resolve(filename);
 
+  if(info.season || info.episode) return null;
+
   // Search
   var searchResult;
   try{
