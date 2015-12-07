@@ -19,6 +19,7 @@ var TheMovieDb = function() {
  */
 TheMovieDb.prototype.search = function(query, callback) {
     var t = this;
+    console.log(t.moviedb);
     console.log("Search for querry : ", query);
     t.moviedb.searchMovie(
       {
@@ -46,6 +47,7 @@ TheMovieDb.prototype.search = function(query, callback) {
  */
 TheMovieDb.prototype.find = function(id, callback) {
     var t = this;
+    console.log("find for movie : ", id);
     t.moviedb.movieInfo(
       {
         id: id,

@@ -31,7 +31,6 @@ var Engine = function(){
   };
   this.algo.when.is.finded = function(cid, themoviedb_id) {
     var movie;
-    console.log("movies search : ", cid);
     t.themoviedb.find(themoviedb_id,function(info) {
       movie = Movie({
         cid : cid,
@@ -87,18 +86,10 @@ var Engine = function(){
     t.movies.create(movie);
   };
   this.files.when.is.deleted = function(movie){
-    if(movie.cid<0){
-      movie = t.movies.whereFirst(Movie({
-        file : movie.file,
-        path : movie.path
-      }));
-    }    
     t.movies.delete(movie);
   };
   // Start sync with actual database movies
   this.files.start(this.movies.all());
-  
-  
 };
   
  

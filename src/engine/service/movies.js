@@ -21,7 +21,7 @@ Movies.prototype.when = {
 		updated : function(){},
 		deleted : function(){}
 	}
-};  
+};
 
 /**
  * Get all movies from the database.
@@ -49,7 +49,7 @@ Movies.prototype.get = function(cid){
 	}
 	// Get movie :
 	var moviedata = this.movies.get(cid);
-    
+
     // No movies found
 	if(!moviedata){
 		return null;
@@ -65,7 +65,7 @@ Movies.prototype.get = function(cid){
  */
 // TODO: Check for return object or boolean ...
 Movies.prototype.create = function(movie){
-    
+
 	movie = this.moviesObjectTransformer(movie);
 
 	// Check the validity of the movie object.
@@ -79,7 +79,7 @@ Movies.prototype.create = function(movie){
 	var cid = this.movies.insert(movie.toJson());
 
 	var newMovie = this.get(cid);
-  
+
 	// Call callback for created movie
 	this.when.is.created(newMovie);
 
@@ -99,37 +99,13 @@ Movies.prototype.update = function(movie){
 		console.error("Movies : can't update your movie ", movie);
 		return false;
 	}
-    
+
 	// Call callback for updated movie
 	this.when.is.updated(this.get(movie));
 
 	return true;
 };
 
-/**
- * Search movie with multiples conditions
- * @param {Movie[]} Searched Movie model or json array
- * @return {Movie[]} Movie list or empty array if no result
- */
-Movies.prototype.where = function(where){
-    var where = (typeof where == Movie)? where.toJson() : where;    
-    var moviesdata = this.movies.where(where);
-    for(var i = moviesdata.length-1;i==0;i--){
-        moviesdata[i] = this.moviesObjectTransformer(moviesdata[i]);
-    }
-    return moviesdata;    
-};
-
-/**
- * Search one movie with multiples conditions
- * @param {Movie} Searched Movie model or json array
- * @return {Movie | null}
- */
-Movies.prototype.whereFirst = function(where){
-    var movies = this.where(where);
-    if(movies.length>0) return Movie(movies[0]);
-    else null;
-};
 
 /**
  * Remove the movie object from the database
@@ -137,16 +113,11 @@ Movies.prototype.whereFirst = function(where){
  * @returns {boolean} true if success
  */
 Movies.prototype.delete = function(movie){
-
-	movie = this.moviesObjectTransformer(movie);
-
-	// Remove movie / return false if no movie deleted
-	if(!this.movies.remove(movie.cid)){
-		return false;
+	var moviesList = this.movies.where({file:movie.file,path:movie.path});
+	for(var i = 0; i < moviesList.items.length ;i++){
+		this.movies.remove(moviesList.items[i].cid);
+		this.when.is.deleted(moviesList.items[i].cid);
 	}
-	// Call when.is.detele
-	this.when.is.deleted(movie.cid);
-
 	return true;
 };
 
