@@ -7,8 +7,14 @@
 		<link href="css/style.css" rel="stylesheet">
 		<script src="js/modernizr.custom.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/style1.css" />
-		<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.3.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="css/chocolat.css" type="text/css" media="screen" charset="utf-8">
+		<link rel="stylesheet" href="css/component.css" type="text/css" media="screen" charset="utf-8">
 
+
+		<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.3.0/css/font-awesome.min.css" />
+<!--
+https://api.themoviedb.org/3/movie/19995?api_key=8a23ddbb896daae56d745ee6cbe0ea94&language=fr&append_to_response=trailers,images,credits&include_image_language=en,null
+-->
 
 	</head>
 	<body>
@@ -54,7 +60,7 @@
 								// on parcours le tableau
 								foreach ($films['film'] as $key=>$val) {
 									?>
-									<a class="grid__item" href="#">
+									<a class="grid__item" href="#" id="<?php echo $val['info']['id']; ?>">
 										<?php
 										if($val['info']){
 											// si le film est existant
@@ -99,11 +105,12 @@
 										if($val['info']){
 										// si le film est existant
 										?>
-										<article class="content__item">
-											<div class="w25">
+										<article class="content__item" >
+											<div class="banner-film" style="background-image: url(https://image.tmdb.org/t/p/original/<?php echo $val['info']['backdrop_path']; ?>);;"></div>
+											<div class="w25" style="padding-top:0;">
 											<img src="https://image.tmdb.org/t/p/w396<?php echo $val['info']['poster_path'];?>">
 											</div>
-											<div class="w75">
+											<div class="w75 border-film">
 												<h2 class="title title--full"><?php echo $val['info']['original_title'];?></h2>
 												<div class="note">
 													<span class="star">
@@ -119,41 +126,82 @@
 												</div>-->
 												<p><?php echo $val['info']['overview'];?></p>
 												<div class="w50 info_film">
-													<h4>Informations</h4>
-
-													<p><i class="fa fa-clock-o"></i> Durée : <?php echo $val['info']['runtime'];?> minutes</p>
-													<p><i class="fa fa-money"></i> Chiffre d'affaires : <?php  echo "$ ".number_format($val['info']['revenue'],0);?></p>
-													<p><i class="fa fa-money"></i> Budget : <?php echo "$ ".number_format($val['info']['budget'],0);?></p>
 
 												</div>
-												<div class="w50 info_film">
-													<h4>Genre</h4>
-													<?php
-													foreach ($val['info']['genres'] as $key=>$genre) {
-														echo "<p><i class=\"fa fa-angle-right\"></i> ".$genre['name']."</p>";
-													}
+
+											</div>
+											<div class="w100"></div>
+											<div class="w25 border-film">
+												<h4>Informations</h4>
+
+												<p><i class="fa fa-calendar"></i> Date de sortie : <?php echo $val['info']['release_date'];?></p>
+												<p><i class="fa fa-clock-o"></i> Durée : <?php echo $val['info']['runtime'];?> minutes</p>
+												<p><i class="fa fa-money"></i> Chiffre d'affaires : <?php  echo "$ ".number_format($val['info']['revenue'],0);?></p>
+												<p><i class="fa fa-money"></i> Budget : <?php echo "$ ".number_format($val['info']['budget'],0);?></p>
+
+												<h4>Genre</h4>
+												<?php
+												foreach ($val['info']['genres'] as $key=>$genre) {
+													echo "<p><i class=\"fa fa-angle-right\"></i> ".$genre['name']."</p>";
+												}
+												?>
+												<h4>Production</h4>
+												<?php
+												foreach ($val['info']['production_companies'] as $key=>$prod) {
+													echo "<p><i class=\"fa fa-angle-right\"></i> ".$prod['name']."</p>";
+												}
+												?>
+												<h4>Pays producteurs</h4>
+												<?php
+												foreach ($val['info']['production_countries'] as $key=>$prod_pays) {
+													echo "<p><i class=\"fa fa-angle-right\"></i> ".$prod_pays['name']."</p>";
+												}
+												?>
+
+											</div>
+											<div class="w75 border-film">
+												<h4>Bande annonce</h4>
+												<?php
+												foreach ($val['info']['trailers']['youtube'] as $key=>$trailer) {
 													?>
-												</div>
-												<div class="w50 info_film">
-													<h4>Production</h4>
+													<iframe width="100%" height="315" src="https://www.youtube.com/embed/<?php echo $trailer['source']; ?>" frameborder="0" allowfullscreen></iframe>
 													<?php
-													foreach ($val['info']['production_companies'] as $key=>$prod) {
-														echo "<p><i class=\"fa fa-angle-right\"></i> ".$prod['name']."</p>";
 													}
-													?>
-
+												?>
+												<h4>Acteurs du film</h4>
+												<br>
+												<div class="acteur-film">
+														<?php
+														$max = 0;
+														foreach ($val['info']['credits']['cast'] as $key=>$cast) {
+															$max = $max + 1;
+															if($max <= 4){
+																echo "
+																<div>
+																	<img src=\"https://image.tmdb.org/t/p/w185".$cast['profile_path']."\">
+																	<p><a target=\"_blank\" href=\"https://www.themoviedb.org/person/".$cast['id']."\">Nom : ".$cast['name']." </a></p>
+																	<p>Rôle : ".$cast['character']."</p>
+																</div>";
+															}else{
+																echo "<div style=\"display:none;\"><img src=\"https://image.tmdb.org/t/p/w185".$cast['profile_path']."\"><p><a href=\"https://www.themoviedb.org/person/".$cast['id']."\">".$cast['name']."</a></p></div>";
+															}
+														}
+														?>
 												</div>
-
-												<div class="w50 info_film">
-
-													<h4>Pays producteurs</h4>
-													<?php
-													foreach ($val['info']['production_countries'] as $key=>$prod_pays) {
-														echo "<p><i class=\"fa fa-angle-right\"></i> ".$prod_pays['name']."</p>";
-													}
-													?>
+												<div class="w100"></div>
+												<h4>Illustration du film</h4>
+												<br>
+												<div class="img-film">
+													<div class="chocolat-parent" data-chocolat-title="backdrops">
+														<?php
+														foreach ($val['info']['images']['backdrops'] as $key=>$img) {
+															echo "<a class=\"chocolat-image\" href=\"https://image.tmdb.org/t/p/original".$img['file_path']."\" >";
+															echo " <img src=\"https://image.tmdb.org/t/p/w185".$img['file_path']."\">";
+															echo "</a>";
+														}
+														?>
+													</div>
 												</div>
-
 											</div>
 										</article>
 									<?php
@@ -183,7 +231,16 @@
 			<!--</section>-->
 			<footer id="footer"></footer>
 		</div>
+
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.chocolat.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+	    	$('.chocolat-parent').Chocolat();
+			});
+		</script>
 	<script src="js/classie.js"></script>
 	<script src="js/main.js"></script>
+
 	</body>
 </html>
