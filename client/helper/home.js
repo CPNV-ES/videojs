@@ -27,4 +27,17 @@ Template.home.helpers({
     $movies.css('background-image','url('+bg+')');
     console.log(this);
   }
-});*/
+});
+
+ Template.home.helpers({
+ movies : function(){
+ return Movies.find({},{sort: {themoviedb:{title:-1}}});
+ },
+ someproperties : function(){
+ return {
+
+ };
+ }
+ });
+
+*/

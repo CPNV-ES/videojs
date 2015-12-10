@@ -1,0 +1,8 @@
+<template name="movieTemplate">
+            <a class="grid__item" href="/film/{{_id}}" id="{{_id}}">
+                <img class="film-img" src="https://image.tmdb.org/t/p/w396{{themoviedb.poster_path}}">
+                <h2 class="title title--preview">{{themoviedb.title}}</h2>
+                <div class="loader"></div>
+                <span class="category">{{themoviedb.release_date}}</span>
+            </a>
+</template>

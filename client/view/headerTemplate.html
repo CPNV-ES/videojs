@@ -1,0 +1,26 @@
+<template name="headerTemplate">
+    <header id="header" class="cl-effect-1">
+        <img id="logo" src="img/logo.png">
+        <a class="linkheader" href="#">A propos </a>
+        <a class="linkheader" href="#">Mettre à jour</a>
+        <a class="linkheader search" href="#">Rechercher &#8628;
+            <div id="search">
+                <form>
+                    <label><p>Nom du film: <input></p></label>
+                    <label><p>Réalisateur : <input></p></label>
+                    <label><p>Genre : <input name="genre" id="listgenre" list="genre"></p>
+                        <datalist id="genre">
+                            <select>
+                                <option value="Action">Action</option>
+                                <option value="Animé">Animé</option>
+                                <option value="Fantastique">Fantastique</option>
+                                <option value="Western">Western</option>
+                            </select>
+                        </datalist>
+                    </label>
+                    <label><button type="submit">Envoyer</button></label>
+                </form>
+            </div>
+        </a>
+    </header>
+</template>

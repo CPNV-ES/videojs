@@ -1,6 +1,18 @@
 <template name="home">
+  {{> headerTemplate }}
+  <div class="container">
+    <div id="theGrid" class="main">
+      <section class="grid">
+        {{#each movies}}
+          {{> movieTemplate}}
+        {{/each}}
+      </section>
+    </div>
+    </div>
+</template>
 
-  <div class="sidebar">
+
+  <!--<div class="sidebar">
     Yo
   </div>
 
@@ -43,6 +55,4 @@
       </div>
     {{/each}}
 
-  </div>
-
-</template>
+  </div>-->
