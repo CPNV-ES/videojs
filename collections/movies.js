@@ -20,3 +20,10 @@ Movies.before.insert(function(userId,doc){
 Movies.before.update(function(userId,doc,fieldNames,modifier,options){
   doc.updateAt = Date.now();
 });
+
+if(Meteor.isServer){
+  // Publish for all movie (1 user per server)
+  Meteor.publish('movies', function(){
+    return Movies.find({});
+  });
+}
