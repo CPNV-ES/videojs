@@ -3,30 +3,49 @@ var fs = Npm.require('fs');
 var path = Npm.require('path');
 
 Filemonitor = function(){
-  this.sources = [];
-  this.extensions = [];
-  this.watchers = [];
-  this.subscribers = {
+  this._sources = [];
+  this._extensions = [];
+  this._watchers = [];
+  this._subscribers = {
     create : [],
     update : [],
     delete : [],
   };
 };
 
-Filemonitor.prototype.sources = function (sources) {
-  this.both(sources,this.extensions);
+Filemonitor.prototype.sources = function () {
+  this.reloadSources();
+  this.sync();
 };
-Filemonitor.prototype.extensions = function (extensions) {
-  this.both(this.sources,this.extensions);
+
+Filemonitor.prototype.extensions = function () {
+  this.reloadExtensions();
+  this.sync();
 };
 Filemonitor.prototype.both = function(sources,extensions){
+  this.reloadSources();
+  this.reloadExtensions();
+  this.sync();
+};
+
+Filemonitor.prototype.sync = function(){
   this.stop();
-  this.sources = sources;
-  this.sources.forEach(function(source){
-    source = fs.realpathSync(source);
-  });
-  this.extensions = extensions;
   this.start();
+};
+
+Filemonitor.prototype.reloadSources = function(){
+  var self = this;
+  this._sources = [];
+  Sources.find().fetch().forEach(function(source){
+    if (source.source) self._sources.push(source.source);
+  });
+};
+Filemonitor.prototype.reloadExtensions = function(){
+  var self = this;
+  this._extensions = [];
+  Extensions.find().fetch().forEach(function(extension){
+    if(extension.extension) self._extensions.push(extension.extension);
+  });
 };
 
 Filemonitor.prototype.start = function () {
@@ -38,7 +57,7 @@ Filemonitor.prototype.start = function () {
   });
 
   var files = [];
-  this.sources.forEach(function(source){
+  this._sources.forEach(function(source){
     files = files.concat(self.list(source));
   });
 
@@ -71,13 +90,14 @@ Filemonitor.prototype.start = function () {
 
 
   // Watch
-  this.sources.forEach(function(source){
+  this._sources.forEach(function(source){
     self.watch(source);
   });
 };
 Filemonitor.prototype.stop = function () {
-  Object.keys(this.watchers).forEach(function(watcherid){
-    this.unwatch(watcherid);
+  var self = this;
+  Object.keys(this._watchers).forEach(function(watcherid){
+    self.unwatch(watcherid);
   });
 };
 
@@ -85,10 +105,10 @@ Filemonitor.prototype.watch = function(folder){
   var self = this;
   this.unwatch(folder);
 
-  this.watchers[folder] = fm.watch(folder,{
+  this._watchers[folder] = fm.watch(folder,{
     matches : function(relPath){
       var ext = path.extname(relPath);
-      return self.extensions.indexOf(ext) >= 0;
+      return self._extensions.indexOf(ext) >= 0;
     },
     excludes : function(relPath){
       return false;
@@ -96,7 +116,7 @@ Filemonitor.prototype.watch = function(folder){
 
   });
 
-  this.watchers[folder].on('change',Meteor.bindEnvironment(function(changes){
+  this._watchers[folder].on('change',Meteor.bindEnvironment(function(changes){
     changes.addedFiles.forEach(function(file){
       self.fire('create',new File(path.join(folder,file)));
     });
@@ -114,7 +134,7 @@ Filemonitor.prototype.watch = function(folder){
 
 };
 Filemonitor.prototype.unwatch = function(folder){
-  if(this.watchers[folder]) this.watchers[folder].close();
+  if(this._watchers[folder]) this._watchers[folder].close();
 };
 
 Filemonitor.prototype.list = function(folder){
@@ -127,7 +147,7 @@ Filemonitor.prototype.list = function(folder){
     var extension = path.extname(file);
     if(info.isDirectory()) files = files.concat(self.list(realpath));
     else if(info.isFile()){
-      if(self.extensions.indexOf(extension)<0) return false;
+      if(self._extensions.indexOf(extension)<0) return false;
       files.push(new File(realpath));
     }
   });
@@ -135,14 +155,14 @@ Filemonitor.prototype.list = function(folder){
 };
 
 Filemonitor.prototype.on = function(type,fn,context){
-  if(typeof this.subscribers[type] == 'undefined') throw new Error(type+' is not real type');
+  if(typeof this._subscribers[type] == 'undefined') throw new Error(type+' is not real type');
   fn = typeof fn === 'function' ? fn : context[fn];
-  this.subscribers[type].push({fn: fn, context: context || this});
+  this._subscribers[type].push({fn: fn, context: context || this});
 };
 Filemonitor.prototype.fire = function(type,File){
-  if(typeof this.subscribers[type] == 'undefined') throw new Error(type+' is not real type');
+  if(typeof this._subscribers[type] == 'undefined') throw new Error(type+' is not real type');
   var i,max,subscribers;
-  subscribers = this.subscribers[type];
+  subscribers = this._subscribers[type];
   max = subscribers ? subscribers.length : 0;
   for(i=0;i<max;i++){
     subscribers[i].fn.call(subscribers[i].context,File);
