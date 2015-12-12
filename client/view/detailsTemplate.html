@@ -1,28 +1,24 @@
 <template name="detailsTemplate">
     <!--<article class="content__item" >-->
-    {{movies}}
+
     <div class="banner-film"
-         style="background-image: url(https://image.tmdb.org/t/p/original//{{themoviedb.backdrop_path}});;"></div>
+         style="background-image: url(https://image.tmdb.org/t/p/original/{{themoviedb.backdrop_path}});"></div>
     <div class="w25" style="padding-top:0;">
         <img src="https://image.tmdb.org/t/p/w396/iHyW1522lgxAY76jCqMD1dA60DK.jpg">
     </div>
     <div class="w75 border-film">
-        <h2 class="title title--full">{{themoviedb.title}}</h2>
+        <h2 class="title title--full">{{themoviedb.original_title}}</h2>
 
         <div class="note">
 													<span class="star">
 														<span class="star-blue" style="width:98px;"></span>
 													</span>
 
-            <p class="small"> 7/10 sur 7009 votes</p>
+            <p class="small"> {{themoviedb.vote_average}}/10 sur 7009 votes</p>
         </div>
-        <p>Malgré sa paralysie, Jake Sully, un ancien marine immobilisé dans un fauteuil roulant, est resté un
-            combattant au plus profond de son être. Il est recruté pour se rendre à des années-lumière de la Terre, sur
-            Pandora, où de puissants groupes industriels exploitent un minerai rarissime destiné à résoudre la crise
-            énergétique sur Terre. Parce que l'atmosphère de Pandora est toxique pour les humains, ceux-ci ont créé le
-            Programme Avatar, qui permet à des "pilotes" humains de lier leur esprit à un avatar, un corps biologique
-            commandé à distance, capable de survivre dans cette atmosphère létale. Ces avatars sont des hybrides créés
-            génétiquement en croisant l'ADN humain avec celui des Na'vi, les autochtones de Pandora.</p>
+        <p>
+            {{themoviedb.overview}}
+        </p>
 
         <div class="w50 info_film">
 
@@ -33,97 +29,61 @@
     <div class="w25 border-film">
         <h4>Informations</h4>
 
-        <p><i class="fa fa-calendar"></i> Date de sortie : 2009-12-18</p>
+        <p><i class="fa fa-calendar"></i> Date de sortie : {{themoviedb.release_date}}</p>
 
-        <p><i class="fa fa-clock-o"></i> Durée : 166 minutes</p>
+        <p><i class="fa fa-clock-o"></i> Durée : {{themoviedb.runtime}} minutes</p>
 
-        <p><i class="fa fa-money"></i> Chiffre d'affaires : $ 2,781,505,847</p>
+        <p><i class="fa fa-money"></i> Chiffre d'affaires : $ {{themoviedb.revenue}}</p>
 
-        <p><i class="fa fa-money"></i> Budget : $ 237,000,000</p>
+        <p><i class="fa fa-money"></i> Budget : $ {{themoviedb.budget}}</p>
 
         <h4>Genre</h4>
+        {{#each themoviedb.genres}}
+            <p><i class="fa fa-angle-right"></i>{{name}}</p>
+        {{/each}}
 
-        <p><i class="fa fa-angle-right"></i> Action</p>
+        <h4>Production</h4>
 
-        <p><i class="fa fa-angle-right"></i> Aventure</p>
+        {{#each themoviedb.production_companies}}
+            <p><i class="fa fa-angle-right"></i>{{name}}</p>
+        {{/each}}
 
-        <p><i class="fa fa-angle-right"></i> Fantastique</p>
-
-        <p><i class="fa fa-angle-right"></i> Science-Fiction</p>                                                <h4>
-        Production</h4>
-
-        <p><i class="fa fa-angle-right"></i> 20th Century Fox</p>
-
-        <p><i class="fa fa-angle-right"></i> Ingenious Film Partners</p>
-
-        <p><i class="fa fa-angle-right"></i> Dune Entertainment</p>
-
-        <p><i class="fa fa-angle-right"></i> Lightstorm Entertainment</p>
         <h4>Pays producteurs</h4>
 
-        <p><i class="fa fa-angle-right"></i> United States of America</p>
+        {{#each themoviedb.production_countries}}
+            <p><i class="fa fa-angle-right"></i>{{name}}</p>
+        {{/each}}
 
-        <p><i class="fa fa-angle-right"></i> United Kingdom</p>
     </div>
     <div class="w75 border-film">
         <h4>Bande annonce</h4>
-        <iframe width="100%" height="315" src="https://www.youtube.com/embed/KyFoIvQgr8U" frameborder="0"
-                allowfullscreen></iframe>
+
+        {{#each themoviedb.trailers.youtube}}
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/{{source}}" frameborder="0"
+                    allowfullscreen></iframe>
+        {{/each}}
+
         <h4>Acteurs du film</h4>
         <br>
-
         <div class="acteur-film">
+            {{#each themoviedb.credits.cast}}
+                {{#if isNotNull profile_path}}
+                    <div>
+                        <img src="https://image.tmdb.org/t/p/w185/{{profile_path}}">
 
-            <div>
-                <img src="https://image.tmdb.org/t/p/w185/9XzAE3ZnCnazub4xrSY8YBN7sNq.jpg">
+                        <p><a target="_blank" href="https://www.themoviedb.org/person/{{id}}">Nom : {{name}} </a></p>
 
-                <p><a target="_blank" href="https://www.themoviedb.org/person/65731">Nom : Sam Worthington </a></p>
-
-                <p>Rôle : Jake Sully</p>
-            </div>
-            <div>
-                <img src="https://image.tmdb.org/t/p/w185/ofNrWiA2KDdqiNxFTLp51HcXUlp.jpg">
-
-                <p><a target="_blank" href="https://www.themoviedb.org/person/8691">Nom : Zoe Saldana </a></p>
-
-                <p>Rôle : Neytiri</p>
-            </div>
-            <div>
-                <img src="https://image.tmdb.org/t/p/w185/bcDb0vbfWZBHo1QEh9oQVRs3vx2.jpg">
-
-                <p><a target="_blank" href="https://www.themoviedb.org/person/10205">Nom : Sigourney Weaver </a></p>
-
-                <p>Rôle : Dr. Grace Augustine</p>
-            </div>
-            <div>
-                <img src="https://image.tmdb.org/t/p/w185/tqF6ibURpLvRPlgvLRvjCQqWaa2.jpg">
-
-                <p><a target="_blank" href="https://www.themoviedb.org/person/32747">Nom : Stephen Lang </a></p>
-
-                <p>Rôle : Col. Quaritch</p>
-            </div>
-            <div style="display:none;">
-                <img src="https://image.tmdb.org/t/p/w185/v37VK0MNuRuJOCKPKJcZAJXRA5r.jpg">
-
-                <p><a href="https://www.themoviedb.org/person/17647">Michelle Rodriguez</a></p></div>
-            <div style="display:none;"><img src="https://image.tmdb.org/t/p/w185/mLQrEU7X7GD5V7i1clGRqpg8PVk.jpg">
-
-                <p><a href="https://www.themoviedb.org/person/1771">Giovanni Ribisi</a></p></div>
-
-            <div style="display:none;">
-                <img src="https://image.tmdb.org/t/p/w185/y6AyGCsQHLoi4LegSS7VRtgRyJe.jpg">
-
-                <p><a href="https://www.themoviedb.org/person/59231">Joel David Moore</a></p></div>
-        </div>
-        <div class="w100"></div>
-        <h4>Illustration du film</h4>
-        <br>
-
-        <div class="img-film">
-            <div class="chocolat-parent" data-chocolat-title="backdrops">
-                <a class="chocolat-image" href="https://image.tmdb.org/t/p/original/5XPPB44RQGfkBrbJxmtdndKz05n.jpg">
-                    <img src="https://image.tmdb.org/t/p/w185/5XPPB44RQGfkBrbJxmtdndKz05n.jpg"></a></div>
+                        <p>Rôle : {{character}}</p>
+                    </div>
+                {{/if}}
+            {{/each}}
         </div>
     </div>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            console.log("poeut !");
+            $('.chocolat-parent').Chocolat();
+        });
+    </script>
     <!--</article>-->
 </template>
