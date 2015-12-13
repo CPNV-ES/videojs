@@ -26,4 +26,7 @@ if(Meteor.isServer){
   Meteor.publish('movies', function(){
     return Movies.find({});
   });
+  Meteor.publish('movie', function(id){
+    return Movies.find(id);
+  });
 }
