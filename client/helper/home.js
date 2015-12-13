@@ -4,7 +4,7 @@ Template.home.helpers({
     var title =  Session.get("querytitle");
     var crew = Session.get("querycrew");
     var cast = Session.get("querycast");
-    console.log("name : ", name);
+
     query = {};
     if(title != undefined && title.length > 0){
       query['themoviedb.title'] = { $regex: title, $options: 'gi' };
