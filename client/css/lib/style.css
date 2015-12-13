@@ -13,7 +13,7 @@ a:hover > #search{display: block;}
 #search p{width: 100%;display: block;text-align: left; font-size: 12pt;}
 #search input{float: right;border: none;color: rgb(55, 135, 189);/* margin: 0px 0 0 0; */background: none;border-bottom: 1px solid rgb(57, 137, 191);font-size: 16pt; height: 26px;width: 100%;}
 input{outline: none;}
-button[type="submit"]{background: rgb(55, 135, 189); border: none;color: rgb(255, 255, 255); font-size: 12pt;padding: 10px 30px 10px 30px; margin-top: 23px;    cursor: wait;}
+.clearbutton{background: rgb(55, 135, 189); border: none;color: rgb(255, 255, 255); font-size: 12pt;padding: 10px 30px 10px 30px; margin-top: 23px}
 .w50{width: calc(50% - 50px); float: left; padding: 5px;}
 .w25{width: calc(25% - 50px); float: left; padding: 20px; margin: 20px;}
 .w75{width: calc(75% - 80px); float: left; padding: 20px; margin: 20px;background: rgba(255, 255, 255, 0.9);}

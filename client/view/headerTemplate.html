@@ -5,9 +5,10 @@
         <a class="linkheader" href="#">Mettre à jour</a>
         <a class="linkheader search" href="#">Rechercher &#8628;
             <div id="search">
-                <form>
-                    <label><p>Nom du film: <input></p></label>
-                    <label><p>Réalisateur : <input></p></label>
+                <form id="form">
+                    <label><p>Nom du film: <input id="querytitle"></p></label>
+                    <label><p>Equipe : <input id="querycrew"></p></label>
+                    <label><p>Acteur : <input id="querycast"></p></label>
                     <label><p>Genre : <input name="genre" id="listgenre" list="genre"></p>
                         <datalist id="genre">
                             <select>
@@ -18,7 +19,7 @@
                             </select>
                         </datalist>
                     </label>
-                    <label><button type="submit">Envoyer</button></label>
+                    <label><button class="clearbutton" id="queryclear">Effacer</button></label>
                 </form>
             </div>
         </a>

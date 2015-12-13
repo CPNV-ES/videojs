@@ -1,9 +1,7 @@
 Meteor.startup(function(){
 
   // Get Sources
-  var sources = [
-
-       ];
+  var sources = [];
   Sources.find().fetch().forEach(function(source){
     sources.push(source.source);
   });

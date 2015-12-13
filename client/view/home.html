@@ -1,18 +1,18 @@
 <template name="home">
-  {{> headerTemplate }}
-  <div class="container">
-    <div id="theGrid" class="main">
-      <section class="grid">
-        {{#each movies}}
-          {{> movieTemplate}}
-        {{/each}}
-      </section>
-    </div>
+    {{> headerTemplate }}
+    <div class="container">
+        <div id="theGrid" class="main">
+            <section class="grid">
+                {{#each movies}}
+                    {{> movieTemplate}}
+                {{/each}}
+            </section>
+        </div>
     </div>
 </template>
 
 
-  <!--<div class="sidebar">
+<!--<div class="sidebar">
     Yo
   </div>
 
@@ -25,8 +25,8 @@
               <strong>{{themoviedb.title}}</strong>
               <small>{{themoviedb.runtime}}</small>
             {{else}}
-              {{filename}}
-            {{/if}}
+    {{filename}}
+{{/if}}
           </a>
         </li>
       {{/each}}
@@ -49,7 +49,7 @@
           {{#if themoviedb.tagline}}
             <p class="tagline">{{themoviedb.tagline}}</p>
           {{/if}}
-        {{else}}
+{{else}}
           <h2>{{filename}}</h2>
         {{/if}}
       </div>
