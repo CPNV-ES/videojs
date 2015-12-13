@@ -1,19 +1,9 @@
 <template name="home">
+  <div class="home">
 
-  <div class="background"></div>
-
-  <div class="sidebar">
-    Yo
   </div>
 
-  <div class="list">
-    <ul>
-      {{#each movies}}
-        {{path}}
-      {{/each}}
-    </ul>
-  </div>
-
-  <div class="info"></div>
-
+  {{#if openSources}}
+    {{> sources}}
+  {{/if}}
 </template>

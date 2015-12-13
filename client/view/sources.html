@@ -1,0 +1,15 @@
+<template name="sources">
+<div class="source-wrap">
+  <div class="source-content">
+    <h2>Changer Source</h2>
+    <ul>
+      {{#each sources}}
+        {{source}}
+      {{/each}}
+    </ul>
+    <form class="source-create">
+      <input type="text" name="source" placeholder="Nouvelle source">
+    </form>
+  </div>
+</div>
+</template>

@@ -1,12 +1,8 @@
 Template.home.helpers({
-  movies : function(){
-    return Movies.find({},{$sort:{themoviedb:{title:-1}}});
-  }
-});
+  openSources: function(){
+    var hasSources = Sources.find({}).count() <= 0;
+    var toggleSources = Session.get('toggleSources');
 
-
-Template.movieTemplate.helpers({
-  movie : function(){
-    return Movies.find(this._id);
+    return hasSources || toggleSources;
   }
 });
