@@ -1,0 +1,18 @@
+/*
+* grid.css
+* Styling for grid movies
+*
+*
+*/
+
+
+/* Skelett ----------------------------------------------------------------------------- */
+div#theGrid{width: 100%; float: left;}
+
+
+/* Items ----------------------------------------------------------------------------- */
+.container secton.grid a{}
+.grid__item img{min-height: 263px;}
+a.grid__item{width: calc(12.5% - 10px); float: left; padding: 5px; margin: 5px;}
+.title{margin: 0; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;text-align: left;color: rgb(255, 255, 255); font-weight: 100;}
+.grid__item span.category{color: white; font-weight: 100; text-decoration: italic;}

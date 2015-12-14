@@ -1,0 +1,28 @@
+/*
+* Main.css
+* Styling for app
+*
+*
+*/
+
+
+/* Reset ----------------------------------------------------------------------------- */
+
+*{border: 0; padding: 0; text-decoration: none;font-family: roboto;}
+*, *:after, *:before {-webkit-box-sizing: border-box;box-sizing: border-box;}
+button:focus {outline: none;}
+img{width: 100%;}
+body, html{margin: 0; padding: 0;}
+
+/* Skelett ----------------------------------------------------------------------------- */
+body{background: url(img/background.png); }
+header#header{width: 100px;float: left;position: fixed;height: 100%; background: rgba(255, 255, 255, 0.90); padding: 5px;}
+div.container{width: calc(100% - 100px); float: left;margin-left: 100px;}
+
+
+/* Color ----------------------------------------------------------------------------- */
+.yellow{color: #c7a305;}
+.orange{color: #c96108; }
+.dark-orange{color: #ad3a01;}
+.dark-grey{color: #252525;}
+.light-grey{color : #474747;}
