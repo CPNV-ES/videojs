@@ -1,3 +1,22 @@
+Template.header.helpers({
+    settingsFileName: function() {
+        return {
+            rules: [
+                {
+                    collection: Movies,
+                    field: 'themoviedb.title',
+                    matchAll: true,
+                    template: Template.fileNameAutoComplete,
+                    selector: function (match){
+                        regex = new RegExp(match, 'i');
+                        return {$or: [{'filename': regex}, {'themoviedb.title': regex}]};
+                    }
+                }
+            ]
+        };
+    }
+});
+
 Template.header.events({
     'keyup #querytitle': function() {
         // save the current search query in a session variable as the user types
