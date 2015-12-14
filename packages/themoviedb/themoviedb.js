@@ -98,7 +98,8 @@ Themoviedb.prototype.info = function(filename){
   var infoRequest = {
     id: movieId,
     language: Meteor.settings.themoviedb.language || 'fr',
-    append_to_response: 'trailers,images,keywords,credits'
+    append_to_response: 'trailers,images,keywords,credits',
+    include_image_language : 'null'
   };
 
 var movieInfo;
