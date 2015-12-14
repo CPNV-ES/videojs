@@ -9,7 +9,7 @@ File = function(filename){
     this.filename = filename.filename;
   }else if(typeof filename == 'string'){ // Direct pathname
     this.path = filename;
-    this.filename = path.basename(this.path,path.extname(this.path));
+    this.filename = path.basename(this.path);
   }
 
 };

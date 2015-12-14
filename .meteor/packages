@@ -14,14 +14,13 @@ tracker                 # Meteor's client-side reactive programming library
 standard-minifiers      # JS/CSS minifiers run for production mode
 es5-shim                # ECMAScript 5 compatibility for older browsers.
 
-autopublish             # Publish all data to the clients (for prototyping)
-insecure                # Allow all DB writes from clients (for prototyping)
 http
 blaze-html-templates
 ecmascript
 iron:router
 nolanrigo:filemonitor
-msavin:mongol
 matb33:collection-hooks
 nolanrigo:themoviedb
 meteorhacks:async
+msavin:mongol
+autopublish

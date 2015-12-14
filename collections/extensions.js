@@ -20,3 +20,10 @@ Extensions.before.insert(function(userId,doc){
 Extensions.before.update(function(userId,doc,fieldNames,modifier,options){
   doc.updateAt = Date.now();
 });
+
+if(Meteor.isServer){
+  // Publish for all extensions (1 user per server)
+  Meteor.publish('extensions', function(){
+    return Extensions.find({});
+  });
+}

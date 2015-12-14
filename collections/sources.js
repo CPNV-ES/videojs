@@ -20,3 +20,10 @@ Sources.before.insert(function(userId,doc){
 Sources.before.update(function(userId,doc,fieldNames,modifier,options){
   doc.updateAt = Date.now();
 });
+
+if(Meteor.isServer){
+  // Publish for all sources (1 user per server)
+  Meteor.publish('sources', function(){
+    return Sources.find({});
+  });
+}
