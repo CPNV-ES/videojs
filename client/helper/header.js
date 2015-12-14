@@ -1,4 +1,4 @@
-Template.headerTemplate.events({
+Template.header.events({
     'keyup #querytitle': function() {
         // save the current search query in a session variable as the user types
         return Session.set('querytitle', $('#querytitle').val());

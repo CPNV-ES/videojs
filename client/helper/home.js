@@ -1,6 +1,5 @@
-var movies;
 Template.home.helpers({
-  movies : function(){
+  movies: function(){
     var title =  Session.get("querytitle");
     var crew = Session.get("querycrew");
     var cast = Session.get("querycast");
@@ -18,7 +17,9 @@ Template.home.helpers({
 
     movies = Movies.find(query,{sort: {themoviedb:{title:-1}}});
     return movies;
+  },
+  openSources: function() {
+    var hasSources = Sources.find({}).count() <= 0;
+    var toggleSources = Session.get('toggleSources');
   }
 });
-
-
