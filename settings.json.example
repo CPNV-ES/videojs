@@ -1,6 +1,6 @@
 {
   "themoviedb" : {
-    "api_key" : "[[PUT YOUR OWN THEMOVIEDB API KEY HERE]]",
+    "api_key" : "PUT YOUR OWN THEMOVIEDB API KEY HERE",
     "language" : "fr"
   },
   "extensions" : [".webm",".mkv",".flv",".vob",".ogv",".ogg",".drc",".avi",".mov",".qt",".wmv",".yuv",".rm",".rmvb",".asf",".mp4",".m4v",".mpg",".mp2",".mpeg",".mpe",".mpv",".m2v",".m4v",".mxf",".svi",".3gp",".3g2"]

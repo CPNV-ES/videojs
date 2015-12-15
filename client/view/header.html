@@ -1,9 +1,8 @@
 <template name="header">
-    <header id="header" class="cl-effect-1">
+    <header id="header" > <!-- class="cl-effect-1" for efect [ ] -->
         <img id="logo" src="img/logo.png">
-        <a class="linkheader" href="#">A propos </a>
-        <a class="linkheader" href="#">Mettre à jour</a>
-        <a class="linkheader search" href="#">Rechercher &#8628;
+        <a class="linkheader" href="#"><img src="img/more.png"><span class="hidden">A propos </span></a>
+        <a class="linkheader search" href="#"><img src="img/search.png"><span class="hidden">Rechercher &#8628;</span>
             <div id="search">
                 <form id="form">
                     <label><p>Nom du film: {{> inputAutocomplete settings=settingsFileName id="querytitle"
@@ -28,9 +27,10 @@
 
             </div>
         </a>
+        <a class="linkheader rotate" href="#"><img src="img/sync.png"><span class="hidden">Mettre à jour</span></a>
     </header>
 </template>
 
 <template name="fileNameAutoComplete">
-    {{themoviedb.title}} -> {{filename}}
+    {{themoviedb.title}}
 </template>

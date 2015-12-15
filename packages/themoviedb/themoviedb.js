@@ -5,14 +5,15 @@ var path = Npm.require('path');
 var Themoviedb = function(){};
 
 /**
-* Analyse le nom d'un fichier pour retirer les données
-* @param filename Nom du fichier
-* @dependences : parse-torrent-name
-* @return : tableau retourné par le module parse-torrent-name avec quelques modifications
+ * Use parse-torrent-name (npm module) for analyze name of movie file
+ * @param filename : filename
+ * @return : parse-torrent-name array (https://github.com/jzjzjzj/parse-torrent-name#usage)
 **/
-Themoviedb.prototype.resolve = function(filename){
+Themoviedb.prototype._resolve = function (filename) {
+
   // Remove extension of filename
   filename = path.basename(filename,path.extname(filename));
+
   // Get Information
   var info = ptn(filename);
 
@@ -22,11 +23,48 @@ Themoviedb.prototype.resolve = function(filename){
   return info;
 };
 
-Themoviedb.prototype.NoResultException = function(){};
-Themoviedb.prototype.ItIsNotMovieException = function(){};
-Themoviedb.prototype.NoTitleFoundException = function(){};
-Themoviedb.prototype.NoInternetException = function(){};
-Themoviedb.prototype.InvalidApiKeyException = function(){};
+Themoviedb.prototype._tmdbQuery = function (method, request) {
+  while (true) {
+    try {
+      var movieInfo;
+      movieInfo = this.moviedb[method](request);
+      return movieInfo;
+    } catch (e) {
+      if(e.status == this.status.QUOTA_ERROR) break;
+      else if(e.status == this.status.INVALID_APIKEY) throw new this.InvalidApiKeyException('INVALID_APIKEY');
+      else if(e.status == this.status.SUSPENDED_APIKEY) throw new this.InvalidApiKeyException('SUSPENDED_APIKEY');
+      else if(e.status == this.status.SERVICE_OFFLINE) throw new this.NoInternetException('SERVICE_OFFLINE');
+      else if(e.status == this.status.REQUEST_TIMEOUT) throw new this.NoInternetException('REQUEST_TIMEOUT');
+      else throw e;
+    }
+  }
+};
+
+Themoviedb.prototype.NoResultException = function(message){
+  this.name = 'NoResultException';
+  this.message = message || '';
+  this.prototype = Error.prototype;
+};
+Themoviedb.prototype.ItIsNotMovieException = function(message){
+  this.name = 'ItIsNotMovieException';
+  this.message = message || '';
+  this.prototype = Error.prototype;
+};
+Themoviedb.prototype.NoTitleFoundException = function(message){
+  this.name = 'NoTitleFoundException';
+  this.message = message || '';
+  this.prototype = Error.prototype;
+};
+Themoviedb.prototype.NoInternetException = function(message){
+  this.name = 'NoInternetException';
+  this.message = message || '';
+  this.prototype = Error.prototype;
+};
+Themoviedb.prototype.InvalidApiKeyException = function(message){
+  this.name = 'InvalidApiKeyException';
+  this.message = message || '';
+  this.prototype = Error.prototype;
+};
 
 Themoviedb.prototype.status = {
   INVALID_APIKEY : 401,
@@ -36,81 +74,74 @@ Themoviedb.prototype.status = {
   QUOTA_ERROR : 429
 };
 
-Themoviedb.prototype.MoviedbCatch = function(e){
-  switch(e.status){
-    case this.status.QUOTA_ERROR:
-      break;
-    case this.status.INVALID_APIKEY:
-    case this.status.SUSPENDED_APIKEY:
-      throw new this.InvalidApiKeyException();
-    case this.status.SERVICE_OFFLINE:
-    case this.status.REQUEST_TIMEOUT:
-      throw new NoInternetException();
-    default:
-      throw e;
-  }
-};
-
 /**
 * Wrap les méthodes asyncrone du module moviedb
 **/
 Themoviedb.prototype.moviedb = Async.wrap(moviedb,['searchMovie','movieInfo','configuration','requestToken']);
 
 /**
+ * Search movie in Themoviedb API
+ * @param query
+ * @return json
+ **/
+Themoviedb.prototype.search = function (query) {
+  // Construct Request
+  var searchRequest = {
+    language: Meteor.settings.themoviedb.language || 'fr',
+  };
+
+  if(typeof query == 'object'){
+    // If query is object, it's parse-torrent-name array.
+    searchRequest.query = query.title;
+    if(query.year) searchRequest.year = query.year;
+  }else{
+    // It it's not, is directly a query.
+    searchRequest.query = query;
+  }
+
+  // Do Search
+  return this._tmdbQuery('searchMovie',searchRequest);
+};
+
+Themoviedb.prototype.find = function (id) {
+  // Construct Request
+  var findRequest = {
+    id: id,
+    language: Meteor.settings.themoviedb.language || 'fr',
+    append_to_response: 'trailers,images,keywords,credits',
+    include_image_language: 'null',
+  };
+
+  // Do Find
+  return this._tmdbQuery('movieInfo',findRequest);
+};
+
+/**
 * Recherche un film par rapport à un nom de fichier
 * @param filename nom du fichier
 * @return null ou themoviedb[] tableau d'information du film
 **/
-Themoviedb.prototype.info = function(filename){
+Themoviedb.prototype.algo = function(filename){
   // Analyse le nom du fichier
-  var info = this.resolve(filename);
+  var info = this._resolve(filename);
 
   // Si c'est une série on arrête là
   if(info.season || info.episode) throw new this.ItIsNotMovieException();
+
   // Si il n'y a pas de title, on ne peut pas faire de recherche, on arrête
   if(!info.title) throw new this.NoTitleFoundException();
 
-  // Construit la request de recherche
-  var searchRequest = {
-    query: info.title,
-    language: Meteor.settings.themoviedb.language || 'fr'
-  };
-  if(info.year) searchRequest.year = info.year;
+  // Search movies
+  var searchResult = this.search(info);
 
-  // Effectue la recherche
-  var searchResult;
-  while(true){
-    try{
-      searchResult = this.moviedb.searchMovie(searchRequest);
-      break;
-    }catch(e){
-      this.MoviedbCatch(e);
-    }
-  }
-
-  // If 1 result no less no more, find more information about it
-  if(searchResult.total_results<1) throw new this.NoResultException();
+  // If 1 or many results ind more information about it
+  if(!searchResult.total_results) throw new this.NoResultException();
 
   // On prend le premier
   var movieId = searchResult.results[0].id;
 
-  // Create request
-  var infoRequest = {
-    id: movieId,
-    language: Meteor.settings.themoviedb.language || 'fr',
-    append_to_response: 'trailers,images,keywords,credits',
-    include_image_language : 'null'
-  };
-
-var movieInfo;
-  while(true){
-    try{
-      movieInfo = this.moviedb.movieInfo(infoRequest);
-      break;
-    }catch(e){
-      this.MoviedbCatch(e);
-    }
-  }
+  // Get Good movie
+  var movieInfo = this.find(movieId);
 
   // get movie info
   return movieInfo;

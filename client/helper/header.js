@@ -1,5 +1,5 @@
 Template.header.helpers({
-    settingsFileName: function () {
+    settingsFileName: function() {
         return {
             rules: [
                 {
@@ -7,7 +7,7 @@ Template.header.helpers({
                     field: 'themoviedb.title',
                     matchAll: true,
                     template: Template.fileNameAutoComplete,
-                    selector: function (match) {
+                    selector: function (match){
                         regex = new RegExp(match, 'i');
                         return {$or: [{'filename': regex}, {'themoviedb.title': regex}]};
                     }
@@ -26,8 +26,11 @@ Template.header.helpers({
                 .flatten()
             .unique()
                 .value();
-        console.log(uniqueGenres);
         return uniqueGenres;
+    },
+    isLoading: function () {
+        var themoviedb = ServerSession.get('loading.themoviebd') || 0;
+        return (themoviebd > 0);
     }
 });
 
