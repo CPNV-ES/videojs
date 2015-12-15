@@ -6,13 +6,26 @@ Movies
 })
 .observe({
   added : function(item){
-    try{
+
+    // Say to clients, we're searching movie
+    ServerSession.set('loading.themoviebd',(ServerSession.get('loading.themoviebd') || 0)+1);
+
+    try {
+      // Try get info
       var info = themoviedb.algo(item.filename);
+      // If we get info without error, update in database
       Movies.update(item._id,{$set : {themoviedb : info}});
-    }catch(e){
+
+    } catch (e) {
+
+      // If We can't find movie for natural reason, add _nosearch at item in collection
       if(e instanceof themoviedb.NoResultException || e instanceof themoviedb.ItIsNotMovieException || e instanceof themoviedb.NoTitleFoundException){
         Movies.update(item._id,{$set:{_nosearch:true}});
       }
+
+    } finally {
+      // Say to clients, we finish to search movie
+      ServerSession.set('loading.themoviebd',(ServerSession.get('loading.themoviebd') || 1)-1);
     }
   }
 });
@@ -20,10 +33,11 @@ Movies
 
 
 Meteor.methods({
-  // Method for search
+  // Method for search by interface
   tmdbSearch: function (query) {
     return themoviedb.search(query);
   },
+  // Method for bind themoviedb at our movie
   tmdbBind: function (_id, tmdb_id) {
     var movieInfo = themoviedb.find(tmdb_id);
     if(movieInfo){
