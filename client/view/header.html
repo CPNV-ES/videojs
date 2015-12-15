@@ -5,12 +5,13 @@
         <a class="linkheader search" href="#"><img src="img/search.png"><span class="hidden">Rechercher &#8628;</span>
             <div id="search">
                 <form id="form">
-                    <label><p>Nom du film: <input id="querytitle"></p></label>
+                    <label><p>Nom du film: {{> inputAutocomplete settings=settingsFileName id="querytitle" class="form-control" placeholder="nom du film ou nom du fichier" }}</p></label>
                     <label><p>Equipe : <input id="querycrew"></p></label>
                     <label><p>Acteur : <input id="querycast"></p></label>
+
                     <label><p>Genre : <input name="genre" id="listgenre" list="genre"></p>
                         <datalist id="genre">
-                            <select>
+                            <select id="clientName">
                                 <option value="Action">Action</option>
                                 <option value="Animé">Animé</option>
                                 <option value="Fantastique">Fantastique</option>
@@ -24,4 +25,8 @@
         </a>
         <a class="linkheader rotate" href="#"><img src="img/sync.png"><span class="hidden">Mettre à jour</span></a>
     </header>
+</template>
+
+<template name="fileNameAutoComplete">
+    {{themoviedb.title}}
 </template>
