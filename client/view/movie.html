@@ -1,7 +1,7 @@
 <template name="movie">
             <a class="grid__item" href="/film/{{_id}}" id="{{_id}}">
-
-                <img class="film-img" src="{{#if themoviedb.poster_path}}https://image.tmdb.org/t/p/w396{{themoviedb.poster_path}}{{else}}img/noposter.png{{/if}}">
+                <div class="content">
+                <div class="film-img" style="background-image: url({{#if themoviedb.poster_path}}https://image.tmdb.org/t/p/w396{{themoviedb.poster_path}}{{else}}img/noposter.png{{/if}});"></div>
                 <h2 class="title orange">
                {{#if themoviedb.title}}
                        {{themoviedb.title}}
@@ -12,5 +12,6 @@
                 </h2>
                 <div class="loader"></div>
                 <span class="category">{{#if themoviedb.release_date}}{{themoviedb.release_date}}{{else}}Non trouvé{{/if}}</span>
+               </div>
             </a>
 </template>
