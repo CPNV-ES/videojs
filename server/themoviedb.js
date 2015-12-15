@@ -47,5 +47,15 @@ Meteor.methods({
         },
       });
     }
-  }
+  },
+  tmdbUnBind: function (_id) {
+    Movies.update(_id,{
+      $unset: {
+        themoviedb : null
+      },
+      $set : {
+        _nosearch : true
+      }
+    });
+  },
 });
