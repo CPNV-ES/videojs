@@ -45,5 +45,5 @@ Template.tmdbBind.events({
     Session.set('toggleTmdbBind',false);
     Session.set('tmdbBindId',null);
   },
-  
+
 });
