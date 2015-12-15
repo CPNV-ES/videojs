@@ -12,6 +12,11 @@ Extensions.allow({
   }
 });
 
+/**
+ * Read properties file
+ * @return {Object} Json parse object
+ * @private
+ */
 Extensions.before.insert(function(userId,doc){
   doc.createAt = Date.now();
   doc.updateAt = Date.now();
