@@ -6,22 +6,26 @@
         <a class="linkheader search" href="#">Rechercher &#8628;
             <div id="search">
                 <form id="form">
-                    <label><p>Nom du film: {{> inputAutocomplete settings=settingsFileName id="querytitle" class="form-control" placeholder="nom du film ou nom du fichier" }}</p></label>
+                    <label><p>Nom du film: {{> inputAutocomplete settings=settingsFileName id="querytitle"
+                        class="form-control" placeholder="nom du film ou nom du fichier" }}</p></label>
                     <label><p>Equipe : <input id="querycrew"></p></label>
                     <label><p>Acteur : <input id="querycast"></p></label>
 
-                    <label><p>Genre : <input name="genre" id="listgenre" list="genre"></p>
-                        <datalist id="genre">
-                            <select id="clientName">
-                                <option value="Action">Action</option>
-                                <option value="Animé">Animé</option>
-                                <option value="Fantastique">Fantastique</option>
-                                <option value="Western">Western</option>
-                            </select>
-                        </datalist>
+                    <label>
+                        <p>Genre :
+                        <select aria-hidden="true" tabindex="-1" id="queryGenre" multiple="">
+                            {{#each uniqueGenre}}
+                                <option>{{this}}</option>
+                            {{/each}}
+                        </select>
+                        </p>
                     </label>
-                    <label><button class="clearbutton" id="queryclear">Effacer</button></label>
+                    <label>
+                        <button class="clearbutton" id="queryclear">Effacer</button>
+                    </label>
                 </form>
+
+
             </div>
         </a>
     </header>
