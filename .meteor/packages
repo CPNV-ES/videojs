@@ -21,7 +21,7 @@ iron:router
 nolanrigo:filemonitor
 matb33:collection-hooks
 nolanrigo:themoviedb
-meteorhacks:async
 msavin:mongol
 autopublish
 mizzao:autocomplete
+matteodem:server-session
