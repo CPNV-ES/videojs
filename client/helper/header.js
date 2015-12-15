@@ -1,16 +1,24 @@
 Template.header.helpers({
-    settingsFileName: function () {
+    settingsMovieTitleName: function () {
         return {
             rules: [
                 {
                     collection: Movies,
                     field: 'themoviedb.title',
                     matchAll: true,
-                    template: Template.fileNameAutoComplete,
-                    selector: function (match) {
-                        regex = new RegExp(match, 'i');
-                        return {$or: [{'filename': regex}, {'themoviedb.title': regex}]};
-                    }
+                    template: Template.movieTitleAutoCompletes
+                }
+            ]
+        };
+    },
+    settingsFileName: function () {
+        return {
+            rules: [
+                {
+                    collection: Movies,
+                    field: 'filename',
+                    matchAll: true,
+                    template: Template.fileNameAutoCompletes
                 }
             ]
         };
@@ -48,6 +56,9 @@ Template.header.events({
     },
     'keyup #querycast': function () {
         return Session.set('querycast', $('#querycast').val());
+    },
+    'keyup #queryfilename': function () {
+        return Session.set('queryfilename', $('#queryfilename').val())
     },
     'click #queryclear': function () {
         resetVarForm();
