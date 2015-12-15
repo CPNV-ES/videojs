@@ -47,7 +47,7 @@ Template.header.events({
         return Session.set('querycrew', $('#querycrew').val());
     },
     'keyup #querycast': function () {
-        return Session.set('querycast', $('#querycast').val())
+        return Session.set('querycast', $('#querycast').val());
     },
     'click #queryclear': function () {
         resetVarForm();
