@@ -1,8 +1,9 @@
-<template name="header">
-    <header id="header" > <!-- class="cl-effect-1" for efect [ ] -->
+<template name="headerTemplate">
+    <header id="header" class="cl-effect-1">
         <img id="logo" src="img/logo.png">
-        <a class="linkheader" href="#"><img src="img/more.png"><span class="hidden">A propos </span></a>
-        <a class="linkheader search" href="#"><img src="img/search.png"><span class="hidden">Rechercher &#8628;</span>
+        <a class="linkheader" href="#">A propos </a>
+        <a class="linkheader" href="#"><img src="img/search.png">Mettre à jour</a>
+        <a class="linkheader search" href="#">Rechercher &#8628;
             <div id="search">
                 <form id="form">
                     <label><p>Nom du film: <input id="querytitle"></p></label>
@@ -22,6 +23,5 @@
                 </form>
             </div>
         </a>
-        <a class="linkheader rotate" href="#"><img src="img/sync.png"><span class="hidden">Mettre à jour</span></a>
     </header>
 </template>
