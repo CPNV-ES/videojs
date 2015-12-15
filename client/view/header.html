@@ -5,8 +5,10 @@
         <a class="linkheader search" href="#"><img src="img/search.png"><span class="hidden">Rechercher &#8628;</span>
             <div id="search">
                 <form id="form">
-                    <label><p>Nom du film: {{> inputAutocomplete settings=settingsFileName id="querytitle"
-                        class="form-control" placeholder="nom du film ou nom du fichier" }}</p></label>
+                    <label><p>Nom du film: {{> inputAutocomplete settings=settingsMovieTitleName id="querytitle"
+                        class="form-control" placeholder="nom du film" }}</p></label>
+                    <label><p>Nom du fichier: {{> inputAutocomplete settings=settingsFileName id="queryfilename"
+                        class="form-control" placeholder="nom du film" }}</p></label>
                     <label><p>Equipe : <input id="querycrew"></p></label>
                     <label><p>Acteur : <input id="querycast"></p></label>
 
@@ -31,6 +33,10 @@
     </header>
 </template>
 
-<template name="fileNameAutoComplete">
+<template name="movieTitleAutoCompletes">
     {{themoviedb.title}}
+</template>
+
+<template name="fileNameAutoCompletes">
+    {{filename}}
 </template>
