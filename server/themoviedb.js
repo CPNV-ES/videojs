@@ -7,12 +7,31 @@ Movies
 .observe({
   added : function(item){
     try{
-      var info = themoviedb.info(item.filename);
+      var info = themoviedb.algo(item.filename);
       Movies.update(item._id,{$set : {themoviedb : info}});
     }catch(e){
       if(e instanceof themoviedb.NoResultException || e instanceof themoviedb.ItIsNotMovieException || e instanceof themoviedb.NoTitleFoundException){
         Movies.update(item._id,{$set:{_nosearch:true}});
       }
+    }
+  }
+});
+
+
+
+Meteor.methods({
+  // Method for search
+  tmdbSearch: function (query) {
+    return themoviedb.search(query);
+  },
+  tmdbBind: function (_id, tmdb_id) {
+    var movieInfo = themoviedb.find(tmdb_id);
+    if(movieInfo){
+      Movies.update(_id,{
+        $set: {
+          themoviedb: movieInfo
+        },
+      });
     }
   }
 });
