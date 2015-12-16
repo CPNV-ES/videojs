@@ -5,7 +5,6 @@ Template.tmdbBind.events({
     var search = e.target.search.value;
     if(!search) return false;
 
-    Session.set('tmdbBindSearch',search);
     Session.set('tmdbBindLoading',true);
 
     Meteor.call('tmdbSearch',search,function(err,result){
@@ -29,7 +28,6 @@ Template.tmdbBind.events({
 
     Meteor.call('tmdbBind',movie_id,tmdb_id,function(err,result){
       if(err) return false;
-      Session.set('tmdbBindSearch','');
       Session.set('tmdbBindResults',[]);
       Session.set('tmdbBindLoading',false);
       Session.set('toggleTmdbBind',false);
@@ -39,7 +37,6 @@ Template.tmdbBind.events({
 
   'click .close': function(e){
     e.preventDefault();
-    Session.set('tmdbBindSearch','');
     Session.set('tmdbBindResults',[]);
     Session.set('tmdbBindLoading',false);
     Session.set('toggleTmdbBind',false);

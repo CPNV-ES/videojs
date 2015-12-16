@@ -3,10 +3,9 @@
     <div class="tmdbBindContent">
       <h2>{{filename}}</h2>
       <form>
-        <input name="search" type="text" value="{{search}}" placeholder="Chercher ...">
+        <input name="search" type="text" placeholder="Chercher ...">
         <button type="submit">Search</button>
       </form>
-
       {{#if isLoading}}
         <p>is loading</p>
       {{else}}

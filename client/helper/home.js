@@ -56,6 +56,7 @@ Template.home.helpers({
             }
         }
 
+
         if (andQuerry.length > 0) {
             movies = Movies.find({$and: andQuerry}, {sort: {themoviedb: {title: -1}}});
         } else {
@@ -64,9 +65,10 @@ Template.home.helpers({
 
         return movies;
     },
-    openSources: function () {
+    toggleSources: function () {
         var hasSources = Sources.find({}).count() <= 0;
         var toggleSources = Session.get('toggleSources');
+        return (hasSources || toggleSources);
     }
 });
 
