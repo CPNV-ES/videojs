@@ -17,7 +17,7 @@ a.linkheader:hover{background: rgba(43, 43, 43, 0.55);cursor: default;}
 
 /* Search ----------------------------------------------------------------------------- */
 a:hover > #search{display: block;transition-duration: 1s;}
-#search{transition-duration: 1s;margin-top: -80px;margin-left: 90px;box-shadow: 1px 1px 5px 0px rgb(54, 54, 54);padding: 20px;background: rgba(47, 47, 47, 0.9);width: 301px;}
+#search{transition-duration: 1s;margin-top: -80px;margin-left: 90px;box-shadow: 1px 1px 5px 0px rgb(54, 54, 54);padding: 20px;background: rgba(47, 47, 47, 0.95);width: 301px;}
 #search p{color: grey;line-height: 30px,color: rgb(154, 154, 154);width: 100%;display: block;text-align: left; font-size: 12pt;}
 #search input{margin-bottom: 9px;float: right;border: none;color:  #ad3a01;/* margin: 0px 0 0 0; */background: none;border-bottom: 1px solid  #ad3a01;font-size: 16pt; height: 26px;width: 100%;}
 input{outline: none;}
