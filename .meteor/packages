@@ -21,7 +21,13 @@ iron:router
 nolanrigo:filemonitor
 matb33:collection-hooks
 nolanrigo:themoviedb
+meteorhacks:async
 msavin:mongol
 autopublish
 mizzao:autocomplete
+aldeed:autoform-select2
+aldeed:autoform
+aldeed:collection2
 matteodem:server-session
+momentjs:moment
+jeremy:selectize

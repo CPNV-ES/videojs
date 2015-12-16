@@ -1,0 +1,17 @@
+<template name="sources">
+  <div class="sourcesBackground">
+    <div class="sourcesContent">
+      <h2>Gérer les sources</h2>
+      <!-- Cacher le close si il n'y a pas de source -->
+      <a href="#" class="close">x</a>
+      <ul>
+        {{#each sources}}
+          <li>{{source}} <a href="#" class="delete">x</a></li>
+        {{/each}}
+      </ul>
+      <form>
+        <input type="text" name="source" placeholder="Nouvelle source">
+      </form>
+    </div>
+  </div>
+</template>

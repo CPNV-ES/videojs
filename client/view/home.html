@@ -1,12 +1,16 @@
 <template name="home">
-    {{> header }}
-    <div class="container">
-        <div id="theGrid" class="main">
-            <section class="grid">
-                {{#each movies}}
-                    {{> movie}}
-                {{/each}}
-            </section>
-        </div>
+  {{> header }}
+  <div class="container">
+    <div id="theGrid" class="main">
+      <section class="grid">
+        {{#each movies}}
+          {{> movie}}
+        {{/each}}
+      </section>
     </div>
+  </div>
+
+  {{#if toggleSources}}
+    {{> sources}}
+  {{/if}}
 </template>

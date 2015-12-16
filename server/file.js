@@ -1,8 +1,22 @@
-// Création de l'entrée dans la collection Movies
-filemonitor.on('create',function(file){
+/**
+ * Manage all create update delete file from the client folder.
+ * @namespace server/themovidb
+ * 
+ */
+ 
+ 
+/**
+ * Create new file in the database
+ * @param {String} [file] File path
+ * @memberof server/themovidb
+ * @method create
+ * @public
+ */
+ filemonitor.on('create',function(file){
   Movies.insert(file);
 });
 // Supression de l'entrée dans la collection Movies
+
 filemonitor.on('delete',function(file){
   Movies.remove(file);
 });

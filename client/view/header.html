@@ -4,21 +4,26 @@
         <a class="linkheader search" href="#"><img src="img/search.png"><span class="hidden">Rechercher &#8628;</span>
             <div id="search">
                 <form id="form">
-                    <label><p>Nom du film: {{> inputAutocomplete settings=settingsFileName id="querytitle" class="form-control" placeholder="nom du film ou nom du fichier" }}</p></label>
+                    <label><p>Nom du film: {{> inputAutocomplete settings=settingsMovieTitleName id="querytitle"
+                        class="form-control"}}</p></label>
+                    <label><p>Nom du fichier: {{> inputAutocomplete settings=settingsFileName id="queryfilename"
+                        class="form-control"}}</p></label>
                     <label><p>Equipe : <input id="querycrew"></p></label>
                     <label><p>Acteur : <input id="querycast"></p></label>
-
-                    <label><p>Genre : <input name="genre" id="listgenre" list="genre"></p>
-                        <datalist id="genre">
-                            <select id="clientName">
-                                <option value="Action">Action</option>
-                                <option value="Animé">Animé</option>
-                                <option value="Fantastique">Fantastique</option>
-                                <option value="Western">Western</option>
-                            </select>
-                        </datalist>
+                    <label><p>Année de debut : <input type="text" id="querydatestart" placeholder="YYYY"></p></label>
+                    <label><p>Année de fin : <input type="text" id="querydateend" placeholder="YYYY"></p></label>
+                    <label>
+                        <p>Genre :
+                        <select aria-hidden="true" tabindex="-1" id="queryGenre" multiple="">
+                            {{#each uniqueGenre}}
+                                <option>{{this}}</option>
+                            {{/each}}
+                        </select>
+                        </p>
                     </label>
-                    <label><button class="clearbutton" id="queryclear">Effacer</button></label>
+                    <label>
+                        <button class="clearbutton" id="queryclear">Effacer</button>
+                    </label>
                 </form>
             </div>
         </a>
@@ -36,6 +41,10 @@
     </header>
 </template>
 
-<template name="fileNameAutoComplete">
+<template name="movieTitleAutoCompletes">
     {{themoviedb.title}}
+</template>
+
+<template name="fileNameAutoCompletes">
+    {{filename}}
 </template>

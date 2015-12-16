@@ -21,6 +21,8 @@ a:hover > #search{display: block;transition-duration: 1s;}
 #search p{color: grey;line-height: 30px,color: rgb(154, 154, 154);width: 100%;display: block;text-align: left; font-size: 12pt;}
 #search input{margin-bottom: 9px;float: right;border: none;color:  #ad3a01;/* margin: 0px 0 0 0; */background: none;border-bottom: 1px solid  #ad3a01;font-size: 16pt; height: 26px;width: 100%;}
 input{outline: none;}
+.select2-container{width: 100% !important;} /* select genre*/
+
 
 
 /* Switch ----------------------------------------------------------------------------- */
