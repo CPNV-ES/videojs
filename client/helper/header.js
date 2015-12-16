@@ -42,7 +42,11 @@ Template.header.helpers({
         var themoviedb = ServerSession.get('loading.themoviebd') || 0;
         console.log('themoviedb.loading', themoviebd);
         return (themoviebd > 0);
-    }
+    },
+    toggleShowFilename: function () {
+      console.log(Session.get('toggleShowFilename'));
+      return Session.get('toggleShowFilename');
+    },
 });
 
 Template.header.events({
@@ -58,13 +62,13 @@ Template.header.events({
         return Session.set('querycast', $('#querycast').val());
     },
     'keyup #queryfilename': function () {
-        return Session.set('queryfilename', $('#queryfilename').val())
+        return Session.set('queryfilename', $('#queryfilename').val());
     },
     'keyup #querydatestart': function () {
-        return Session.set('querydatestart', $('#querydatestart').val())
+        return Session.set('querydatestart', $('#querydatestart').val());
     },
     'keyup #querydateend': function () {
-        return Session.set('querydateend', $('#querydateend').val())
+        return Session.set('querydateend', $('#querydateend').val());
     },
     'click #queryclear': function () {
         resetVarForm();

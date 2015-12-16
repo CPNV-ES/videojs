@@ -11,6 +11,11 @@ Template.home.helpers({
         var genre = Session.get("queryGenre");
         var anneeDebut = Session.get("querydatestart");
         var anneeFin = Session.get("querydateend");
+        var showFilename = Session.get('toggleShowFilename');
+
+        if(!showFilename){
+          andQuerry.push({themoviedb:{$exists:true,$not:null}});
+        }
 
         if (isValidInput(title)) {
             andQuerry.push({'themoviedb.title': {$regex: title, $options: 'gi'}});

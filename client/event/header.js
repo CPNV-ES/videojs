@@ -15,5 +15,9 @@ Template.header.events({
         Session.set('querycrew', '');
         Session.set('querycast', '');
         document.getElementById("form").reset();
-    }
+    },
+    'change #toggleShowFilename': function (e) {
+      var toggle = e.target.checked;
+      Session.set('toggleShowFilename',toggle);
+    },
 });
