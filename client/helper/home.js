@@ -31,7 +31,8 @@ Template.home.helpers({
         }
         if (isValidInput(genre)) {
             genre.forEach(function (element) {
-                andQuerry.push({'themoviedb.genres.name': element});
+                if(element.length > 0)
+                    andQuerry.push({'themoviedb.genres.name': element});
             });
         }
         // Between date
@@ -43,7 +44,6 @@ Template.home.helpers({
                 }});
             }
         }else if (isValidInput(anneeDebut)) {
-            console.log("jdjd", moment().format("YYYY-MM-DD"));
             if (anneeDebut.match(CHECK_YEAR)) {
                 andQuerry.push({
                     'themoviedb.release_date': {

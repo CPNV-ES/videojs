@@ -25,7 +25,6 @@ Template.header.helpers({
     },
     uniqueGenre: function () {
         var list = Movies.find({"themoviedb.genres": {$ne: null}}).fetch();
-        console.log(list);
         var uniqueGenres = _.chain(list)
             .pluck('themoviedb')
             .flatten()
@@ -35,18 +34,15 @@ Template.header.helpers({
             .flatten()
             .unique()
             .value();
-        console.log(uniqueGenres);
         return uniqueGenres;
     },
     isLoading: function () {
         var themoviedb = ServerSession.get('loading.themoviebd') || 0;
-        console.log('themoviedb.loading', themoviebd);
         return (themoviebd > 0);
     },
     toggleShowFilename: function () {
-      console.log(Session.get('toggleShowFilename'));
       return Session.get('toggleShowFilename');
-    },
+    }
 });
 
 Template.header.events({
@@ -91,16 +87,22 @@ var resetVarForm = function () {
  * TODO: refactor this crap !
  */
 Template.header.rendered = function () {
-    $("#queryGenre").select2({
-        tags: true,
-        tokenSeparators: [',', ' ']
-    }).on('change', function () {
-        Session.set('queryGenre', $("#queryGenre").val());
-    });
-    $('#input-tags').selectize({
+    $('#queryGenre').selectize({
+        plugins: ['remove_button'],
         persist: false,
         createOnBlur: true,
-        create: true,
-
+        create: true
+    }).on('change', function(){
+        Session.set('queryGenre', $("#queryGenre").val().split(','));
     });
+    updateList(true);
+};
+
+var updateList = function(needClear){
+    var $select = $('#queryGenre').selectize();
+    if($select !== null && $select !== undefined){
+        var control = $select[0].selectize;
+        control.refreshOptions();
+        if(needClear) control.clear();
+    }
 };

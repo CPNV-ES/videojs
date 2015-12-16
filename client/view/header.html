@@ -14,13 +14,11 @@
                     <label><p>Année de fin : <input type="text" id="querydateend" placeholder="YYYY"></p></label>
                     <label>
                         <p>Genre :
-                        <select aria-hidden="true" tabindex="-1" id="queryGenre" multiple="">
-                            {{#each uniqueGenre}}
-                                <option>{{this}}</option>
-                            {{/each}}
-                        </select>
+                            <input type="text" id="queryGenre" class="demo-default" value="{{#each uniqueGenre}}{{this}},{{/each}}">
                         </p>
                     </label>
+
+
                     <label>
                         <button class="clearbutton" id="queryclear">Effacer</button>
                     </label>
