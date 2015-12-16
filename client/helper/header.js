@@ -24,7 +24,7 @@ Template.header.helpers({
         };
     },
     uniqueGenre: function () {
-        var list = Movies.find({"themoviedb.genres":{$ne:null}}).fetch();
+        var list = Movies.find({"themoviedb.genres": {$ne: null}}).fetch();
         console.log(list);
         var uniqueGenres = _.chain(list)
             .pluck('themoviedb')
@@ -60,6 +60,12 @@ Template.header.events({
     'keyup #queryfilename': function () {
         return Session.set('queryfilename', $('#queryfilename').val())
     },
+    'keyup #querydatestart': function () {
+        return Session.set('querydatestart', $('#querydatestart').val())
+    },
+    'keyup #querydateend': function () {
+        return Session.set('querydateend', $('#querydateend').val())
+    },
     'click #queryclear': function () {
         resetVarForm();
         $("#queryGenre").select2('val', 'All');
@@ -72,6 +78,8 @@ var resetVarForm = function () {
     Session.set('querycrew', '');
     Session.set('querycast', '');
     Session.set('queryGenre', '');
+    Session.set('querydatestart', '');
+    Session.set('querydateend', '');
 };
 
 
@@ -84,5 +92,11 @@ Template.header.rendered = function () {
         tokenSeparators: [',', ' ']
     }).on('change', function () {
         Session.set('queryGenre', $("#queryGenre").val());
+    });
+    $('#input-tags').selectize({
+        persist: false,
+        createOnBlur: true,
+        create: true,
+
     });
 };
