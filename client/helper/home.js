@@ -35,8 +35,9 @@ Template.home.helpers({
 
         return movies;
     },
-    openSources: function () {
+    toggleSources: function () {
         var hasSources = Sources.find({}).count() <= 0;
         var toggleSources = Session.get('toggleSources');
+        return (hasSources || toggleSources);
     }
 });

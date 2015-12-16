@@ -44,7 +44,7 @@ Filemonitor.prototype.reloadExtensions = function(){
   var self = this;
   this._extensions = [];
   Extensions.find().fetch().forEach(function(extension){
-    if(extension.extension) self._extensions.push(extension.extension);
+    if(extension.extension) self._extensions.push(extension.extension.toLowerCase());
   });
 };
 
@@ -107,7 +107,7 @@ Filemonitor.prototype.watch = function(folder){
 
   this._watchers[folder] = fm.watch(folder,{
     matches : function(relPath){
-      var ext = path.extname(relPath);
+      var ext = path.extname(relPath).toLowerCase();
       return self._extensions.indexOf(ext) >= 0;
     },
     excludes : function(relPath){
@@ -144,7 +144,7 @@ Filemonitor.prototype.list = function(folder){
   reader.forEach(function(file){
     var realpath = path.join(folder,file);
     var info = fs.statSync(realpath);
-    var extension = path.extname(file);
+    var extension = path.extname(file).toLowerCase();
     if(info.isDirectory()) files = files.concat(self.list(realpath));
     else if(info.isFile()){
       if(self._extensions.indexOf(extension)<0) return false;

@@ -1,0 +1,9 @@
+<template name="detailsNoTmdb">
+  <div class="movie">
+    <a href="#" class="toggleTmdbBind">Trouver un le film</a>
+  </div>
+
+  {{#if toggleTmdbBind}}
+    {{> tmdbBind this}}
+  {{/if}}
+</template>

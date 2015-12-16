@@ -1,4 +1,3 @@
-// When movies added in collection without themoviedb information (and with no _nosearch tag), research
 Movies
 .find({
   themoviedb: {$exists:false},
