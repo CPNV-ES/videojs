@@ -23,6 +23,7 @@ a.grid__item:hover{}
 .grid__item:before {display: block;content: " ";width: 100%;padding-top: 180%;}
 .grid__item > .content {position: absolute; padding-bottom: 50px;top: 0;left: 0;right: 0;bottom: 0;}
 .grid__item:hover > .content .film-img{border: 10px solid white; border: 10px solid rgb(196, 94, 3);transition-duration: 0.35s;}
+
 .film-img:before {
     position: absolute;
     top: 40%;
@@ -40,6 +41,7 @@ a.grid__item:hover{}
     transform-origin: 50%;
     background-size: cover;
 }
+
 .grid__item:hover > .content .film-img:before {
     opacity: 1;
     -webkit-transform: translate3d(-50%,-50%,0) scale3d(1,1,1);
@@ -68,3 +70,13 @@ a.grid__item:hover{}
 @media screen and (min-width: 0px) and (max-width: 399px) {
   a.grid__item {width: calc(50% - 10px);position: relative;}
 }
+/*
+@media screen and (min-width: 1280px) and (max-width: 1479px) {
+  .film-img{min-height: 300px;}
+  a.grid__item{width: calc(16.66% - 12px);}
+}
+@media screen and (min-width: 880px) and (max-width: 1279px) {
+  .film-img{min-height: 312px;}
+  a.grid__item{width: calc(20% - 12px);}
+}
+*/

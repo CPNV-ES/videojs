@@ -12,12 +12,25 @@ div#search{display: none;}
 /* Menu ----------------------------------------------------------------------------- */
 .hidden{display: none;}
 .linkheader img{ width: 30px;margin: 30px auto 20px auto; display: block;}
-a.linkheader{height: 90px;background: rgba(78, 78, 78, 0.28); float: left; width: 100%; margin-bottom: 5px;box-shadow: inset -1px 1px 1px 0px rgba(0,0,0,0.25); }
-a.linkheader:hover{background: rgba(43, 43, 43, 0.55);    cursor: help;}
+a.linkheader{transition-duration: 1s;height: 90px;background: rgba(78, 78, 78, 0.28); float: left; width: 100%; margin-bottom: 5px;box-shadow: inset -1px 1px 1px 0px rgba(0,0,0,0.25); }
+a.linkheader:hover{background: rgba(43, 43, 43, 0.55);cursor: default;}
 
 /* Search ----------------------------------------------------------------------------- */
-a:hover > #search{display: block;}
-#search{margin-top: -83px;margin-left: 92px;box-shadow: 1px 1px 5px 0px rgb(54, 54, 54);padding: 20px;background: rgb(59, 59, 59);width: 301px;}
+a:hover > #search{display: block;transition-duration: 1s;}
+#search{transition-duration: 1s;margin-top: -80px;margin-left: 90px;box-shadow: 1px 1px 5px 0px rgb(54, 54, 54);padding: 20px;background: rgba(47, 47, 47, 0.9);width: 301px;}
 #search p{color: grey;line-height: 30px,color: rgb(154, 154, 154);width: 100%;display: block;text-align: left; font-size: 12pt;}
 #search input{margin-bottom: 9px;float: right;border: none;color:  #ad3a01;/* margin: 0px 0 0 0; */background: none;border-bottom: 1px solid  #ad3a01;font-size: 16pt; height: 26px;width: 100%;}
 input{outline: none;}
+
+
+/* Switch ----------------------------------------------------------------------------- */
+.onoffswitch { position: relative; width: 100%;float:left;-webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;}
+.onoffswitch-checkbox { display: none;}
+.onoffswitch-label {display: block; overflow: hidden; cursor: pointer;border: 2px solid #999999; border-radius: 0px;}
+.onoffswitch-inner {display: block; width: 200%; margin-left: -100%;transition: margin 0.3s ease-in 0s;}
+.onoffswitch-inner:before, .onoffswitch-inner:after {display: block; float: left; width: 50%; height: 28px; padding: 0; line-height: 24px;font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold; box-sizing: border-box; border: 2px solid transparent;background-clip: padding-box;}
+.onoffswitch-inner:before {content: "Afficher";padding-left: 10px;background-color: #AD3A01; color: #FFFFFF;}
+.onoffswitch-inner:after {content: "Cacher";padding-right: 10px;background-color: #CCCCCC; color: #333333;text-align: right;}
+.onoffswitch-switch {display: block; width: 26px; margin: 0px;background: #252525;position: absolute; top: 0; bottom: 0;right: 78px;transition: all 0.3s ease-in 0s;}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner { margin-left: 0;}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch { right: 0px;}

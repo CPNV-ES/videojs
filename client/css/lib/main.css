@@ -8,7 +8,7 @@
 
 /* Reset ----------------------------------------------------------------------------- */
 
-*{border: 0; padding: 0; text-decoration: none;font-family: roboto;font-weight: 300;}
+*{border: 0; padding: 0; text-decoration: none;font-family: roboto;}
 *, *:after, *:before {-webkit-box-sizing: border-box;box-sizing: border-box;}
 button:focus {outline: none;}
 img{width: 100%;}
@@ -18,9 +18,9 @@ body, html{margin: 0; padding: 0;}
 body{background: url(img/background.png); }
 header#header{z-index:10;width: 100px;float: left;position: fixed;height: 100%; background: rgba(45, 45, 45, 0.7); padding: 5px;box-shadow: -2px 1px 2px rgba(39, 30, 31, 0.40) inset;}
 div.container{width: calc(100% - 100px); float: left;margin-left: 100px;}
-.w25{width: calc(25% - 40px); float: left;}
-.w75{width: calc(75% - 40px); float: left;}
-.w100{width: calc(100% - 40px); float: left;}
+.w25{width: 25%; float: left;}
+.w75{width: 75%; float: left;}
+.w100{width: 100%; float: left;}
 
 /* Color ----------------------------------------------------------------------------- */
 .yellow{color: #c7a305;}
@@ -31,4 +31,8 @@ div.container{width: calc(100% - 100px); float: left;margin-left: 100px;}
 
 /* Loading ----------------------------------------------------------------------------- */
 
-.load img#logo {width: 400px;margin: 0 auto;display: block;}
+.load img#logo {
+    width: 400px;
+    margin: 0 auto;
+    display: block;
+}

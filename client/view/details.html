@@ -1,20 +1,19 @@
 <template name="details">
+    <div class="detail">
     <!--<article class="content__item" >-->
 
     <div class="banner-film"
          style="background-image: url(https://image.tmdb.org/t/p/original{{themoviedb.backdrop_path}});"></div>
-    <div class="w25" style="padding-top:0;">
+    <div class="w25 padding" style="padding-top:0;">
         <img src="https://image.tmdb.org/t/p/w396{{themoviedb.poster_path}}">
     </div>
-    <div class="w75 border-film">
-        <h2 class="title title--full">{{themoviedb.original_title}}</h2>
-                    
+    <div class="w75 border-film padding">
+        <h2 class="title title--full orange">{{themoviedb.original_title}}</h2>
         <div class="note">
-													<span class="star">
-														<span class="star-blue" style="width:98px;"></span>
-													</span>
-
-            <p class="small"> {{themoviedb.vote_average}}/10 sur 7009 votes</p>
+    		<span class="star">
+    			<span class="star-orange" style="width:{{starcalcul}}%;"></span>
+    		</span>
+        <p class="small"> {{startotal}}/5 sur {{themoviedb.vote_count}} votes</p>
         </div>
         <p>
             {{themoviedb.overview}}
@@ -25,8 +24,8 @@
         </div>
 
     </div>
-    <div class="w100"></div>
-    <div class="w25 border-film">
+    <div class="w100 padding"></div>
+    <div class="w25 border-film padding">
         <h4>Informations</h4>
 
         <p><i class="fa fa-calendar"></i> Date de sortie : {{themoviedb.release_date}}</p>
@@ -55,7 +54,7 @@
         {{/each}}
 
     </div>
-    <div class="w75 border-film">
+    <div class="w75 border-film padding">
         <h4>Bande annonce</h4>
 
         {{#each themoviedb.trailers.youtube}}
@@ -78,6 +77,19 @@
                 {{/if}}
             {{/each}}
         </div>
+        <h4>Illustration du film</h4>
+        <br>
+        <div class="img-film">
+            <div class="chocolat-parent" data-chocolat-title="backdrops">
+                {{#each themoviedb.images.posters}}
+
+                        <a class="chocolat-image" href="https://image.tmdb.org/t/p/original{{themoviedb.images.posters.file_path}}" >
+                            <img src="https://image.tmdb.org/t/p/w185{{themoviedb.file_path}}">
+                        </a>
+
+                {{/each}}
+            </div>
+        </div>
     </div>
     <script type="text/javascript">
         $(document).ready(function(){
@@ -86,4 +98,5 @@
         });
     </script>
     <!--</article>-->
+</div>
 </template>
