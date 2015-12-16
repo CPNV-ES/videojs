@@ -1,10 +1,10 @@
 /**
  * Manage all create update delete file from the client folder.
  * @namespace server/themovidb
- * 
+ *
  */
- 
- 
+
+
 /**
  * Create new file in the database
  * @param {String} [file] File path
@@ -26,7 +26,7 @@ Sources.find({
   updateAt: {
     $gt: Date.now()
   }
-}).observe({
+}).observe({ 
   added: function(){ filemonitor.sources(); },
   removed: function(){ filemonitor.sources(); },
   changed: function(){ filemonitor.sources(); }
