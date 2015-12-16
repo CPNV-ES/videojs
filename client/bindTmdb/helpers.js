@@ -4,9 +4,6 @@ Template.tmdbBind.helpers({
   results: function () {
     return Session.get('tmdbBindResults');
   },
-  search: function () {
-    return Session.get('tmdbBindSearch');
-  },
   isLoading: function () {
     return Session.get('tmdbBindLoading');
   },
