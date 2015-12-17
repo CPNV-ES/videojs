@@ -60,6 +60,7 @@ Template.header.helpers({
             .value();
         return uniqueGenres;
     },
+    // Enable the rotate animation (loading) if the number is > 0
     classLoading: function () {
         var themoviedb = ServerSession.get('loading.themoviedb') || 0;
         return (themoviedb > 0) ? 'rotate' : '';
@@ -67,7 +68,7 @@ Template.header.helpers({
 });
 
 /**
- * Reset all query session variable
+ * Reset all query session variable for the search
  */
 resetVarForm = function () {
     Session.set('querytitle', '');
@@ -80,7 +81,7 @@ resetVarForm = function () {
 };
 
 /**
- * Use for update the genre list,
+ * Use for update the "genre" list,
  * there refresh all new tags.
  * @param needClear [boolean] remove all user selection tags
  */

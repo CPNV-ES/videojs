@@ -1,4 +1,5 @@
 Template.sources.events({
+  // Update the source list
   "submit form": function (e) {
     e.preventDefault();
     var source = e.target.source;
@@ -16,6 +17,7 @@ Template.sources.events({
       }
     });
   },
+  // remove source file path
   'click ul li .delete': function (e) {
     e.preventDefault();
     Sources.remove(this._id);
@@ -24,6 +26,7 @@ Template.sources.events({
     e.preventDefault();
     Session.set('toggleSources',false);
   },
+  // Hide the movie not found
   'change #toggleShowFilename': function (e) {
     var toggle = e.target.checked;
     Session.set('toggleShowFilename', toggle);

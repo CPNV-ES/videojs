@@ -1,8 +1,8 @@
 const CHECK_YEAR = '^[0-9]{4}$';
 
 Template.home.helpers({
-    // Load all movies for the home view
-    // considers the conditions
+    //Load all movies if there is no research on the part of the user.
+    // If a user wanted to search for a film, the query request is generated.
     movies: function () {
         var movies = null;
         var andQuerry = [];
@@ -11,8 +11,8 @@ Template.home.helpers({
         var crew = Session.get("querycrew");
         var cast = Session.get("querycast");
         var genre = Session.get("queryGenre");
-        var anneeDebut = Session.get("querydatestart");
-        var anneeFin = Session.get("querydateend");
+        var startDate = Session.get("querydatestart");
+        var endDate = Session.get("querydateend");
         var showFilename = Session.get('toggleShowFilename');
 
         if(!showFilename){
@@ -36,38 +36,40 @@ Template.home.helpers({
             andQuerry.push({'themoviedb.credits.cast.name': {$regex: cast, $options: 'gi'}});
         }
 
+        // Condition if the user is looking for one or more categories
         if (isValidInput(genre)) {
             genre.forEach(function (element) {
                 if(element.length > 0)
                     andQuerry.push({'themoviedb.genres.name': element});
             });
         }
-        // Between date
-        if(isValidInput(anneeDebut) && isValidInput(anneeFin)){
-            if(anneeDebut.match(CHECK_YEAR) && anneeFin.match(CHECK_YEAR)){
+
+        // Between date logic
+        if(isValidInput(startDate) && isValidInput(endDate)){
+            if(startDate.match(CHECK_YEAR) && endDate.match(CHECK_YEAR)){
                 andQuerry.push({'themoviedb.release_date':{
-                    $lt: anneeFin + '-12-31', // a 2015-12-31
-                    $gte:  anneeDebut + '-01-01' // de 2003-01-01
+                    $lt: endDate + '-12-31', // a 2015-12-31
+                    $gte:  startDate + '-01-01' // de 2003-01-01
                 }});
             }
-        }else if (isValidInput(anneeDebut)) {
-            if (anneeDebut.match(CHECK_YEAR)) {
+        }else if (isValidInput(startDate)) { // Logic if the user put only the startDate : between  startDate to today
+            if (startDate.match(CHECK_YEAR)) {
                 andQuerry.push({
                     'themoviedb.release_date': {
                         $lt: moment().format("YYYY-MM-DD"),
-                        $gte: anneeDebut + '-01-01'
+                        $gte: startDate + '-01-01'
                     }
                 });
             }
-        }else if (isValidInput(anneeFin)){
-            if(anneeFin.match(CHECK_YEAR)){
+        }else if (isValidInput(endDate)){ // Logic if the user put only the endDate ... between 0000-01-01 to endDate
+            if(endDate.match(CHECK_YEAR)){
                 andQuerry.push({'themoviedb.release_date':{
-                    $lt: anneeFin + '-12-31',
+                    $lt: endDate + '-12-31',
                     $gte:  '0000-01-01'
                 }});
             }
         }
-
+        // If there are not conditions we use the second query (list all movies).
         if (andQuerry.length > 0) {
             movies = Movies.find({$and: andQuerry}, {sort: {themoviedb: {title: -1}}});
         } else {
@@ -83,6 +85,11 @@ Template.home.helpers({
     }
 });
 
+/**
+ * Test if the input is valid (not null & undefined & length)
+ * @param toTest
+ * @returns {boolean} true if the input is filled
+ */
 var isValidInput = function(toTest){
     return (toTest !== null && toTest !== undefined && toTest.length > 0);
 };
