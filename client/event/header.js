@@ -18,6 +18,9 @@ Template.header.events({
     },
     'change #toggleShowFilename': function (e) {
       var toggle = e.target.checked;
-      Session.set('toggleShowFilename',toggle);
+      Session.set('toggleShowFilename', toggle);
     },
+    'click #toggleSources': function (e) {
+      Session.set('toggleSources', true);
+    }
 });

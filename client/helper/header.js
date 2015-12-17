@@ -1,3 +1,12 @@
+// By default :
+// We show movie without themoviedb data
+Session.setDefault('toggleShowFilename', true);
+// We hide sources interface
+Session.setDefault('toggleSources', false);
+
+
+
+
 Template.header.helpers({
     settingsMovieTitleName: function () {
         return {
