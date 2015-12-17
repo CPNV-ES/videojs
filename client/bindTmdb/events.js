@@ -42,5 +42,12 @@ Template.tmdbBind.events({
     Session.set('toggleTmdbBind',false);
     Session.set('tmdbBindId',null);
   },
+  'click .unbind': function(e){
+    e.preventDefault();
+    var movie_id = this._id;
+    Meteor.call('tmdbUnBind',movie_id,function(err,result){
+      if(err) console.error("unbind error");
+    });
+  }
 
 });
