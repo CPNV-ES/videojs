@@ -8,15 +8,32 @@
 
 /* View by film ----------------------------------------------------------------------------- */
 .banner-film{background-size: cover;height: 500px;float: left;width: calc(100% + 80px); background-position: center;margin: -60px 0 -407px -60px;}
-.acteur-film div {float: left;width: 25%;}
+.acteur-film div {min-height: 412px;float: left;width: 25%; width: calc(16.66% - 10px); margin: 5px;overflow: hidden;}
 .acteur-film div img {height: 278px;width: auto;}
 .detail{padding: 20px}
 .padding{padding: 20px; margin:20px;}
-.border-film {background: rgba(27, 27, 27, 0.80);color: rgb(255, 255, 255); border: 1px solid #c96108;}
+.border-film {background: rgba(27, 27, 27, 0.80);color: rgb(206, 206, 206); border: 1px solid #c96108;}
 .detail p{font-weight: 300;}
 span.star {background: url(../img/star_grey.png) right repeat-x;height: 14px;float: left;width: 70px;}
 span.star-orange {background: url(../img/star_orange.png) repeat-x;height: 14px;float: left;}
-.detail h4{clear: both;color:#c96108;font-size: 25px;text-shadow: rgb(49, 49, 49) 0px 1px 0, rgb(49, 49, 49) 0 -1px 0;background: rgb(49, 49, 49);padding: 6px; border-radius: 1px;}
+.detail h4{margin-top: 20px;clear: both;color:#c96108;font-size: 25px;text-shadow: rgb(49, 49, 49) 0px 1px 0, rgb(49, 49, 49) 0 -1px 0;background: rgb(49, 49, 49);padding: 6px; border-radius: 1px;}
 .detail .title{font-size: 52px; font-weight: 300;}
 .detail a{color: #ad3a01;}
 .detail .img-film a{max-width: calc(20% - 10px);display: block;float: left;margin: 5px;}
+
+
+@media screen and (min-width: 1024px){
+  .acteur-film div{ width: calc(16.66% - 10px);}
+}
+
+@media screen and (max-width: 1200px){
+  .acteur-film div{ width: calc(20% - 10px);}
+}
+
+@media screen and (max-width: 1023px){
+  .acteur-film div{ width: calc(25% - 10px);}
+}
+
+@media screen and (max-width: 768px){
+  .acteur-film div{ width: calc(50% - 10px);}
+}

@@ -1,11 +1,10 @@
-<template name="details">
-    <div class="detail">
-    <!--<article class="content__item" >-->
 
+<template name="details">
     {{#if toggleTmdbBind}}
         {{> tmdbBind this}}
     {{/if}}
-    <a href="#" class="toggleTmdbBind button">Modifier le film</a>
+    <div class="detail">
+    <!--<article class="content__item" >-->
     <div class="banner-film" style="background-image: url(https://image.tmdb.org/t/p/original{{themoviedb.backdrop_path}});"></div>
     <div class="w25 padding" style="padding-top:0;">
         <img src="https://image.tmdb.org/t/p/w396{{themoviedb.poster_path}}">
@@ -26,6 +25,13 @@
 
         </div>
 
+    </div>
+    <div class="w75 border-film padding">
+        <h4>Gestion du film</h4>
+        <a href="#" class="toggleTmdbBind button">Modifier le film</a>
+        <a href="#" class="delete button">Supprimer le film</a>
+        <h4>Localisation de votre film</h4>
+        <a href="file://{{path}}">{{path}}</a>
     </div>
     <div class="w100 padding"></div>
     <div class="w25 border-film padding">
@@ -85,9 +91,11 @@
         <div class="img-film">
             <div class="chocolat-parent" data-chocolat-title="Illustrations du film">
                 {{#each themoviedb.images.backdrops}}
+                    {{#if isNotNull file_path}}
                     <a class="chocolat-image" href="https://image.tmdb.org/t/p/original{{file_path}}" >
                         <img src="https://image.tmdb.org/t/p/w185{{file_path}}">
                     </a>
+                    {{/if}}
                 {{/each}}
             </div>
         </div>
