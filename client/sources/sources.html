@@ -1,7 +1,12 @@
 <template name="sources">
   <div class="sourcesBackground">
     <div class="sourcesContent">
-      <h4>Gérer les sources</h4>
+      {{#if hasSources}}
+        <h4>Gérer vos sources</h4>
+      {{else}}
+        <h4>Votre première source</h4>
+      {{/if}}
+
       <!-- Cacher le close si il n'y a pas de source -->
       <ul>
         {{#each sources}}
@@ -11,6 +16,7 @@
       <form>
         <input type="text" name="source" placeholder="Nouvelle source">
         <button type="submit" name="submit" class="button">Ajouter</button>
+        {{#if sourcesError}} <div class="error">{{sourcesError}}</div> {{/if}}
       </form>
       <h4>Paramètres</h4>
       <p>Afficher ou cacher les films sans résultat</p>
@@ -23,7 +29,7 @@
           </div>
       <div class="w100"></div>
       <br>
-      <a href="#" class="close button">Fermer</a>
+      {{#if hasSources}}<a href="#" class="close button">Fermer</a>{{/if}}
     </div>
   </div>
 </template>

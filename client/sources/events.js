@@ -4,11 +4,17 @@ Template.sources.events({
     var source = e.target.source;
     if(!source.value) return false;
 
-    Sources.insert({
-      source: source.value
+    Meteor.call('folderIsValid',source.value,function(err,isFolder){
+      if (isFolder) {
+        Sources.insert({
+          source: source.value
+        });
+        Session.set('sourcesError',null);
+        source.value = '';
+      } else {
+        Session.set('sourcesError','Ce n\'est pas un répertoire valide, veuillez réessayer');
+      }
     });
-
-    source.value = '';
   },
   'click ul li .delete': function (e) {
     e.preventDefault();
