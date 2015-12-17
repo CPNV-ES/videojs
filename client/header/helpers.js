@@ -94,6 +94,8 @@ updateList = function (needClear) {
 };
 
 /**
+ * Generate the drop down list for the category
+ *
  * TODO: refactor this crap !
  */
 Template.header.rendered = function () {

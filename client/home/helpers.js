@@ -1,6 +1,8 @@
 const CHECK_YEAR = '^[0-9]{4}$';
 
 Template.home.helpers({
+    // Load all movies for the home view
+    // considers the conditions
     movies: function () {
         var movies = null;
         var andQuerry = [];
@@ -17,18 +19,23 @@ Template.home.helpers({
           andQuerry.push({themoviedb:{$exists:true,$not:null}});
         }
 
+        // Condition if the user is looking for a title
         if (isValidInput(title)) {
             andQuerry.push({'themoviedb.title': {$regex: title, $options: 'gi'}});
         }
+        // Condition if the user is looking for a file name
         if (isValidInput(fileName)) {
             andQuerry.push({'filename': {$regex: fileName, $options: 'gi'}});
         }
+        // Condition if the user is looking for a crew
         if (isValidInput(crew)) {
             andQuerry.push({'themoviedb.credits.crew.name': {$regex: crew, $options: 'gi'}});
         }
+        // Condition if the user is looking for a cast
         if (isValidInput(cast)) {
             andQuerry.push({'themoviedb.credits.cast.name': {$regex: cast, $options: 'gi'}});
         }
+
         if (isValidInput(genre)) {
             genre.forEach(function (element) {
                 if(element.length > 0)
@@ -60,7 +67,6 @@ Template.home.helpers({
                 }});
             }
         }
-
 
         if (andQuerry.length > 0) {
             movies = Movies.find({$and: andQuerry}, {sort: {themoviedb: {title: -1}}});
