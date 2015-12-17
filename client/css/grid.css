@@ -11,6 +11,7 @@ div#theGrid{width: 100%; float: left;}
 
 
 /* Items ----------------------------------------------------------------------------- */
+.film-img{background: url(img/noposter.png);}
 .container secton.grid a{}
 .grid__item img{}
 a.grid__item{float: left; padding: 5px; margin: 5px;}
