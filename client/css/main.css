@@ -7,7 +7,6 @@
 
 
 /* Reset ----------------------------------------------------------------------------- */
-
 *{border: 0; padding: 0; text-decoration: none;font-family: roboto;font-weight: 300;}
 *, *:after, *:before {-webkit-box-sizing: border-box;box-sizing: border-box;}
 button:focus {outline: none;}
@@ -20,8 +19,10 @@ header#header{z-index:10;width: 100px;float: left;position: fixed;height: 100%; 
 div.container{width: calc(100% - 100px); float: left;margin-left: 100px;}
 .w25{width: calc(25% - 40px); float: left;}
 .w75{width: calc(75% - 40px); float: left;}
-.w100{width: calc(100% - 40px); float: left;}
-
+.w100{clear: both;width: calc(100% - 40px); float: left;}
+a.button, .button{border-radius: 0 0 5px 5px;background: #ad3a01; position:relative; padding: 10px; color:#252525; box-shadow: 0 6px #252525;display: inline-block; margin-bottom: 10px;}
+.button:hover{box-shadow: 0 4px #252525;top: 2px; cursor: pointer;}
+.bold{font-weight: 500;}
 /* Color ----------------------------------------------------------------------------- */
 .yellow{color: #c7a305;}
 .orange{color: #c96108; }

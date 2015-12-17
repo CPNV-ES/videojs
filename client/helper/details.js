@@ -7,5 +7,14 @@ Template.details.helpers({
     },
     startotal: function(){
         return this.themoviedb.vote_average/2;
+    },
+    toggleTmdbBind: function(){
+      return Session.get('toggleTmdbBind');
     }
+});
+
+Template.details.events({
+  'click .toggleTmdbBind': function(e){
+    Session.set('toggleTmdbBind',!Session.get('toggleTmdbBind'));
+  }
 });

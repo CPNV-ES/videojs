@@ -2,8 +2,11 @@
     <div class="detail">
     <!--<article class="content__item" >-->
 
-    <div class="banner-film"
-         style="background-image: url(https://image.tmdb.org/t/p/original{{themoviedb.backdrop_path}});"></div>
+    {{#if toggleTmdbBind}}
+        {{> tmdbBind this}}
+    {{/if}}
+    <a href="#" class="toggleTmdbBind button">Modifier le film</a>
+    <div class="banner-film" style="background-image: url(https://image.tmdb.org/t/p/original{{themoviedb.backdrop_path}});"></div>
     <div class="w25 padding" style="padding-top:0;">
         <img src="https://image.tmdb.org/t/p/w396{{themoviedb.poster_path}}">
     </div>
@@ -80,20 +83,18 @@
         <h4>Illustration du film</h4>
         <br>
         <div class="img-film">
-            <div class="chocolat-parent" data-chocolat-title="backdrops">
-                {{#each themoviedb.images.posters}}
-
-                        <a class="chocolat-image" href="https://image.tmdb.org/t/p/original{{themoviedb.images.posters.file_path}}" >
-                            <img src="https://image.tmdb.org/t/p/w185{{themoviedb.file_path}}">
-                        </a>
-
+            <div class="chocolat-parent" data-chocolat-title="Illustrations du film">
+                {{#each themoviedb.images.backdrops}}
+                    <a class="chocolat-image" href="https://image.tmdb.org/t/p/original{{file_path}}" >
+                        <img src="https://image.tmdb.org/t/p/w185{{file_path}}">
+                    </a>
                 {{/each}}
             </div>
         </div>
     </div>
     <script type="text/javascript">
         $(document).ready(function(){
-            console.log("poeut !");
+            console.log("chocolate  !");
             $('.chocolat-parent').Chocolat();
         });
     </script>

@@ -4,20 +4,21 @@
       <h2>{{filename}}</h2>
       <form>
         <input name="search" type="text" placeholder="Chercher ...">
-        <button type="submit">Search</button>
+        <button type="submit" class="button">Rechercher</button>
       </form>
       {{#if isLoading}}
         <p>is loading</p>
       {{else}}
         <ul>
           {{#each results}}
-            <li><a href="#">{{title}}</a></li>
+            <li><a href="#">{{title}}</a><span>{{overview}}</span></li>
           {{/each}}
         </ul>
       {{/if}}
       {{#if hasId}}
         <a href="#" class="bind">Assimiler</a>
       {{/if}}
+      <button type="button" class="button close">Fermer</button>
     </div>
   </div>
 </template>

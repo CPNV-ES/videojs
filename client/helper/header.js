@@ -77,8 +77,11 @@ Template.header.events({
     },
     'click #queryclear': function () {
         resetVarForm();
-        $("#queryGenre").select2('val', 'All');
+        updateList(true);
         document.getElementById("form").reset();
+    },
+    'click .onoffswitch-checkbox': function(){
+        return Session.set('toggleShowFilename',!Session.get('toggleShowFilename'));
     }
 });
 
