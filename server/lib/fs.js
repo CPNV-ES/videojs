@@ -1,0 +1,1 @@
+fs = Npm.require('fs');
