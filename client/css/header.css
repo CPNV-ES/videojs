@@ -28,7 +28,7 @@ input{outline: none;}
 
 
 /* Switch ----------------------------------------------------------------------------- */
-.onoffswitch {width: 100px;position: relative;float:left;-webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;}
+.onoffswitch {width: 100px;position: relative;float:left;-webkit-user-select:none; -moz-user-select:none; -ms-user-select: none; margin-bottom: 20px;}
 .onoffswitch-checkbox { display: none;}
 .onoffswitch-label {display: block; overflow: hidden; cursor: pointer;border: 2px solid #999999; border-radius: 0px;}
 .onoffswitch-inner {display: block; width: 200%; margin-left: -100%;transition: margin 0.3s ease-in 0s;}
