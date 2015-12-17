@@ -59,9 +59,9 @@ Template.header.helpers({
             .value();
         return uniqueGenres;
     },
-    isLoading: function () {
-        var themoviedb = ServerSession.get('loading.themoviebd') || 0;
-        return (themoviebd > 0);
+    classLoading: function () {
+      var themoviedb = ServerSession.get('loading.themoviebd') || 0;
+        return (themoviebd > 0) ? 'rotate' : '';
     },
 });
 
