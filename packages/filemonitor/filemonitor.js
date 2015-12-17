@@ -58,7 +58,8 @@ Filemonitor.prototype.start = function () {
 
   var files = [];
   this._sources.forEach(function(source){
-    files = files.concat(self.list(source));
+    if(fs.existsSync(source))
+      files = files.concat(self.list(source));
   });
 
   // New One

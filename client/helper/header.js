@@ -1,4 +1,25 @@
+// By default :
+// We show movie without themoviedb data
+Session.setDefault('toggleShowFilename', true);
+// We hide sources interface
+Session.setDefault('toggleSources', false);
+// Use for query title
+Session.setDefault('querytitle', '');
+// Use for query crew (Search one realisator)
+Session.setDefault('querycrew', '');
+// Use for query one cast (Actor)
+Session.setDefault('querycast', '');
+// Use for query Categories
+// This session need an array of categories -> ["Action", "Adventure"]
+Session.setDefault('queryGenre', '');
+// Use for query the outside date
+Session.setDefault('querydatestart', '');
+Session.setDefault('querydateend', '');
+
+
+
 Template.header.helpers({
+    // return all movie title for the autocompletion
     settingsMovieTitleName: function () {
         return {
             rules: [
@@ -11,6 +32,7 @@ Template.header.helpers({
             ]
         };
     },
+    // return all file name for the autocompletion
     settingsFileName: function () {
         return {
             rules: [
@@ -23,6 +45,7 @@ Template.header.helpers({
             ]
         };
     },
+    // List all categories and return an array like : ["Action","Adventure"]
     uniqueGenre: function () {
         var list = Movies.find({"themoviedb.genres": {$ne: null}}).fetch();
         var uniqueGenres = _.chain(list)
@@ -55,27 +78,36 @@ Template.header.events({
         return Session.set('querycrew', $('#querycrew').val());
     },
     'keyup #querycast': function () {
+        // save the current search query in a session variable, this is use for the name cast person
         return Session.set('querycast', $('#querycast').val());
     },
     'keyup #queryfilename': function () {
+        // save the current search query in a session variable, this is use for the file name
         return Session.set('queryfilename', $('#queryfilename').val());
     },
     'keyup #querydatestart': function () {
+        // save the current search query in a session variable, this is use for the beggin date
         return Session.set('querydatestart', $('#querydatestart').val());
     },
     'keyup #querydateend': function () {
+        // save the current search query in a session variable, this is use for the ending date
         return Session.set('querydateend', $('#querydateend').val());
     },
+    // remove all search
     'click #queryclear': function () {
         resetVarForm();
         updateList(true);
         document.getElementById("form").reset();
     },
+    // Hidde or unhidde the movies not found
     'click .onoffswitch-checkbox': function(){
         return Session.set('toggleShowFilename',!Session.get('toggleShowFilename'));
     }
 });
 
+/**
+ * Reset all query session variable
+ */
 var resetVarForm = function () {
     Session.set('querytitle', '');
     Session.set('querycrew', '');
@@ -99,8 +131,14 @@ Template.header.rendered = function () {
         Session.set('queryGenre', $("#queryGenre").val().split(','));
     });
     updateList(true);
+    resetVarForm();
 };
 
+/**
+ * Use for update the genre list,
+ * there refresh all new tags.
+ * @param needClear [boolean] remove all user selection tags
+ */
 var updateList = function(needClear){
     var $select = $('#queryGenre').selectize();
     if($select !== null && $select !== undefined){
