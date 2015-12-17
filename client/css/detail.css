@@ -7,7 +7,7 @@
 
 
 /* View by film ----------------------------------------------------------------------------- */
-.banner-film{background-size: cover;height: 500px;float: left;width: calc(100% + 120px); background-position: center;margin: -60px 0 -407px -60px;}
+.banner-film{background-size: cover;height: 500px;float: left;width: calc(100% + 80px); background-position: center;margin: -60px 0 -407px -60px;}
 .acteur-film div {float: left;width: 25%;}
 .acteur-film div img {height: 278px;width: auto;}
 .detail{padding: 20px}

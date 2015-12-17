@@ -15,7 +15,6 @@ Template.details.helpers({
 
 Template.details.events({
   'click .toggleTmdbBind': function(e){
-    console.log("hello !");
     Session.set('toggleTmdbBind',!Session.get('toggleTmdbBind'));
   }
 });
