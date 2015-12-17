@@ -1,3 +1,10 @@
+<!--
+*
+* Panel containing the buttons, search (to search for a movie with several criteria), configuration,
+* loader ...
+*
+-->
+
 <template name="header">
     <header id="header" > <!-- class="cl-effect-1" for efect [ ] -->
         <img id="logo" src="img/logo.png">
@@ -29,10 +36,12 @@
     </header>
 </template>
 
+<!-- Template for display the data of the autocomplete field : Nom du film -> querytitle -->
 <template name="movieTitleAutoCompletes">
     {{themoviedb.title}}
 </template>
 
+<!-- Template for display the data of the autocomplete field : Nom du fichier  -> queryfilename -->
 <template name="fileNameAutoCompletes">
     {{filename}}
 </template>
