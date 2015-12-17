@@ -3,8 +3,6 @@
  * @namespace server/themovidb
  *
  */
-
- 
 /**
  * Create new file in the database
  * @param {String} [file] File path
