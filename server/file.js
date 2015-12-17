@@ -51,3 +51,20 @@ Extensions.find({}).observe({
 Meteor.startup(function(){
   filemonitor.both();
 });
+
+/**
+* Verifiy if path is a folder in server filesystem
+* @param path : path of folder
+* @return : true if it's folder, false if it's not
+*/
+Meteor.methods({
+  folderIsValid: function (path) {
+      try {
+        var realPath = fs.realpathSync(path);
+        var info = fs.statSync(realPath);
+        return info.isDirectory();
+      } catch (e) {
+        return false;
+      }
+  }
+});
