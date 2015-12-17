@@ -14,11 +14,7 @@
                     <label><p>Année de fin : <input type="text" id="querydateend" placeholder="YYYY"></p></label>
                     <label>
                         <p>Genre :
-                        <select aria-hidden="true" tabindex="-1" id="queryGenre" multiple="">
-                            {{#each uniqueGenre}}
-                                <option>{{this}}</option>
-                            {{/each}}
-                        </select>
+                            <input type="text" id="queryGenre" class="demo-default" value="{{#each uniqueGenre}}{{this}},{{/each}}">
                         </p>
                     </label>
                     <label>
@@ -32,8 +28,8 @@
         <a class="linkheader rotate" href="#"><img src="img/config.png"><span class="hidden">Mettre à jour</span></a>
         <p>Afficher/cacher les films sans résultat</p>
         <div class="onoffswitch">
-            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
-            <label class="onoffswitch-label" for="myonoffswitch">
+            <input type="checkbox" name="toggleShowFilename" class="onoffswitch-checkbox" id="toggleShowFilename" checked="{{toggleShowFilename}}">
+            <label class="onoffswitch-label" for="toggleShowFilename">
                 <span class="onoffswitch-inner"></span>
                 <span class="onoffswitch-switch"></span>
             </label>

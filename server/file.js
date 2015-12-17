@@ -1,9 +1,9 @@
 /**
  * Manage all create update delete file from the client folder.
  * @namespace server/themovidb
- * 
+ *
  */
- 
+
  
 /**
  * Create new file in the database
@@ -29,7 +29,7 @@ Sources.find({
 }).observe({
   added: function(){ filemonitor.sources(); },
   removed: function(){ filemonitor.sources(); },
-  changed: function(){ filemonitor.sources(); }
+  changed: function(){ filemonitor.sources(); },
 });
 
 // When extension added, removed or changed -> reload filemonitor
@@ -40,7 +40,7 @@ Extensions.find({
 }).observe({
   added: function(){ filemonitor.extensions(); },
   removed: function(){ filemonitor.extensions(); },
-  changed: function(){ filemonitor.extensions(); }
+  changed: function(){ filemonitor.extensions(); },
 });
 
 // When Meteor start synchronise filemonitor with filesystem

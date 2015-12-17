@@ -11,6 +11,11 @@ Template.home.helpers({
         var genre = Session.get("queryGenre");
         var anneeDebut = Session.get("querydatestart");
         var anneeFin = Session.get("querydateend");
+        var showFilename = Session.get('toggleShowFilename');
+
+        if(!showFilename){
+          andQuerry.push({themoviedb:{$exists:true,$not:null}});
+        }
 
         if (isValidInput(title)) {
             andQuerry.push({'themoviedb.title': {$regex: title, $options: 'gi'}});
@@ -26,7 +31,8 @@ Template.home.helpers({
         }
         if (isValidInput(genre)) {
             genre.forEach(function (element) {
-                andQuerry.push({'themoviedb.genres.name': element});
+                if(element.length > 0)
+                    andQuerry.push({'themoviedb.genres.name': element});
             });
         }
         // Between date
@@ -38,7 +44,6 @@ Template.home.helpers({
                 }});
             }
         }else if (isValidInput(anneeDebut)) {
-            console.log("jdjd", moment().format("YYYY-MM-DD"));
             if (anneeDebut.match(CHECK_YEAR)) {
                 andQuerry.push({
                     'themoviedb.release_date': {
