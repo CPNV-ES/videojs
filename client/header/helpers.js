@@ -19,7 +19,6 @@ Session.setDefault('querydatestart', '');
 // Use for query the last relase date
 Session.setDefault('querydateend', '');
 
-
 Template.header.helpers({
     // return all movie title for the autocompletion
     settingsMovieTitleName: function () {
@@ -62,8 +61,8 @@ Template.header.helpers({
         return uniqueGenres;
     },
     classLoading: function () {
-        var themoviedb = ServerSession.get('loading.themoviebd') || 0;
-        return (themoviebd > 0) ? 'rotate' : '';
+        var themoviedb = ServerSession.get('loading.themoviedb') || 0;
+        return (themoviedb > 0) ? 'rotate' : '';
     },
 });
 

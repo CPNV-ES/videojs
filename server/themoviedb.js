@@ -7,7 +7,7 @@ Movies
   added : function(item){
 
     // Say to clients, we're searching movie
-    ServerSession.set('loading.themoviebd',(ServerSession.get('loading.themoviebd') || 0)+1);
+    ServerSession.set('loading.themoviedb',(ServerSession.get('loading.themoviedb') || 0)+1);
 
     try {
       // Try get info
@@ -24,7 +24,7 @@ Movies
 
     } finally {
       // Say to clients, we finish to search movie
-      ServerSession.set('loading.themoviebd',(ServerSession.get('loading.themoviebd') || 1)-1);
+      ServerSession.set('loading.themoviedb',(ServerSession.get('loading.themoviedb') || 1)-1);
     }
   }
 });
