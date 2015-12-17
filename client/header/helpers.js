@@ -12,10 +12,12 @@ Session.setDefault('querycast', '');
 // Use for query Categories
 // This session need an array of categories -> ["Action", "Adventure"]
 Session.setDefault('queryGenre', '');
-// Use for query the outside date
+// Use for query the file name
+Session.setDefault('queryfilename', '');
+// Use for query the release date
 Session.setDefault('querydatestart', '');
+// Use for query the last relase date
 Session.setDefault('querydateend', '');
-
 
 
 Template.header.helpers({
@@ -60,60 +62,37 @@ Template.header.helpers({
         return uniqueGenres;
     },
     classLoading: function () {
-      var themoviedb = ServerSession.get('loading.themoviebd') || 0;
+        var themoviedb = ServerSession.get('loading.themoviebd') || 0;
         return (themoviebd > 0) ? 'rotate' : '';
     },
-});
-
-Template.header.events({
-    'keyup #querytitle': function () {
-        // save the current search query in a session variable as the user types
-        return Session.set('querytitle', $('#querytitle').val());
-    },
-    'keyup #querycrew': function () {
-        // save the current search query in a session variable as the user types
-        return Session.set('querycrew', $('#querycrew').val());
-    },
-    'keyup #querycast': function () {
-        // save the current search query in a session variable, this is use for the name cast person
-        return Session.set('querycast', $('#querycast').val());
-    },
-    'keyup #queryfilename': function () {
-        // save the current search query in a session variable, this is use for the file name
-        return Session.set('queryfilename', $('#queryfilename').val());
-    },
-    'keyup #querydatestart': function () {
-        // save the current search query in a session variable, this is use for the beggin date
-        return Session.set('querydatestart', $('#querydatestart').val());
-    },
-    'keyup #querydateend': function () {
-        // save the current search query in a session variable, this is use for the ending date
-        return Session.set('querydateend', $('#querydateend').val());
-    },
-    // remove all search
-    'click #queryclear': function () {
-        resetVarForm();
-        updateList(true);
-        document.getElementById("form").reset();
-    },
-    // Hidde or unhidde the movies not found
-    'click .onoffswitch-checkbox': function(){
-        return Session.set('toggleShowFilename',!Session.get('toggleShowFilename'));
-    }
 });
 
 /**
  * Reset all query session variable
  */
-var resetVarForm = function () {
+resetVarForm = function () {
     Session.set('querytitle', '');
     Session.set('querycrew', '');
     Session.set('querycast', '');
     Session.set('queryGenre', '');
+    Session.set('queryfilename', '');
     Session.set('querydatestart', '');
     Session.set('querydateend', '');
 };
 
+/**
+ * Use for update the genre list,
+ * there refresh all new tags.
+ * @param needClear [boolean] remove all user selection tags
+ */
+updateList = function (needClear) {
+    var $select = $('#queryGenre').selectize();
+    if ($select !== null && $select !== undefined) {
+        var control = $select[0].selectize;
+        control.refreshOptions();
+        if (needClear) control.clear();
+    }
+};
 
 /**
  * TODO: refactor this crap !
@@ -124,23 +103,9 @@ Template.header.rendered = function () {
         persist: false,
         createOnBlur: true,
         create: true
-    }).on('change', function(){
+    }).on('change', function () {
         Session.set('queryGenre', $("#queryGenre").val().split(','));
     });
     updateList(true);
     resetVarForm();
-};
-
-/**
- * Use for update the genre list,
- * there refresh all new tags.
- * @param needClear [boolean] remove all user selection tags
- */
-var updateList = function(needClear){
-    var $select = $('#queryGenre').selectize();
-    if($select !== null && $select !== undefined){
-        var control = $select[0].selectize;
-        control.refreshOptions();
-        if(needClear) control.clear();
-    }
 };

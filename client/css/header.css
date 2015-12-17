@@ -24,7 +24,7 @@ input{outline: none;}
 .select2-container{width: 100% !important;} /* select genre*/
 .selectize-control.multi .selectize-input [data-value] {background: rgb(197, 148, 4);}
 .selectize-control.plugin-remove_button [data-value] .remove{border-left: 1px solid rgb(196, 83, 3) !important; background: rgb(196, 86, 3) !important;}
-
+.selectize-control.multi .selectize-input > div {border: 1px solid rgb(197, 79, 3) !important;}
 
 
 /* Switch ----------------------------------------------------------------------------- */
