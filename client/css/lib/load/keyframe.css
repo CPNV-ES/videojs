@@ -1,5 +1,6 @@
  .rotate{
     cursor: auto;
+    animation-fill-mode:forwards;
     -webkit-animation-name: spin;
     -webkit-animation-duration: 2s;
     -webkit-animation-iteration-count: infinite;
