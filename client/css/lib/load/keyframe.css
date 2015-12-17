@@ -1,4 +1,4 @@
-a.rotate:hover > img {
+.rotate {
     cursor: auto;
     -webkit-animation-name: spin;
     -webkit-animation-duration: 2s;

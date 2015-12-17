@@ -22,11 +22,13 @@ a:hover > #search{display: block;transition-duration: 1s;}
 #search input, input{margin-bottom: 9px;float: right;border: none;color:  #ad3a01;/* margin: 0px 0 0 0; */background: none;border-bottom: 1px solid  #ad3a01;font-size: 16pt; height: 26px;width: 100%;}
 input{outline: none;}
 .select2-container{width: 100% !important;} /* select genre*/
+.selectize-control.multi .selectize-input [data-value] {background: rgb(197, 148, 4);}
+.selectize-control.plugin-remove_button [data-value] .remove{border-left: 1px solid rgb(196, 83, 3) !important; background: rgb(196, 86, 3) !important;}
 
 
 
 /* Switch ----------------------------------------------------------------------------- */
-.onoffswitch { position: relative; width: 100%;float:left;-webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;}
+.onoffswitch {width: 100px;position: relative;float:left;-webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;}
 .onoffswitch-checkbox { display: none;}
 .onoffswitch-label {display: block; overflow: hidden; cursor: pointer;border: 2px solid #999999; border-radius: 0px;}
 .onoffswitch-inner {display: block; width: 200%; margin-left: -100%;transition: margin 0.3s ease-in 0s;}

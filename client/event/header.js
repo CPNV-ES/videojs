@@ -16,10 +16,6 @@ Template.header.events({
         Session.set('querycast', '');
         document.getElementById("form").reset();
     },
-    'change #toggleShowFilename': function (e) {
-      var toggle = e.target.checked;
-      Session.set('toggleShowFilename', toggle);
-    },
     'click #toggleSources': function (e) {
       Session.set('toggleSources', true);
     }

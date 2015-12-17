@@ -18,4 +18,8 @@ Template.sources.events({
     e.preventDefault();
     Session.set('toggleSources',false);
   },
+  'change #toggleShowFilename': function (e) {
+    var toggle = e.target.checked;
+    Session.set('toggleShowFilename', toggle);
+  },
 });

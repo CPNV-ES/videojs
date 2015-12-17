@@ -1,17 +1,28 @@
 <template name="sources">
   <div class="sourcesBackground">
     <div class="sourcesContent">
-      <h2>Gérer les sources</h2>
+      <h4>Gérer les sources</h4>
       <!-- Cacher le close si il n'y a pas de source -->
-      <a href="#" class="close">x</a>
       <ul>
         {{#each sources}}
-          <li>{{source}} <a href="#" class="delete">x</a></li>
+          <li>{{source}} <a href="#" class="button delete button-small">x</a></li>
         {{/each}}
       </ul>
       <form>
         <input type="text" name="source" placeholder="Nouvelle source">
+        <button type="submit" name="submit" class="button">Ajouter</button>
       </form>
+      <h4>Paramètres</h4>
+      <p>Afficher ou cacher les films sans résultat</p>
+          <div class="onoffswitch">
+              <input type="checkbox" name="toggleShowFilename" class="onoffswitch-checkbox" id="toggleShowFilename" checked="{{toggleShowFilename}}">
+              <label class="onoffswitch-label" for="toggleShowFilename">
+                  <span class="onoffswitch-inner"></span>
+                  <span class="onoffswitch-switch"></span>
+              </label>
+          </div>
+      <div class="w100"></div>
+      <a href="#" class="close button">Fermer</a>
     </div>
   </div>
 </template>

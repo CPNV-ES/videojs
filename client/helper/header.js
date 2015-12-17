@@ -63,9 +63,6 @@ Template.header.helpers({
         var themoviedb = ServerSession.get('loading.themoviebd') || 0;
         return (themoviebd > 0);
     },
-    toggleShowFilename: function () {
-      return Session.get('toggleShowFilename');
-    }
 });
 
 Template.header.events({

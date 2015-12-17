@@ -1,7 +1,7 @@
 <template name="header">
     <header id="header" > <!-- class="cl-effect-1" for efect [ ] -->
         <img id="logo" src="img/logo.png">
-        <a class="linkheader search" href="#"><img src="img/search.png"><span class="hidden">Rechercher &#8628;</span>
+        <a class="linkheader search rotate" href="#"><img src="img/search.png"><span class="hidden">Rechercher &#8628;</span>
             <div id="search">
                 <form id="form">
                     <label><p>Nom du film: {{> inputAutocomplete settings=settingsMovieTitleName id="querytitle"
@@ -18,22 +18,15 @@
                         </p>
                     </label>
                     <label>
-                        <button class="clearbutton" id="queryclear">Effacer</button>
+                        <button class="clearbutton button" id="queryclear">Effacer</button>
                     </label>
                 </form>
             </div>
         </a>
         <a class="linkheader" href="#"><img src="img/more.png"><span class="hidden">A propos </span></a>
-        <a class="linkheader rotate" href="#"><img src="img/sync.png"><span class="hidden">Mettre à jour</span></a>
-        <a id="toggleSources" class="linkheader rotate" href="#"><img src="img/config.png"><span class="hidden">Mettre à jour</span></a>
-        <p>Afficher/cacher les films sans résultat</p>
-        <div class="onoffswitch">
-            <input type="checkbox" name="toggleShowFilename" class="onoffswitch-checkbox" id="toggleShowFilename" checked="{{toggleShowFilename}}">
-            <label class="onoffswitch-label" for="toggleShowFilename">
-                <span class="onoffswitch-inner"></span>
-                <span class="onoffswitch-switch"></span>
-            </label>
-        </div>
+        <a class="linkheader" href="#"><img src="img/sync.png"><span class="hidden">Mettre à jour</span></a>
+        <a id="toggleSources" class="linkheader" href="#"><img src="img/config.png"><span class="hidden">Mettre à jour</span></a>
+        
     </header>
 </template>
 
