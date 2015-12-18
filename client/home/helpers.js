@@ -15,8 +15,8 @@ Template.home.helpers({
         var endDate = Session.get("querydateend");
         var showFilename = Session.get('toggleShowFilename');
 
-        if(!showFilename){
-          andQuerry.push({themoviedb:{$exists:true,$not:null}});
+        if (!showFilename) {
+            andQuerry.push({themoviedb: {$exists: true, $not: null}});
         }
 
         // Condition if the user is looking for a title
@@ -39,20 +39,22 @@ Template.home.helpers({
         // Condition if the user is looking for one or more categories
         if (isValidInput(genre)) {
             genre.forEach(function (element) {
-                if(element.length > 0)
+                if (element.length > 0)
                     andQuerry.push({'themoviedb.genres.name': element});
             });
         }
 
         // Between date logic
-        if(isValidInput(startDate) && isValidInput(endDate)){
-            if(startDate.match(CHECK_YEAR) && endDate.match(CHECK_YEAR)){
-                andQuerry.push({'themoviedb.release_date':{
-                    $lt: endDate + '-12-31', // a 2015-12-31
-                    $gte:  startDate + '-01-01' // de 2003-01-01
-                }});
+        if (isValidInput(startDate) && isValidInput(endDate)) {
+            if (startDate.match(CHECK_YEAR) && endDate.match(CHECK_YEAR)) {
+                andQuerry.push({
+                    'themoviedb.release_date': {
+                        $lt: endDate + '-12-31', // a 2015-12-31
+                        $gte: startDate + '-01-01' // de 2003-01-01
+                    }
+                });
             }
-        }else if (isValidInput(startDate)) { // Logic if the user put only the startDate : between  startDate to today
+        } else if (isValidInput(startDate)) { // Logic if the user put only the startDate : between  startDate to today
             if (startDate.match(CHECK_YEAR)) {
                 andQuerry.push({
                     'themoviedb.release_date': {
@@ -61,12 +63,14 @@ Template.home.helpers({
                     }
                 });
             }
-        }else if (isValidInput(endDate)){ // Logic if the user put only the endDate ... between 0000-01-01 to endDate
-            if(endDate.match(CHECK_YEAR)){
-                andQuerry.push({'themoviedb.release_date':{
-                    $lt: endDate + '-12-31',
-                    $gte:  '0000-01-01'
-                }});
+        } else if (isValidInput(endDate)) { // Logic if the user put only the endDate ... between 0000-01-01 to endDate
+            if (endDate.match(CHECK_YEAR)) {
+                andQuerry.push({
+                    'themoviedb.release_date': {
+                        $lt: endDate + '-12-31',
+                        $gte: '0000-01-01'
+                    }
+                });
             }
         }
         // If there are not conditions we use the second query (list all movies).
@@ -82,7 +86,7 @@ Template.home.helpers({
         var hasSources = Sources.find({}).count() <= 0;
         var toggleSources = Session.get('toggleSources');
         return (hasSources || toggleSources);
-    }
+    },
 });
 
 /**
@@ -90,6 +94,6 @@ Template.home.helpers({
  * @param toTest
  * @returns {boolean} true if the input is filled
  */
-var isValidInput = function(toTest){
+var isValidInput = function (toTest) {
     return (toTest !== null && toTest !== undefined && toTest.length > 0);
 };

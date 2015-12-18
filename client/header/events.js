@@ -30,11 +30,11 @@ Template.header.events({
         document.getElementById("form").reset();
     },
     // Hidde or unhidde the movies not found
-    'click .onoffswitch-checkbox': function(){
-        return Session.set('toggleShowFilename',!Session.get('toggleShowFilename'));
+    'click .onoffswitch-checkbox': function () {
+        return Session.set('toggleShowFilename', !Session.get('toggleShowFilename'));
     },
     // Hidde or unhidde the source ( file path ) config.
     'click #toggleSources': function (e) {
         Session.set('toggleSources', true);
-    }
+    },
 });

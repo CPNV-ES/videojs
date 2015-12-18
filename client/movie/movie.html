@@ -11,13 +11,12 @@
                  style="background-image: url({{#if themoviedb.poster_path}}https://image.tmdb.org/t/p/w396{{themoviedb.poster_path}}{{else}}img/noposter.png{{/if}});"></div>
             <h2 class="title orange">
                 {{#if themoviedb.title}}
-                {{themoviedb.title}}
+                    {{themoviedb.title}}
                 {{else}}
-                {{filename}}
+                    {{filename}}
                 {{/if}}
 
             </h2>
-
             <div class="loader"></div>
             <span class="category">{{#if themoviedb.release_date}}{{themoviedb.release_date}}{{else}}Non trouvé{{/if}}</span>
         </div>
