@@ -12,7 +12,7 @@
       {{else}}
         <ul>
           {{#each results}}
-            <li><a href="#">{{title}}</a><span>{{overview}}</span></li>
+            <li><a class="link" href="#"><p style="font-weight: 500;">{{title}}</p><img src="{{#if poster_path}}https://image.tmdb.org/t/p/w300{{poster_path}}{{else}}../img/noposter.png{{/if}}"><p class="desc">{{overview}}</p></a></li>
           {{/each}}
         </ul>
       {{/if}}
