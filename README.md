@@ -6,6 +6,10 @@ This project run on javascript framework : [Meteor](https://www.meteor.com/)
 
 Then, you need to install meteor here : [https://www.meteor.com/install](https://www.meteor.com/install)
 
+## Config 
+Rename **"settings.json.example"** to **"settings.json"** and put your themovidb api key for the parameters "api_key".
+Example : "api_key" : "PUT YOUR OWN THEMOVIEDB API KEY HERE" to "api_key" : "123456789"
+
 ## Run VideoJS
 
 For start this project, go to project root directory with your terminal :
