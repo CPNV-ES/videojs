@@ -1,6 +1,6 @@
 Template.details.helpers({
     isNotNull: function (value) {
-        return value != null;
+        return value !== null;
     },
     starcalcul: function () {
         return this.themoviedb.vote_average * 100 / 10;
