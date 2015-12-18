@@ -23,6 +23,12 @@ Themoviedb.prototype._resolve = function (filename) {
   return info;
 };
 
+/**
+ * Do query to themoviedb API
+ * if themoviedb return QUOTA_ERROR, execute again request.
+ * else throw Exception
+ * TODO : Change while(true) by better loop
+**/
 Themoviedb.prototype._tmdbQuery = function (method, request) {
   while (true) {
     try {
@@ -40,26 +46,35 @@ Themoviedb.prototype._tmdbQuery = function (method, request) {
   }
 };
 
+// NoResultException : We don't find result for this movie
 Themoviedb.prototype.NoResultException = function(message){
   this.name = 'NoResultException';
   this.message = message || '';
   this.prototype = Error.prototype;
 };
+
+// ItIsNotMovieException : file is series or other, but not movie
 Themoviedb.prototype.ItIsNotMovieException = function(message){
   this.name = 'ItIsNotMovieException';
   this.message = message || '';
   this.prototype = Error.prototype;
 };
+
+// NotTitleFoundException : filename is horrible, can't find title
 Themoviedb.prototype.NoTitleFoundException = function(message){
   this.name = 'NoTitleFoundException';
   this.message = message || '';
   this.prototype = Error.prototype;
 };
+
+// NoInternetException : We don't have internet
 Themoviedb.prototype.NoInternetException = function(message){
   this.name = 'NoInternetException';
   this.message = message || '';
   this.prototype = Error.prototype;
 };
+
+// InvalidApiKeyException : ApiKey doesn't accept by themoviedb
 Themoviedb.prototype.InvalidApiKeyException = function(message){
   this.name = 'InvalidApiKeyException';
   this.message = message || '';
@@ -74,9 +89,7 @@ Themoviedb.prototype.status = {
   QUOTA_ERROR : 429
 };
 
-/**
-* Wrap les méthodes asyncrone du module moviedb
-**/
+// Wrap les méthodes asyncrone du module moviedb
 Themoviedb.prototype.moviedb = Async.wrap(moviedb,['searchMovie','movieInfo','configuration','requestToken']);
 
 /**

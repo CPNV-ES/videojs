@@ -1,15 +1,16 @@
 Package.describe({
   name: 'nolanrigo:themoviedb',
   version: '0.1.0',
-  // Brief, one-line summary of the package.
   summary: 'Packages for do request api to themoviedb',
-  // URL to the Git repository containing the source code for this package.
   git: '',
-  // By default, Meteor will default to using README.md for documentation.
-  // To avoid submitting documentation, set this field to null.
   documentation: 'README.md'
 });
 
+/**
+ * Dependencies to npm modules
+ * moviedb : do request to themoviedb API
+ * parse-torrent-name : parse name of movie file
+**/
 Npm.depends({
   'moviedb': '0.2.2',
   'parse-torrent-name': '0.5.4'
