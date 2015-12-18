@@ -26,7 +26,7 @@ Template.header.events({
     // remove all search
     'click #queryclear': function () {
         resetVarForm();
-        updateList(true);
+        updateList(true, false);
         document.getElementById("form").reset();
     },
     // Hidde or unhidde the movies not found

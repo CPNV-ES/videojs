@@ -84,12 +84,13 @@ resetVarForm = function () {
  * Use for update the "genre" list,
  * there refresh all new tags.
  * @param needClear [boolean] remove all user selection tags
+ * @param needRefresh [boolean] update list of tags.
  */
-updateList = function (needClear) {
+updateList = function (needClear, needRefresh) {
     var $select = $('#queryGenre').selectize();
     if ($select !== null && $select !== undefined) {
         var control = $select[0].selectize;
-        control.refreshOptions();
+        if (needRefresh) control.refreshOptions();
         if (needClear) control.clear();
     }
 };
@@ -108,6 +109,6 @@ Template.header.rendered = function () {
     }).on('change', function () {
         Session.set('queryGenre', $("#queryGenre").val().split(','));
     });
-    updateList(true);
+    updateList(true, true);
     resetVarForm();
 };
