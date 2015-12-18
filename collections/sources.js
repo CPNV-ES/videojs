@@ -1,5 +1,6 @@
 Sources = new Mongo.Collection("Sources");
 
+// We allow user to insert, update and remove all document in extensions collection
 Sources.allow({
     insert: function () {
         return true;
@@ -12,12 +13,14 @@ Sources.allow({
     },
 });
 
+// Hook : before insert, we join createAt & updateAt fileds, with current date
 Sources.before.insert(function (userId, doc) {
     doc.createAt = Date.now();
     doc.updateAt = Date.now();
 });
 
-Sources.before.update(function (userId, doc, fieldNames, modifier, options) {
+// Hook : before update, we update updateAt field, with current date
+Sources.before.update(function (userId, doc) {
     doc.updateAt = Date.now();
 });
 

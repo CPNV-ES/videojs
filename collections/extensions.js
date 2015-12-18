@@ -1,5 +1,6 @@
 Extensions = new Mongo.Collection("Extensions");
 
+// We allow user to insert, update and remove all document in extensions collection
 Extensions.allow({
     insert: function () {
         return true;
@@ -12,17 +13,14 @@ Extensions.allow({
     },
 });
 
-/**
- * Read properties file
- * @return {Object} Json parse object
- * @private
- */
+// Hook : before insert, we join createAt & updateAt fields, with current date
 Extensions.before.insert(function (userId, doc) {
     doc.createAt = Date.now();
     doc.updateAt = Date.now();
 });
 
-Extensions.before.update(function (userId, doc, fieldNames, modifier, options) {
+// Hook : before update, we update updateAt field, with current date
+Extensions.before.update(function (userId, doc) {
     doc.updateAt = Date.now();
 });
 
